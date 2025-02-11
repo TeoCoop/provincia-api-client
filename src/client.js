@@ -21,7 +21,7 @@ function authEndpoint(baseURL) {
     }
 }
 
-function client(options) {
+export function client(options) {
     const { env } = options;
     const baseURL = env === "dev" ? "http://localhost:1337/api" : env === "sandbox" ? "https://provincia.teocoop.site/api" : "https://provincia.teocoop.site/api"
     return {
@@ -30,5 +30,3 @@ function client(options) {
         auth: authEndpoint(baseURL)
     };
 }
-
-module.exports = { client };
