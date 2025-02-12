@@ -16,16 +16,13 @@ function bursatilEndpoints(baseURL) {
 
 function authEndpoint(baseURL) {
     const client = createClient(baseURL);
-    return {
-        auth: require("./enpoints/auth/auth.js")({client}),
-    }
+    return require("./enpoints/auth/auth.js")({client})
 }
 
 export function client(options) {
     const { env } = options;
     const baseURL = env === "dev" ? "http://localhost:1337/api" : env === "sandbox" ? "https://provincia.teocoop.site/api" : "https://provincia.teocoop.site/api"
     return {
-        _createClient: createClient(baseURL),
         bursatil: bursatilEndpoints(baseURL),
         auth: authEndpoint(baseURL)
     };

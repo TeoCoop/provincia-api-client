@@ -1,7 +1,5 @@
 function auth({client}) {
   function auth({user}) {
-    console.log("PASA ALGO ACA",user);
-    
     return client({
       url: `/auth/local`,
       method: "post",
