@@ -1,5 +1,4 @@
 export function client(options: any): {
-    _createClient: import("axios").AxiosInstance;
     bursatil: {
         blog: {
             get: ({ jwtToken, blogId }: {
@@ -12,10 +11,8 @@ export function client(options: any): {
         };
     };
     auth: {
-        auth: {
-            auth: ({ user }: {
-                user: any;
-            }) => any;
-        };
+        auth: ({ user }: {
+            user: any;
+        }) => any;
     };
 };
