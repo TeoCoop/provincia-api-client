@@ -1,7 +1,8 @@
 function blog({ client }) {
-  function get({ jwtToken, blogId }) {
+  function getById({ jwtToken, blogId }) {
     return client({
-      url: `/blog-resource-bursatils/${blogId}`,
+      url: `/blog-bursatils/${blogId}`,
+      method: "get",
       headers: {
         Authorization:
           `Bearer ${jwtToken}`,
@@ -11,7 +12,8 @@ function blog({ client }) {
 
   function getAll({ jwtToken }) {
     return client({
-      url: `/blog-resource-bursatils`,
+      url: `/blog-bursatils`,
+      method: "get",
       headers: {
         Authorization:
           `Bearer ${jwtToken}`,
@@ -20,7 +22,7 @@ function blog({ client }) {
   }
 
   return {
-    get,
+    getById,
     getAll
   };
 }

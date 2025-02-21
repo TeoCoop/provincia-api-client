@@ -21,7 +21,7 @@ function authEndpoint(baseURL) {
 
 export function client(options) {
     const { env } = options;
-    const baseURL = env === "dev" ? "http://localhost:1337/api" : env === "sandbox" ? "https://provincia.teocoop.site/api" : "https://provincia.teocoop.site/api"
+    const baseURL = env === "development" ? "http://localhost:1337/api" : env === "sandbox" ? "https://provincia.teocoop.site/api" : "https://provincia.teocoop.site/api"
     return {
         bursatil: bursatilEndpoints(baseURL),
         auth: authEndpoint(baseURL)

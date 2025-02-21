@@ -10,8 +10,32 @@ function auth({client}) {
     });
   }
 
+  function login({user}) {
+    return client({
+      url: `/auth/login`,
+      method: "post",
+      data: {
+        email: user.email,
+        password: user.password
+      }
+    });
+  }
+
+  function verifyTotp({user}) {
+    return client({
+      url: `/auth/verify-totp`,
+      method: "post",
+      data: {
+        email: user.email,
+        token: user.token
+      }
+    });
+  }
+
   return {
-    auth
+    auth,
+    login,
+    verifyTotp
   };
 }
 
