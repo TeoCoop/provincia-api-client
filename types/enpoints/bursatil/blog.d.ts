@@ -2,7 +2,7 @@ export = blog;
 declare function blog({ client }: {
     client: any;
 }): {
-    get: ({ jwtToken, blogId }: {
+    getById: ({ jwtToken, blogId }: {
         jwtToken: any;
         blogId: any;
     }) => any;

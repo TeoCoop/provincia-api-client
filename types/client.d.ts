@@ -1,7 +1,7 @@
 export function client(options: any): {
     bursatil: {
         blog: {
-            get: ({ jwtToken, blogId }: {
+            getById: ({ jwtToken, blogId }: {
                 jwtToken: any;
                 blogId: any;
             }) => any;
@@ -12,6 +12,12 @@ export function client(options: any): {
     };
     auth: {
         auth: ({ user }: {
+            user: any;
+        }) => any;
+        login: ({ user }: {
+            user: any;
+        }) => any;
+        verifyTotp: ({ user }: {
             user: any;
         }) => any;
     };

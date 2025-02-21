@@ -2,11 +2,12 @@
 
 function blog(_ref) {
   var client = _ref.client;
-  function get(_ref2) {
+  function getById(_ref2) {
     var jwtToken = _ref2.jwtToken,
       blogId = _ref2.blogId;
     return client({
-      url: "/blog-resource-bursatils/".concat(blogId),
+      url: "/blog-bursatils/".concat(blogId),
+      method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       }
@@ -15,14 +16,15 @@ function blog(_ref) {
   function getAll(_ref3) {
     var jwtToken = _ref3.jwtToken;
     return client({
-      url: "/blog-resource-bursatils",
+      url: "/blog-bursatils",
+      method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       }
     });
   }
   return {
-    get: get,
+    getById: getById,
     getAll: getAll
   };
 }
