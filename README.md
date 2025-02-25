@@ -18,3 +18,4 @@ Testing local:
 Para testear de manera local se puede instalar el modulo desde file:
 
 "provincia-api-client": "file:../provincia-api-client",
+En el index => const provinciaClient = require("./src/client").client; en testing usar dist en produccion 

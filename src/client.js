@@ -11,6 +11,7 @@ function bursatilEndpoints(baseURL) {
     const client = createClient(baseURL);    
     return {
         blog: require("./enpoints/bursatil/blog.js")({ client }),
+        institutional: require('./enpoints/bursatil/institutional.js')({ client }),
     }
 }
 
