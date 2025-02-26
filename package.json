@@ -13,7 +13,7 @@
     "transpile": "babel -d dist/ src/",
     "commit": "git add . && git commit --allow-empty -m \"transpiled\"",
     "preversion": "npm run transpile && npm run types && npm run commit",
-    "postversion": "git push origin main && git push --tags",
+    "postversion": "git push --tags && npm publish --access public",
     "types": "npx -p typescript tsc src/**.js --declaration --allowJs --emitDeclarationOnly --outDir types --lib es2015"
   },
   "author": "Cooperativa Teo Coop - https://teocoop.site/",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@babel/cli": "^7.15.8",
     "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8"
+    "@babel/preset-env": "^7.15.8",
+    "typescript": "^5.7.3"
   }
 }
