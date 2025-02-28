@@ -1,16 +1,13 @@
 function institutional({ client }) {
-  function getAll({ jwtToken }) {
+  function getAll() {
     return client({
-      url: `/institutional-bursatil`,
+      url: "/institutional-bursatil",
       method: "get",
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
     });
   }
-  function put({ jwtToken, data }) {
+  function updateInstitutional({ jwtToken }) {
     return client({
-      url: `/institutional-bursatil`,
+      url: "/institutional-bursatil",
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -29,7 +26,7 @@ function institutional({ client }) {
   }
   function deleteInstitutional({ jwtToken }) {
     return client({
-      url: `/institutional-bursatil`,
+      url: "/institutional-bursatil",
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -38,9 +35,8 @@ function institutional({ client }) {
   }
   return {
     getAll,
-    put,
+    updateInstitutional,
     deleteInstitutional,
   };
 }
-
 module.exports = institutional;

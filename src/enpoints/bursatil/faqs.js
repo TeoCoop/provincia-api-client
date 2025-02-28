@@ -1,7 +1,7 @@
-function blog({ client }) {
-  function getById({ blogId }) {
+function faq({ client }) {
+  function getById({ faqId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/faq-bursatils/${faqId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function blog({ client }) {
 
   function getAll() {
     return client({
-      url: `/blog-bursatils`,
+      url: `/faq-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -19,42 +19,39 @@ function blog({ client }) {
     });
   }
 
-  function createBlog({ jwtToken, data }) {
+  function createFaq({ jwtToken, data }) {
     return client({
-      url: `/blog-bursatils`,
+      url: `/faq-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        data: {
-          content: data.content,
-          image: data.image,
-          title: data.title,
-        },
+        question: data.question,
+        answer: data.answer,
       },
     });
   }
 
-  function updateBlog({ jwtToken, blogId, data }) {
+  function updateFaq({ jwtToken, faqId, data }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/faq-bursatils/${faqId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        content: data.content,
-        image: data.image,
-        title: data.title,
-        public: data.public,
+        data: {
+          question: data.question,
+          answer: data.answer,
+        },
       },
     });
   }
 
-  function deleteBlog({ jwtToken, blogId }) {
+  function deleteFaq({ jwtToken, faqId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/faq-bursatils/${faqId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -65,10 +62,10 @@ function blog({ client }) {
   return {
     getById,
     getAll,
-    createBlog,
-    updateBlog,
-    deleteBlog,
+    createFaq,
+    updateFaq,
+    deleteFaq,
   };
 }
 
-module.exports = blog;
+module.exports = faq;

@@ -1,74 +1,67 @@
-function blog({ client }) {
-  function getById({ blogId }) {
+function questionTest({ client }) {
+  function getById({ questionId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/questions/${questionId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
       // },
     });
   }
-
   function getAll() {
     return client({
-      url: `/blog-bursatils`,
+      url: `/questions`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
       // },
     });
   }
-
-  function createBlog({ jwtToken, data }) {
+  function updateProduct({ jwtToken, questionId, data }) {
     return client({
-      url: `/blog-bursatils`,
+      url: `/questions/${questionId}`,
+      method: "put",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      data: {
+        data: {
+          answer: data.answer,
+          question: data.question,
+        },
+      },
+    });
+  }
+  function createQuestion({ jwtToken, data }) {
+    return client({
+      url: "/questions",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
         data: {
-          content: data.content,
-          image: data.image,
-          title: data.title,
+          answer: data.answer,
+          question: data.question,
         },
       },
     });
   }
-
-  function updateBlog({ jwtToken, blogId, data }) {
+  function deleteProduct({ jwtToken, questionId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
-      method: "put",
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      data: {
-        content: data.content,
-        image: data.image,
-        title: data.title,
-        public: data.public,
-      },
-    });
-  }
-
-  function deleteBlog({ jwtToken, blogId }) {
-    return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/questions/${questionId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
     });
   }
-
   return {
-    getById,
     getAll,
-    createBlog,
-    updateBlog,
-    deleteBlog,
+    updateProduct,
+    deleteProduct,
+    getById,
+    createQuestion,
   };
 }
-
-module.exports = blog;
+module.exports = questionTest;

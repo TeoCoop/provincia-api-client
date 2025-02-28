@@ -1,7 +1,7 @@
-function blog({ client }) {
-  function getById({ blogId }) {
+function account({ client }) {
+  function getById({ accountId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/account-opening-bursatils/${accountId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function blog({ client }) {
 
   function getAll() {
     return client({
-      url: `/blog-bursatils`,
+      url: `/account-opening-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -19,42 +19,37 @@ function blog({ client }) {
     });
   }
 
-  function createBlog({ jwtToken, data }) {
+  function createAccount({ jwtToken, data }) {
     return client({
-      url: `/blog-bursatils`,
+      url: `/account-opening-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        data: {
-          content: data.content,
-          image: data.image,
-          title: data.title,
-        },
+        name: data.name,
+        uploads: data.uploads,
       },
     });
   }
 
-  function updateBlog({ jwtToken, blogId, data }) {
+  function updateAccount({ jwtToken, accountId, data }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/account-opening-bursatils/${accountId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        content: data.content,
-        image: data.image,
-        title: data.title,
-        public: data.public,
+        name: data.name,
+        uploads: data.uploads,
       },
     });
   }
 
-  function deleteBlog({ jwtToken, blogId }) {
+  function deleteAccount({ jwtToken, accountId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/account-opening-bursatils/${accountId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -65,10 +60,10 @@ function blog({ client }) {
   return {
     getById,
     getAll,
-    createBlog,
-    updateBlog,
-    deleteBlog,
+    createAccount,
+    updateAccount,
+    deleteAccount,
   };
 }
 
-module.exports = blog;
+module.exports = account;
