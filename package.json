@@ -4,6 +4,7 @@
   "description": "Api client Banco Provincia",
   "homepage": "https://github.com/TeoCoop/provincia-api-client",
   "main": "index.js",
+  "types": "types/client.d.ts",
   "bugs": {
     "url": "https://github.com/TeoCoop/provincia-api-client/issues"
   },
