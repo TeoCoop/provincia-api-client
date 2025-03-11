@@ -24,6 +24,27 @@ function bursatilEndpoints(baseURL) {
     }),
   };
 }
+
+function fondosEndpoints(baseURL) {
+  const client = createClient(baseURL);
+  return {
+    blog: require("./enpoints/fondos/blog.js")({ client }),
+    institutional: require("./enpoints/fondos/institutional.js")({ client }),
+    category: require("./enpoints/fondos/foundCategory.js")({ client }),
+    // accountOppening: require("./enpoints/bursatil/accountOpening.js")({
+    //   client,
+    // }),
+    faqs: require("./enpoints/fondos/faqs.js")({
+      client,
+    }),
+    founds: require("./enpoints/fondos/ourFounds.js")({
+      client,
+    }),
+    global: require("./enpoints/fondos/global.js")({
+      client,
+    }),
+  };
+}
 function generalEnpoints(baseURL) {
   const client = createClient(baseURL);
   return {
@@ -49,5 +70,6 @@ export function client(options) {
     bursatil: bursatilEndpoints(baseURL),
     auth: authEndpoint(baseURL),
     general: generalEnpoints(baseURL),
+    fondos: fondosEndpoints(baseURL),
   };
 }

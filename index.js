@@ -1,4 +1,4 @@
-const provinciaClient = require("./dist/client").client;
+const provinciaClient = require("./src/client").client;
 
 module.exports = {
    provinciaClient
