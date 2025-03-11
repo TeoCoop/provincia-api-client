@@ -14,7 +14,7 @@
     "commit": "git add . && git commit --allow-empty -m \"transpiled\"",
     "preversion": "npm run transpile && npm run types && npm run commit",
     "postversion": "git push --tags && npm publish --access public",
-    "types": "npx -p typescript tsc src/**.js --declaration --allowJs --emitDeclarationOnly --outDir types --lib es2015"
+    "types": "npx -p typescript tsc src/**.js --declaration --allowJs --emitDeclarationOnly --outDir types --lib es2015,dom"
   },
   "author": "Cooperativa Teo Coop - https://teocoop.site/",
   "repository": {
