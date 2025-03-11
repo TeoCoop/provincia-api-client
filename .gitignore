@@ -4,7 +4,4 @@ jspm_packages/
 
 # Optional npm cache directory
 .npm
-src/types/
-dist/
-/types
  
