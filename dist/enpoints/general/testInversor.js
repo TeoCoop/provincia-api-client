@@ -22,7 +22,8 @@ function testInversor(_ref) {
       },
       data: {
         data: {
-          questions: data.questions
+          questions: data.questions,
+          "delete": data["delete"]
         }
       }
     });

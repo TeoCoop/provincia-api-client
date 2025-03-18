@@ -32,7 +32,8 @@ function account(_ref) {
       },
       data: {
         name: data.name,
-        uploads: data.uploads
+        uploads: data.uploads,
+        "delete": data["delete"]
       }
     });
   }
@@ -48,7 +49,8 @@ function account(_ref) {
       },
       data: {
         name: data.name,
-        uploads: data.uploads
+        uploads: data.uploads,
+        "delete": data["delete"]
       }
     });
   }

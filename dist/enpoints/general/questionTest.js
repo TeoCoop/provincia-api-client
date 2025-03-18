@@ -21,7 +21,7 @@ function questionTest(_ref) {
       // },
     });
   }
-  function updateProduct(_ref3) {
+  function updatedQuestion(_ref3) {
     var jwtToken = _ref3.jwtToken,
       questionId = _ref3.questionId,
       data = _ref3.data;
@@ -34,7 +34,8 @@ function questionTest(_ref) {
       data: {
         data: {
           answer: data.answer,
-          question: data.question
+          question: data.question,
+          "delete": data["delete"]
         }
       }
     });
@@ -51,12 +52,13 @@ function questionTest(_ref) {
       data: {
         data: {
           answer: data.answer,
-          question: data.question
+          question: data.question,
+          "delete": data["delete"]
         }
       }
     });
   }
-  function deleteProduct(_ref5) {
+  function deleteCuestion(_ref5) {
     var jwtToken = _ref5.jwtToken,
       questionId = _ref5.questionId;
     return client({
@@ -69,8 +71,8 @@ function questionTest(_ref) {
   }
   return {
     getAll: getAll,
-    updateProduct: updateProduct,
-    deleteProduct: deleteProduct,
+    updatedQuestion: updatedQuestion,
+    deleteCuestion: deleteCuestion,
     getById: getById,
     createQuestion: createQuestion
   };

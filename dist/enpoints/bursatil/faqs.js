@@ -32,7 +32,8 @@ function faq(_ref) {
       },
       data: {
         question: data.question,
-        answer: data.answer
+        answer: data.answer,
+        "delete": data["delete"]
       }
     });
   }
@@ -49,7 +50,8 @@ function faq(_ref) {
       data: {
         data: {
           question: data.question,
-          answer: data.answer
+          answer: data.answer,
+          "delete": data["delete"]
         }
       }
     });

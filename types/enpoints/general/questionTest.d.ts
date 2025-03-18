@@ -3,12 +3,12 @@ declare function questionTest({ client }: {
     client: any;
 }): {
     getAll: () => any;
-    updateProduct: ({ jwtToken, questionId, data }: {
+    updatedQuestion: ({ jwtToken, questionId, data }: {
         jwtToken: any;
         questionId: any;
         data: any;
     }) => any;
-    deleteProduct: ({ jwtToken, questionId }: {
+    deleteCuestion: ({ jwtToken, questionId }: {
         jwtToken: any;
         questionId: any;
     }) => any;

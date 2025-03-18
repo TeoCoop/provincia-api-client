@@ -1,5 +1,5 @@
-export = faq;
-declare function faq({ client }: {
+export = foundCategory;
+declare function foundCategory({ client }: {
     client: any;
 }): {
     getById: ({ categoryId }: {

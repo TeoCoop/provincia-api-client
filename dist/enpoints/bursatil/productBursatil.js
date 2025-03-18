@@ -37,7 +37,8 @@ function productBursatil(_ref) {
           category: data.category,
           pageUrl: data.pageUrl,
           description: data.description,
-          shortDescription: data.shortDescription
+          shortDescription: data.shortDescription,
+          "delete": data["delete"]
         }
       }
     });
@@ -57,7 +58,8 @@ function productBursatil(_ref) {
           category: data.category,
           pageUrl: data.pageUrl,
           description: data.description,
-          shortDescription: data.shortDescription
+          shortDescription: data.shortDescription,
+          "delete": data["delete"]
         }
       }
     });

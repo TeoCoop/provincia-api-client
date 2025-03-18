@@ -95,6 +95,45 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
         };
+        carterasEficientes: {
+            getById: ({ carteraId }: {
+                carteraId: any;
+            }) => any;
+            getAll: () => any;
+            createCartera: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateCartera: ({ jwtToken, carteraId, data }: {
+                jwtToken: any;
+                carteraId: any;
+                data: any;
+            }) => any;
+            deleteCartera: ({ jwtToken, carteraId }: {
+                jwtToken: any;
+                carteraId: any;
+            }) => any;
+        };
+        videoTutorial: any;
+        categoriesVideos: {
+            getById: ({ categoriesId }: {
+                categoriesId: any;
+            }) => any;
+            getAll: () => any;
+            createCategoriesVideos: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateCategoriesVideos: ({ jwtToken, categoriesId, data }: {
+                jwtToken: any;
+                categoriesId: any;
+                data: any;
+            }) => any;
+            deleteCategoriesVideos: ({ jwtToken, categoriesId }: {
+                jwtToken: any;
+                categoriesId: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
@@ -120,12 +159,12 @@ export function client(options: any): {
         };
         questionTest: {
             getAll: () => any;
-            updateProduct: ({ jwtToken, questionId, data }: {
+            updatedQuestion: ({ jwtToken, questionId, data }: {
                 jwtToken: any;
                 questionId: any;
                 data: any;
             }) => any;
-            deleteProduct: ({ jwtToken, questionId }: {
+            deleteCuestion: ({ jwtToken, questionId }: {
                 jwtToken: any;
                 questionId: any;
             }) => any;

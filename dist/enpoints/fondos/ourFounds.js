@@ -41,7 +41,8 @@ function founds(_ref) {
         informationAt: data.informationAt,
         patrimonio: data.patrimonio,
         fund_category_fondo: data.fund_category_fondo,
-        carteras_eficiente: data.carteras_eficiente
+        carteras_eficiente: data.carteras_eficiente,
+        "delete": data["delete"]
       }
     });
   }
@@ -67,7 +68,8 @@ function founds(_ref) {
           informationAt: data.informationAt,
           patrimonio: data.patrimonio,
           fund_category_fondo: data.fund_category_fondo,
-          carteras_eficiente: data.carteras_eficiente
+          carteras_eficiente: data.carteras_eficiente,
+          "delete": data["delete"]
         }
       }
     });

@@ -1,31 +1,25 @@
 "use strict";
 
-function faq(_ref) {
+function foundCategory(_ref) {
   var client = _ref.client;
   function getById(_ref2) {
     var categoryId = _ref2.categoryId;
     return client({
-      url: "/fund-category-fondo/".concat(categoryId),
+      url: "/found-categories/".concat(categoryId),
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function getAll() {
     return client({
-      url: "/faq-fondos",
+      url: "/found-categories",
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function createCategory(_ref3) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/faq-fondos",
+      url: "/found-categories",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -33,7 +27,8 @@ function faq(_ref) {
       data: {
         name: data.name,
         type: data.type,
-        our_founds: data.our_founds
+        our_founds: data.our_founds,
+        "delete": data["delete"]
       }
     });
   }
@@ -42,7 +37,7 @@ function faq(_ref) {
       categoryId = _ref4.categoryId,
       data = _ref4.data;
     return client({
-      url: "/fund-category-fondo/".concat(categoryId),
+      url: "/found-categories/".concat(categoryId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -51,7 +46,8 @@ function faq(_ref) {
         data: {
           name: data.name,
           type: data.type,
-          our_founds: data.our_founds
+          our_founds: data.our_founds,
+          "delete": data["delete"]
         }
       }
     });
@@ -60,7 +56,7 @@ function faq(_ref) {
     var jwtToken = _ref5.jwtToken,
       categoryId = _ref5.categoryId;
     return client({
-      url: "/fund-category-fondo/".concat(categoryId),
+      url: "/found-categories/".concat(categoryId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -75,4 +71,4 @@ function faq(_ref) {
     deleteCategory: deleteCategory
   };
 }
-module.exports = faq;
+module.exports = foundCategory;

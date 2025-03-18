@@ -23,7 +23,8 @@ function institutional(_ref) {
           values: data.values,
           team: data.team,
           code_of_conduct: data.code_of_conduct,
-          directory: data.directory
+          directory: data.directory,
+          "delete": data["delete"]
         }
       }
     });

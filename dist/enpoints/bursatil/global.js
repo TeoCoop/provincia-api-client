@@ -26,7 +26,8 @@ function global(_ref) {
           favicon: data.favicon,
           siteDescription: data.siteDescription,
           defaultSeo: data.defaultSeo,
-          palette: data.palette
+          palette: data.palette,
+          "delete": data["delete"]
         }
       }
     });

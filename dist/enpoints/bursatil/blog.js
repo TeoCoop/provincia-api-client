@@ -34,7 +34,8 @@ function blog(_ref) {
         data: {
           content: data.content,
           image: data.image,
-          title: data.title
+          title: data.title,
+          "delete": data["delete"]
         }
       }
     });
@@ -53,7 +54,8 @@ function blog(_ref) {
         content: data.content,
         image: data.image,
         title: data.title,
-        "public": data["public"]
+        "public": data["public"],
+        "delete": data["delete"]
       }
     });
   }

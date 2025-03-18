@@ -1,6 +1,6 @@
 "use strict";
 
-function faq(_ref) {
+function carterasEficientes(_ref) {
   var client = _ref.client;
   function getById(_ref2) {
     var carteraId = _ref2.carteraId;
@@ -33,11 +33,12 @@ function faq(_ref) {
       data: {
         name: data.name,
         type: data.type,
-        our_founds: data.our_founds
+        our_founds: data.our_founds,
+        "delete": data["delete"]
       }
     });
   }
-  function updateFaq(_ref4) {
+  function updateCartera(_ref4) {
     var jwtToken = _ref4.jwtToken,
       carteraId = _ref4.carteraId,
       data = _ref4.data;
@@ -51,12 +52,13 @@ function faq(_ref) {
         data: {
           name: data.name,
           type: data.type,
-          our_founds: data.our_founds
+          our_founds: data.our_founds,
+          "delete": data["delete"]
         }
       }
     });
   }
-  function deleteFaq(_ref5) {
+  function deleteCartera(_ref5) {
     var jwtToken = _ref5.jwtToken,
       carteraId = _ref5.carteraId;
     return client({
@@ -71,8 +73,8 @@ function faq(_ref) {
     getById: getById,
     getAll: getAll,
     createCartera: createCartera,
-    updateFaq: updateFaq,
-    deleteFaq: deleteFaq
+    updateCartera: updateCartera,
+    deleteCartera: deleteCartera
   };
 }
-module.exports = faq;
+module.exports = carterasEficientes;
