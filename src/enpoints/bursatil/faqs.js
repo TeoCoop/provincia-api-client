@@ -29,6 +29,7 @@ function faq({ client }) {
       data: {
         question: data.question,
         answer: data.answer,
+        delete: data.delete
       },
     });
   }
@@ -44,6 +45,7 @@ function faq({ client }) {
         data: {
           question: data.question,
           answer: data.answer,
+          delete: data.delete
         },
       },
     });

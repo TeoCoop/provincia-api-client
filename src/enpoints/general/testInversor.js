@@ -18,6 +18,7 @@ function testInversor({ client }) {
       data: {
         data: {
           questions: data.questions,
+          delete: data.delete,
         },
       },
     });

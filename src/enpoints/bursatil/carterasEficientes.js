@@ -1,4 +1,4 @@
-function faq({ client }) {
+function carterasEficientes({ client }) {
   function getById({ carteraId }) {
     return client({
       url: `/carteras-eficientes/${carteraId}`,
@@ -30,11 +30,12 @@ function faq({ client }) {
         name: data.name,
         type: data.type,
         our_founds: data.our_founds,
+        delete: data.delete
       },
     });
   }
 
-  function updateFaq({ jwtToken, carteraId, data }) {
+  function updateCartera({ jwtToken, carteraId, data }) {
     return client({
       url: `/carteras-eficientes/${carteraId}`,
       method: "put",
@@ -46,12 +47,13 @@ function faq({ client }) {
           name: data.name,
           type: data.type,
           our_founds: data.our_founds,
+          delete: data.delete
         },
       },
     });
   }
 
-  function deleteFaq({ jwtToken, carteraId }) {
+  function deleteCartera({ jwtToken, carteraId }) {
     return client({
       url: `/carteras-eficientes/${carteraId}`,
       method: "delete",
@@ -65,9 +67,9 @@ function faq({ client }) {
     getById,
     getAll,
     createCartera,
-    updateFaq,
-    deleteFaq,
+    updateCartera,
+    deleteCartera,
   };
 }
 
-module.exports = faq;
+module.exports = carterasEficientes;

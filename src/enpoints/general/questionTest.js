@@ -17,7 +17,7 @@ function questionTest({ client }) {
       // },
     });
   }
-  function updateProduct({ jwtToken, questionId, data }) {
+  function updatedQuestion({ jwtToken, questionId, data }) {
     return client({
       url: `/questions/${questionId}`,
       method: "put",
@@ -28,6 +28,7 @@ function questionTest({ client }) {
         data: {
           answer: data.answer,
           question: data.question,
+          delete: data.delete
         },
       },
     });
@@ -43,11 +44,12 @@ function questionTest({ client }) {
         data: {
           answer: data.answer,
           question: data.question,
+          delete: data.delete
         },
       },
     });
   }
-  function deleteProduct({ jwtToken, questionId }) {
+  function deleteCuestion({ jwtToken, questionId }) {
     return client({
       url: `/questions/${questionId}`,
       method: "delete",
@@ -58,8 +60,8 @@ function questionTest({ client }) {
   }
   return {
     getAll,
-    updateProduct,
-    deleteProduct,
+    updatedQuestion,
+    deleteCuestion,
     getById,
     createQuestion,
   };

@@ -1,27 +1,21 @@
-function faq({ client }) {
+function foundCategory({ client }) {
   function getById({ categoryId }) {
     return client({
-      url: `/fund-category-fondo/${categoryId}`,
+      url: `/found-categories/${categoryId}`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 
   function getAll() {
     return client({
-      url: `/faq-fondos`,
+      url: `/found-categories`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 
   function createCategory({ jwtToken, data }) {
     return client({
-      url: `/faq-fondos`,
+      url: `/found-categories`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -30,13 +24,14 @@ function faq({ client }) {
         name: data.name,
         type: data.type,
         our_founds: data.our_founds,
+        delete: data.delete
       },
     });
   }
 
   function updateCategory({ jwtToken, categoryId, data }) {
     return client({
-      url: `/fund-category-fondo/${categoryId}`,
+      url: `/found-categories/${categoryId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -46,6 +41,7 @@ function faq({ client }) {
           name: data.name,
           type: data.type,
           our_founds: data.our_founds,
+          delete: data.delete
         },
       },
     });
@@ -53,7 +49,7 @@ function faq({ client }) {
 
   function deleteCategory({ jwtToken, categoryId }) {
     return client({
-      url: `/fund-category-fondo/${categoryId}`,
+      url: `/found-categories/${categoryId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -70,4 +66,4 @@ function faq({ client }) {
   };
 }
 
-module.exports = faq;
+module.exports = foundCategory;

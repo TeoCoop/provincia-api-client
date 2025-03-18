@@ -22,6 +22,15 @@ function bursatilEndpoints(baseURL) {
     global: require("./enpoints/bursatil/global.js")({
       client,
     }),
+    carterasEficientes: require("./enpoints/bursatil/carterasEficientes.js")({
+      client,
+    }),
+    videoTutorial: require("./enpoints/bursatil/videoSecction.js")({
+      client,
+    }),
+    categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
+      client,
+    }),
   };
 }
 
@@ -31,9 +40,6 @@ function fondosEndpoints(baseURL) {
     blog: require("./enpoints/fondos/blog.js")({ client }),
     institutional: require("./enpoints/fondos/institutional.js")({ client }),
     category: require("./enpoints/fondos/foundCategory.js")({ client }),
-    // accountOppening: require("./enpoints/bursatil/accountOpening.js")({
-    //   client,
-    // }),
     faqs: require("./enpoints/fondos/faqs.js")({
       client,
     }),

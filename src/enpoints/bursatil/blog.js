@@ -31,6 +31,7 @@ function blog({ client }) {
           content: data.content,
           image: data.image,
           title: data.title,
+          delete: data.delete,
         },
       },
     });
@@ -48,6 +49,7 @@ function blog({ client }) {
         image: data.image,
         title: data.title,
         public: data.public,
+        delete: data.delete,
       },
     });
   }

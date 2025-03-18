@@ -29,6 +29,7 @@ function account({ client }) {
       data: {
         name: data.name,
         uploads: data.uploads,
+        delete: data.delete
       },
     });
   }
@@ -43,6 +44,7 @@ function account({ client }) {
       data: {
         name: data.name,
         uploads: data.uploads,
+        delete: data.delete
       },
     });
   }

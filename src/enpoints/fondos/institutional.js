@@ -20,6 +20,7 @@ function institutional({ client }) {
           team: data.team,
           code_of_conduct: data.code_of_conduct,
           directory: data.directory,
+          delete: data.delete
         },
       },
     });

@@ -19,7 +19,9 @@ function institutional({ client }) {
           values: data.values,
           team: data.team,
           code_of_conduct: data.code_of_conduct,
-          directory: data.directory,
+          presidente: data.presidente,
+          vicepresidente: data.vicepresidente,
+          delete: data.delete
         },
       },
     });

@@ -22,6 +22,7 @@ function global({ client }) {
           siteDescription: data.siteDescription,
           defaultSeo: data.defaultSeo,
           palette: data.palette,
+          delete: data.delete
         },
       },
     });

@@ -38,6 +38,7 @@ function founds({ client }) {
         patrimonio: data.patrimonio,
         fund_category_fondo: data.fund_category_fondo,
         carteras_eficiente: data.carteras_eficiente,
+        delete: data.delete
       },
     });
   }
@@ -62,6 +63,7 @@ function founds({ client }) {
           patrimonio: data.patrimonio,
           fund_category_fondo: data.fund_category_fondo,
           carteras_eficiente: data.carteras_eficiente,
+          delete: data.delete
         },
       },
     });

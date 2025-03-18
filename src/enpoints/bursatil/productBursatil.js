@@ -31,6 +31,7 @@ function productBursatil({ client }) {
           pageUrl: data.pageUrl,
           description: data.description,
           shortDescription: data.shortDescription,
+          delete: data.delete
         },
       },
     });
@@ -49,6 +50,7 @@ function productBursatil({ client }) {
           pageUrl: data.pageUrl,
           description: data.description,
           shortDescription: data.shortDescription,
+          delete: data.delete
         },
       },
     });
