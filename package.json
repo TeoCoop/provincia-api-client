@@ -1,6 +1,6 @@
 {
   "name": "provincia-api-client",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "Api client Banco Provincia",
   "homepage": "https://github.com/TeoCoop/provincia-api-client",
   "main": "index.js",
