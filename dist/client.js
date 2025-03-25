@@ -38,7 +38,7 @@ function bursatilEndpoints(baseURL) {
     carterasEficientes: require("./enpoints/bursatil/carterasEficientes.js")({
       client: client
     }),
-    videoTutorial: require("./enpoints/bursatil/videoSecction.js")({
+    videoTutorial: require("./enpoints/bursatil/videoSection.js")({
       client: client
     }),
     categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
@@ -76,6 +76,9 @@ function generalEnpoints(baseURL) {
       client: client
     }),
     questionTest: require("./enpoints/general/questionTest.js")({
+      client: client
+    }),
+    upload: require("./enpoints/general/upload.js")({
       client: client
     })
     //acá también vamos a poner el update file

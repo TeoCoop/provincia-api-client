@@ -114,7 +114,25 @@ export function client(options: any): {
                 carteraId: any;
             }) => any;
         };
-        videoTutorial: any;
+        videoTutorial: {
+            getById: ({ videoId }: {
+                videoId: any;
+            }) => any;
+            getAll: () => any;
+            createVideo: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateVideo: ({ jwtToken, videoId, data }: {
+                jwtToken: any;
+                videoId: any;
+                data: any;
+            }) => any;
+            deleteVideo: ({ jwtToken, videoId }: {
+                jwtToken: any;
+                videoId: any;
+            }) => any;
+        };
         categoriesVideos: {
             getById: ({ categoriesId }: {
                 categoriesId: any;
@@ -174,6 +192,12 @@ export function client(options: any): {
             createQuestion: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+        };
+        upload: {
+            uploadFile: ({ jwtToken, file }: {
+                jwtToken: any;
+                file: any;
             }) => any;
         };
     };
