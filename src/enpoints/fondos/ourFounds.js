@@ -3,9 +3,6 @@ function founds({ client }) {
     return client({
       url: `/our-founds/${foundId}`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 
@@ -13,9 +10,6 @@ function founds({ client }) {
     return client({
       url: `/our-founds`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 
@@ -38,7 +32,7 @@ function founds({ client }) {
         patrimonio: data.patrimonio,
         fund_category_fondo: data.fund_category_fondo,
         carteras_eficiente: data.carteras_eficiente,
-        delete: data.delete
+        delete: data.delete,
       },
     });
   }
@@ -63,7 +57,7 @@ function founds({ client }) {
           patrimonio: data.patrimonio,
           fund_category_fondo: data.fund_category_fondo,
           carteras_eficiente: data.carteras_eficiente,
-          delete: data.delete
+          delete: data.delete,
         },
       },
     });
@@ -89,3 +83,7 @@ function founds({ client }) {
 }
 
 module.exports = founds;
+// curl --request POST \
+//     --header 'content-type: application/json' \
+//     --url http://localhost:1337/graphql \
+//     --data '{"query":"query ExampleQuery {\n  cuotaPartes(\n    filters: {\n      fecha: {\n        gte: \"2025-03-18\", \n        lte: \"2025-03-19\"\n      },\n      fondo: { numero_fondo: { eq: 9 } } }\n  ) {\n    documentId\n    valor\n    fecha\n    fondo {\n      numero_fondo\n      name\n    }\n  }\n}","variables":{}}'
