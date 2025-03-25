@@ -7,18 +7,12 @@ function founds(_ref) {
     return client({
       url: "/our-founds/".concat(foundId),
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function getAll() {
     return client({
       url: "/our-founds",
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function createFound(_ref3) {
@@ -94,3 +88,7 @@ function founds(_ref) {
   };
 }
 module.exports = founds;
+// curl --request POST \
+//     --header 'content-type: application/json' \
+//     --url http://localhost:1337/graphql \
+//     --data '{"query":"query ExampleQuery {\n  cuotaPartes(\n    filters: {\n      fecha: {\n        gte: \"2025-03-18\", \n        lte: \"2025-03-19\"\n      },\n      fondo: { numero_fondo: { eq: 9 } } }\n  ) {\n    documentId\n    valor\n    fecha\n    fondo {\n      numero_fondo\n      name\n    }\n  }\n}","variables":{}}'
