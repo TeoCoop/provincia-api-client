@@ -31,6 +31,12 @@ function bursatilEndpoints(baseURL) {
     categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
       client,
     }),
+    areaTeam: require("./enpoints/bursatil/areaTeam.js")({
+      client,
+    }),
+    teamMember: require("./enpoints/bursatil/teamMembers.js")({
+      client,
+    }),
   };
 }
 
@@ -56,7 +62,7 @@ function generalEnpoints(baseURL) {
   return {
     test: require("./enpoints/general/testInversor.js")({ client }),
     questionTest: require("./enpoints/general/questionTest.js")({ client }),
-    upload: require("./enpoints/general/upload.js")({ client }), 
+    upload: require("./enpoints/general/upload.js")({ client }),
     //acá también vamos a poner el update file
   };
 }

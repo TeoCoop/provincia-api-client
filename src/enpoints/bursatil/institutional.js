@@ -5,7 +5,7 @@ function institutional({ client }) {
       method: "get",
     });
   }
-  function updateInstitutional({ jwtToken }) {
+  function updateInstitutional({ jwtToken, data }) {
     return client({
       url: "/institutional-bursatil",
       method: "put",
@@ -13,16 +13,7 @@ function institutional({ client }) {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        data: {
-          mision: data.mision,
-          vision: data.vision,
-          values: data.values,
-          team: data.team,
-          code_of_conduct: data.code_of_conduct,
-          presidente: data.presidente,
-          vicepresidente: data.vicepresidente,
-          delete: data.delete
-        },
+        data: { ...data },
       },
     });
   }

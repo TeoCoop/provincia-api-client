@@ -1,20 +1,20 @@
 function upload({ client }) {
-  function uploadFile({ jwtToken, file }) {
+  function update({ jwtToken, file }) {
     console.log(file, "assas file");
     const formData = new FormData();
-    formData.append("files", file); // Strapi espera "files"
+    formData.append("files", file); 
     return client({
       url: "/upload",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
-        "Content-Type": "multipart/form-data", // Necesario para FormData
+        "Content-Type": "multipart/form-data", 
       },
       data: formData,
     });
   }
   return {
-    uploadFile,
+    update,
   };
 }
 
