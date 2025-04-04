@@ -43,6 +43,12 @@ function bursatilEndpoints(baseURL) {
     }),
     categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
       client: client
+    }),
+    areaTeam: require("./enpoints/bursatil/areaTeam.js")({
+      client: client
+    }),
+    teamMember: require("./enpoints/bursatil/teamMembers.js")({
+      client: client
     })
   };
 }

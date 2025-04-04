@@ -6,32 +6,51 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function institutional(_ref) {
+function teamBursatil(_ref) {
   var client = _ref.client;
-  function getAll() {
+  function getById(_ref2) {
+    var memberId = _ref2.memberId;
     return client({
-      url: "/institutional-bursatil",
+      url: "/member-team-bursatils/".concat(memberId),
       method: "get"
     });
   }
-  function updateInstitutional(_ref2) {
-    var jwtToken = _ref2.jwtToken,
-      data = _ref2.data;
+  function getAll() {
     return client({
-      url: "/institutional-bursatil",
+      url: "/member-team-bursatils",
+      method: "get"
+    });
+  }
+  function updateMember(_ref3) {
+    var jwtToken = _ref3.jwtToken,
+      memberId = _ref3.memberId,
+      data = _ref3.data;
+    return client({
+      url: "/member-team-bursatils/".concat(memberId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: {
-        data: _objectSpread({}, data)
-      }
+      data: _objectSpread({}, data)
     });
   }
-  function deleteInstitutional(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function createMember(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     return client({
-      url: "/institutional-bursatil",
+      url: "/member-team-bursatils",
+      method: "post",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      },
+      data: _objectSpread({}, data)
+    });
+  }
+  function deleteMember(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      memberId = _ref5.memberId;
+    return client({
+      url: "/member-team-bursatils/".concat(memberId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -40,8 +59,10 @@ function institutional(_ref) {
   }
   return {
     getAll: getAll,
-    updateInstitutional: updateInstitutional,
-    deleteInstitutional: deleteInstitutional
+    updateMember: updateMember,
+    deleteMember: deleteMember,
+    getById: getById,
+    createMember: createMember
   };
 }
-module.exports = institutional;
+module.exports = teamBursatil;

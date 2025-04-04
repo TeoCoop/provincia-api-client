@@ -21,8 +21,9 @@ export function client(options: any): {
         };
         institutional: {
             getAll: () => any;
-            updateInstitutional: ({ jwtToken }: {
+            updateInstitutional: ({ jwtToken, data }: {
                 jwtToken: any;
+                data: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
                 jwtToken: any;
@@ -152,6 +153,44 @@ export function client(options: any): {
                 categoriesId: any;
             }) => any;
         };
+        areaTeam: {
+            getAll: () => any;
+            updateArea: ({ jwtToken, areaId, data }: {
+                jwtToken: any;
+                areaId: any;
+                data: any;
+            }) => any;
+            deleteArea: ({ jwtToken, areaId }: {
+                jwtToken: any;
+                areaId: any;
+            }) => any;
+            getById: ({ areaId }: {
+                areaId: any;
+            }) => any;
+            createArea: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        teamMember: {
+            getAll: () => any;
+            updateMember: ({ jwtToken, memberId, data }: {
+                jwtToken: any;
+                memberId: any;
+                data: any;
+            }) => any;
+            deleteMember: ({ jwtToken, memberId }: {
+                jwtToken: any;
+                memberId: any;
+            }) => any;
+            getById: ({ memberId }: {
+                memberId: any;
+            }) => any;
+            createMember: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
@@ -195,7 +234,7 @@ export function client(options: any): {
             }) => any;
         };
         upload: {
-            uploadFile: ({ jwtToken, file }: {
+            update: ({ jwtToken, file }: {
                 jwtToken: any;
                 file: any;
             }) => any;
