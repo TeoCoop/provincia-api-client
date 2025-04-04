@@ -1,7 +1,7 @@
 function blog({ client }) {
   function getById({ blogId }) {
     return client({
-      url: `/blog-fondos/${blogId}`,
+      url: `/api/blog-fondos/${blogId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function blog({ client }) {
 
   function getAll() {
     return client({
-      url: `/blog-fondos`,
+      url: `/api/blog-fondos`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -21,7 +21,7 @@ function blog({ client }) {
 
   function createBlog({ jwtToken, data }) {
     return client({
-      url: `/blog-fondos`,
+      url: `/api/blog-fondos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -39,7 +39,7 @@ function blog({ client }) {
 
   function updateBlog({ jwtToken, blogId, data }) {
     return client({
-      url: `/blog-fondos/${blogId}`,
+      url: `/api/blog-fondos/${blogId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -56,7 +56,7 @@ function blog({ client }) {
 
   function deleteBlog({ jwtToken, blogId }) {
     return client({
-      url: `/blog-fondos/${blogId}`,
+      url: `/api/blog-fondos/${blogId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

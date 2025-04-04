@@ -1,19 +1,19 @@
-function areasBursatil({ client }) {
-  function getById({ areaId }) {
+function destacadosHome({ client }) {
+  function getById({ destacadoId }) {
     return client({
-      url: `/api/area-team-bursatils/${areaId}`,
+      url: `/api/destacadps-bursatil/${destacadoId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/api/area-team-bursatils`,
+      url: `/api/destacadps-bursatil`,
       method: "get",
     });
   }
-  function updateArea({ jwtToken, areaId, data }) {
+  function updateDestacado({ jwtToken, destacadoId, data }) {
     return client({
-      url: `/api/area-team-bursatils/${areaId}`,
+      url: `/api/destacadps-bursatil/${destacadoId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -21,9 +21,9 @@ function areasBursatil({ client }) {
       data: { ...data },
     });
   }
-  function createArea({ jwtToken, data }) {
+  function createDestacado({ jwtToken, data }) {
     return client({
-      url: "/api/area-team-bursatils",
+      url: "/api/destacadps-bursatil",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -31,9 +31,9 @@ function areasBursatil({ client }) {
       data: { ...data },
     });
   }
-  function deleteArea({ jwtToken, areaId }) {
+  function deleteDestacado({ jwtToken, destacadoId }) {
     return client({
-      url: `/api/area-team-bursatils/${areaId}`,
+      url: `/api/destacadps-bursatil/${destacadoId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -42,10 +42,10 @@ function areasBursatil({ client }) {
   }
   return {
     getAll,
-    updateArea,
-    deleteArea,
+    updateDestacado,
+    deleteDestacado,
     getById,
-    createArea,
+    createDestacado,
   };
 }
-module.exports = areasBursatil;
+module.exports = destacadosHome;

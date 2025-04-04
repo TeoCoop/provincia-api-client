@@ -1,7 +1,7 @@
 function carterasEficientes({ client }) {
   function getById({ carteraId }) {
     return client({
-      url: `/carteras-eficientes/${carteraId}`,
+      url: `/api/carteras-eficientes/${carteraId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function carterasEficientes({ client }) {
 
   function getAll() {
     return client({
-      url: `/carteras-eficientes`,
+      url: `/api/carteras-eficientes`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -21,7 +21,7 @@ function carterasEficientes({ client }) {
 
   function createCartera({ jwtToken, data }) {
     return client({
-      url: `/carteras-eficientes`,
+      url: `/api/carteras-eficientes`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -37,7 +37,7 @@ function carterasEficientes({ client }) {
 
   function updateCartera({ jwtToken, carteraId, data }) {
     return client({
-      url: `/carteras-eficientes/${carteraId}`,
+      url: `/api/carteras-eficientes/${carteraId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -55,7 +55,7 @@ function carterasEficientes({ client }) {
 
   function deleteCartera({ jwtToken, carteraId }) {
     return client({
-      url: `/carteras-eficientes/${carteraId}`,
+      url: `/api/carteras-eficientes/${carteraId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

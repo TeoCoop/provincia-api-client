@@ -1,21 +1,21 @@
 function founds({ client }) {
   function getById({ foundId }) {
     return client({
-      url: `/our-founds/${foundId}`,
+      url: `/api/our-founds/${foundId}`,
       method: "get",
     });
   }
 
   function getAll() {
     return client({
-      url: `/our-founds`,
+      url: `/api/our-founds`,
       method: "get",
     });
   }
 
   function createFound({ jwtToken, data }) {
     return client({
-      url: `/our-founds`,
+      url: `/api/our-founds`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -39,7 +39,7 @@ function founds({ client }) {
 
   function updateFound({ jwtToken, foundId, data }) {
     return client({
-      url: `/our-founds/${foundId}`,
+      url: `/api/our-founds/${foundId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -65,7 +65,7 @@ function founds({ client }) {
 
   function deleteFound({ jwtToken, foundId }) {
     return client({
-      url: `/our-founds/${foundId}`,
+      url: `/api/our-founds/${foundId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

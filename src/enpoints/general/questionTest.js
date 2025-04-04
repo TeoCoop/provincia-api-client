@@ -1,7 +1,7 @@
 function questionTest({ client }) {
   function getById({ questionId }) {
     return client({
-      url: `/questions/${questionId}`,
+      url: `/api/questions/${questionId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -10,7 +10,7 @@ function questionTest({ client }) {
   }
   function getAll() {
     return client({
-      url: `/questions`,
+      url: `/api/questions`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -19,7 +19,7 @@ function questionTest({ client }) {
   }
   function updatedQuestion({ jwtToken, questionId, data }) {
     return client({
-      url: `/questions/${questionId}`,
+      url: `/api/questions/${questionId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -35,7 +35,7 @@ function questionTest({ client }) {
   }
   function createQuestion({ jwtToken, data }) {
     return client({
-      url: "/questions",
+      url: "/api/questions",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -51,7 +51,7 @@ function questionTest({ client }) {
   }
   function deleteCuestion({ jwtToken, questionId }) {
     return client({
-      url: `/questions/${questionId}`,
+      url: `/api/questions/${questionId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

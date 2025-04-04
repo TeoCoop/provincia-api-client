@@ -1,7 +1,7 @@
 function account({ client }) {
   function getById({ accountId }) {
     return client({
-      url: `/account-opening-bursatils/${accountId}`,
+      url: `/api/account-opening-bursatils/${accountId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function account({ client }) {
 
   function getAll() {
     return client({
-      url: `/account-opening-bursatils`,
+      url: `/api/account-opening-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -21,7 +21,7 @@ function account({ client }) {
 
   function createAccount({ jwtToken, data }) {
     return client({
-      url: `/account-opening-bursatils`,
+      url: `/api/account-opening-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -36,7 +36,7 @@ function account({ client }) {
 
   function updateAccount({ jwtToken, accountId, data }) {
     return client({
-      url: `/account-opening-bursatils/${accountId}`,
+      url: `/api/account-opening-bursatils/${accountId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -51,7 +51,7 @@ function account({ client }) {
 
   function deleteAccount({ jwtToken, accountId }) {
     return client({
-      url: `/account-opening-bursatils/${accountId}`,
+      url: `/api/account-opening-bursatils/${accountId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

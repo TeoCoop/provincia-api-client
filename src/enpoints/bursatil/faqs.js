@@ -1,7 +1,7 @@
 function faq({ client }) {
   function getById({ faqId }) {
     return client({
-      url: `/faq-bursatils/${faqId}`,
+      url: `/api/faq-bursatils/${faqId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function faq({ client }) {
 
   function getAll() {
     return client({
-      url: `/faq-bursatils`,
+      url: `/api/faq-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -21,7 +21,7 @@ function faq({ client }) {
 
   function createFaq({ jwtToken, data }) {
     return client({
-      url: `/faq-bursatils`,
+      url: `/api/faq-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -36,7 +36,7 @@ function faq({ client }) {
 
   function updateFaq({ jwtToken, faqId, data }) {
     return client({
-      url: `/faq-bursatils/${faqId}`,
+      url: `/api/faq-bursatils/${faqId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -53,7 +53,7 @@ function faq({ client }) {
 
   function deleteFaq({ jwtToken, faqId }) {
     return client({
-      url: `/faq-bursatils/${faqId}`,
+      url: `/api/faq-bursatils/${faqId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

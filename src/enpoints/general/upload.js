@@ -1,10 +1,9 @@
 function upload({ client }) {
   function update({ jwtToken, file }) {
-    console.log(file, "assas file");
     const formData = new FormData();
     formData.append("files", file); 
     return client({
-      url: "/upload",
+      url: "/api/upload",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

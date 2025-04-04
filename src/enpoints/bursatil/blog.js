@@ -1,7 +1,7 @@
 function blog({ client }) {
   function getById({ blogId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/api/blog-bursatils/${blogId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -11,7 +11,7 @@ function blog({ client }) {
 
   function getAll() {
     return client({
-      url: `/blog-bursatils`,
+      url: `/api/blog-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -21,7 +21,7 @@ function blog({ client }) {
 
   function createBlog({ jwtToken, data }) {
     return client({
-      url: `/blog-bursatils`,
+      url: `/api/blog-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -39,7 +39,7 @@ function blog({ client }) {
 
   function updateBlog({ jwtToken, blogId, data }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/api/blog-bursatils/${blogId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -56,7 +56,7 @@ function blog({ client }) {
 
   function deleteBlog({ jwtToken, blogId }) {
     return client({
-      url: `/blog-bursatils/${blogId}`,
+      url: `/api/blog-bursatils/${blogId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

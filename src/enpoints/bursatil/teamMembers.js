@@ -1,19 +1,19 @@
 function teamBursatil({ client }) {
   function getById({ memberId }) {
     return client({
-      url: `/member-team-bursatils/${memberId}`,
+      url: `/api/member-team-bursatils/${memberId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/member-team-bursatils`,
+      url: `/api/member-team-bursatils`,
       method: "get",
     });
   }
   function updateMember({ jwtToken, memberId, data }) {
     return client({
-      url: `/member-team-bursatils/${memberId}`,
+      url: `/api/member-team-bursatils/${memberId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -23,7 +23,7 @@ function teamBursatil({ client }) {
   }
   function createMember({ jwtToken, data }) {
     return client({
-      url: "/member-team-bursatils",
+      url: "/api/member-team-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -33,7 +33,7 @@ function teamBursatil({ client }) {
   }
   function deleteMember({ jwtToken, memberId }) {
     return client({
-      url: `/member-team-bursatils/${memberId}`,
+      url: `/api/member-team-bursatils/${memberId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

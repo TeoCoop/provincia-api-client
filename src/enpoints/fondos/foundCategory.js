@@ -1,21 +1,21 @@
 function foundCategory({ client }) {
   function getById({ categoryId }) {
     return client({
-      url: `/found-categories/${categoryId}`,
+      url: `/api/found-categories/${categoryId}`,
       method: "get",
     });
   }
 
   function getAll() {
     return client({
-      url: `/found-categories`,
+      url: `/api/found-categories`,
       method: "get",
     });
   }
 
   function createCategory({ jwtToken, data }) {
     return client({
-      url: `/found-categories`,
+      url: `/api/found-categories`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -31,7 +31,7 @@ function foundCategory({ client }) {
 
   function updateCategory({ jwtToken, categoryId, data }) {
     return client({
-      url: `/found-categories/${categoryId}`,
+      url: `/api/found-categories/${categoryId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -49,7 +49,7 @@ function foundCategory({ client }) {
 
   function deleteCategory({ jwtToken, categoryId }) {
     return client({
-      url: `/found-categories/${categoryId}`,
+      url: `/api/found-categories/${categoryId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

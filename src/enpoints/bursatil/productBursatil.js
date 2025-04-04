@@ -1,7 +1,7 @@
 function productBursatil({ client }) {
   function getById({ productId }) {
     return client({
-      url: `/product-bursatils/${productId}`,
+      url: `/api/product-bursatils/${productId}`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -10,7 +10,7 @@ function productBursatil({ client }) {
   }
   function getAll() {
     return client({
-      url: `/product-bursatils`,
+      url: `/api/product-bursatils`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -19,7 +19,7 @@ function productBursatil({ client }) {
   }
   function updateProduct({ jwtToken, productId, data }) {
     return client({
-      url: `/product-bursatils/${productId}`,
+      url: `/api/product-bursatils/${productId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -38,7 +38,7 @@ function productBursatil({ client }) {
   }
   function createProduct({ jwtToken, data }) {
     return client({
-      url: "/product-bursatils",
+      url: "/api/product-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -57,7 +57,7 @@ function productBursatil({ client }) {
   }
   function deleteProduct({ jwtToken, productId }) {
     return client({
-      url: `/product-bursatils/${productId}`,
+      url: `/api/product-bursatils/${productId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

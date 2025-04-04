@@ -1,21 +1,21 @@
 function categoriesVideos({ client }) {
   function getById({ categoriesId }) {
     return client({
-      url: `/categories-videos/${categoriesId}`,
+      url: `/api/categories-videos/${categoriesId}`,
       method: "get",
     });
   }
 
   function getAll() {
     return client({
-      url: `/categories-videos`,
+      url: `/api/categories-videos`,
       method: "get",
     });
   }
 
   function createCategoriesVideos({ jwtToken, data }) {
     return client({
-      url: `/categories-videos`,
+      url: `/api/categories-videos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -30,7 +30,7 @@ function categoriesVideos({ client }) {
 
   function updateCategoriesVideos({ jwtToken, categoriesId, data }) {
     return client({
-      url: `/categories-videos/${categoriesId}`,
+      url: `/api/categories-videos/${categoriesId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -47,7 +47,7 @@ function categoriesVideos({ client }) {
 
   function deleteCategoriesVideos({ jwtToken, categoriesId }) {
     return client({
-      url: `/categories-videos/${categoriesId}`,
+      url: `/api/categories-videos/${categoriesId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

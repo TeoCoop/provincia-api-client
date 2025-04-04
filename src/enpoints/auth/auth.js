@@ -1,7 +1,7 @@
 function auth({client}) {
   function auth({user}) {
     return client({
-      url: `/auth/local`,
+      url: `/api/auth/local`,
       method: "post",
       data: {
         identifier: user.identifier,
@@ -12,7 +12,7 @@ function auth({client}) {
 
   function login({user}) {
     return client({
-      url: `/auth/login`,
+      url: `/api/auth/login`,
       method: "post",
       data: {
         email: user.email,
@@ -23,7 +23,7 @@ function auth({client}) {
 
   function verifyTotp({user}) {
     return client({
-      url: `/auth/verify-totp`,
+      url: `/api/auth/verify-totp`,
       method: "post",
       data: {
         email: user.email,

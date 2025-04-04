@@ -1,7 +1,7 @@
 function global({ client }) {
   function getAll() {
     return client({
-      url: `/global-bursatil`,
+      url: `/api/global-bursatil`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -10,7 +10,7 @@ function global({ client }) {
   }
   function updateGlobal({ jwtToken, data }) {
     return client({
-      url: `/global-bursatil`,
+      url: `/api/global-bursatil`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -30,7 +30,7 @@ function global({ client }) {
 
   function deleteGlobal({ jwtToken }) {
     return client({
-      url: `/global-bursatil`,
+      url: `/api/global-bursatil`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
