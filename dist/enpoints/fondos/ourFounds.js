@@ -5,13 +5,13 @@ function founds(_ref) {
   function getById(_ref2) {
     var foundId = _ref2.foundId;
     return client({
-      url: "/our-founds/".concat(foundId),
+      url: "/api/our-founds/".concat(foundId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/our-founds",
+      url: "/api/our-founds",
       method: "get"
     });
   }
@@ -19,7 +19,7 @@ function founds(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/our-founds",
+      url: "/api/our-founds",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -45,7 +45,7 @@ function founds(_ref) {
       foundId = _ref4.foundId,
       data = _ref4.data;
     return client({
-      url: "/our-founds/".concat(foundId),
+      url: "/api/our-founds/".concat(foundId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -72,7 +72,7 @@ function founds(_ref) {
     var jwtToken = _ref5.jwtToken,
       foundId = _ref5.foundId;
     return client({
-      url: "/our-founds/".concat(foundId),
+      url: "/api/our-founds/".concat(foundId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

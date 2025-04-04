@@ -11,13 +11,13 @@ function teamBursatil(_ref) {
   function getById(_ref2) {
     var memberId = _ref2.memberId;
     return client({
-      url: "/member-team-bursatils/".concat(memberId),
+      url: "/api/member-team-bursatils/".concat(memberId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/member-team-bursatils",
+      url: "/api/member-team-bursatils",
       method: "get"
     });
   }
@@ -26,7 +26,7 @@ function teamBursatil(_ref) {
       memberId = _ref3.memberId,
       data = _ref3.data;
     return client({
-      url: "/member-team-bursatils/".concat(memberId),
+      url: "/api/member-team-bursatils/".concat(memberId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -38,7 +38,7 @@ function teamBursatil(_ref) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     return client({
-      url: "/member-team-bursatils",
+      url: "/api/member-team-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -50,7 +50,7 @@ function teamBursatil(_ref) {
     var jwtToken = _ref5.jwtToken,
       memberId = _ref5.memberId;
     return client({
-      url: "/member-team-bursatils/".concat(memberId),
+      url: "/api/member-team-bursatils/".concat(memberId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

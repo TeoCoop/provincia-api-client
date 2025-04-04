@@ -4,7 +4,7 @@ function global(_ref) {
   var client = _ref.client;
   function getAll() {
     return client({
-      url: "/global-bursatil",
+      url: "/api/global-bursatil",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -15,7 +15,7 @@ function global(_ref) {
     var jwtToken = _ref2.jwtToken,
       data = _ref2.data;
     return client({
-      url: "/global-bursatil",
+      url: "/api/global-bursatil",
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -35,7 +35,7 @@ function global(_ref) {
   function deleteGlobal(_ref3) {
     var jwtToken = _ref3.jwtToken;
     return client({
-      url: "/global-bursatil",
+      url: "/api/global-bursatil",
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

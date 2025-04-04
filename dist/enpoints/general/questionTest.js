@@ -5,7 +5,7 @@ function questionTest(_ref) {
   function getById(_ref2) {
     var questionId = _ref2.questionId;
     return client({
-      url: "/questions/".concat(questionId),
+      url: "/api/questions/".concat(questionId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function questionTest(_ref) {
   }
   function getAll() {
     return client({
-      url: "/questions",
+      url: "/api/questions",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -26,7 +26,7 @@ function questionTest(_ref) {
       questionId = _ref3.questionId,
       data = _ref3.data;
     return client({
-      url: "/questions/".concat(questionId),
+      url: "/api/questions/".concat(questionId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -44,7 +44,7 @@ function questionTest(_ref) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     return client({
-      url: "/questions",
+      url: "/api/questions",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -62,7 +62,7 @@ function questionTest(_ref) {
     var jwtToken = _ref5.jwtToken,
       questionId = _ref5.questionId;
     return client({
-      url: "/questions/".concat(questionId),
+      url: "/api/questions/".concat(questionId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

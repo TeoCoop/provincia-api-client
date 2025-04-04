@@ -4,14 +4,14 @@ function institutional(_ref) {
   var client = _ref.client;
   function getAll() {
     return client({
-      url: "/institutional-fondos",
+      url: "/api/institutional-fondos",
       method: "get"
     });
   }
   function updateInstitutional(_ref2) {
     var jwtToken = _ref2.jwtToken;
     return client({
-      url: "/institutional-fondos",
+      url: "/api/institutional-fondos",
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -32,7 +32,7 @@ function institutional(_ref) {
   function deleteInstitutional(_ref3) {
     var jwtToken = _ref3.jwtToken;
     return client({
-      url: "/institutional-fondos",
+      url: "/api/institutional-fondos",
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

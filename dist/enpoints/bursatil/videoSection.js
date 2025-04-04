@@ -5,13 +5,13 @@ function videoSeccion(_ref) {
   function getById(_ref2) {
     var videoId = _ref2.videoId;
     return client({
-      url: "/video-secctions/".concat(videoId),
+      url: "/api/video-secctions/".concat(videoId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/video-secctions",
+      url: "/api/video-secctions",
       method: "get"
     });
   }
@@ -19,7 +19,7 @@ function videoSeccion(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/video-secctions",
+      url: "/api/video-secctions",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -38,7 +38,7 @@ function videoSeccion(_ref) {
       videoId = _ref4.videoId,
       data = _ref4.data;
     return client({
-      url: "/video-secctions/".concat(videoId),
+      url: "/api/video-secctions/".concat(videoId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -58,7 +58,7 @@ function videoSeccion(_ref) {
     var jwtToken = _ref5.jwtToken,
       videoId = _ref5.videoId;
     return client({
-      url: "/video-secctions/".concat(videoId),
+      url: "/api/video-secctions/".concat(videoId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

@@ -5,13 +5,13 @@ function foundCategory(_ref) {
   function getById(_ref2) {
     var categoryId = _ref2.categoryId;
     return client({
-      url: "/found-categories/".concat(categoryId),
+      url: "/api/found-categories/".concat(categoryId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/found-categories",
+      url: "/api/found-categories",
       method: "get"
     });
   }
@@ -19,7 +19,7 @@ function foundCategory(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/found-categories",
+      url: "/api/found-categories",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -37,7 +37,7 @@ function foundCategory(_ref) {
       categoryId = _ref4.categoryId,
       data = _ref4.data;
     return client({
-      url: "/found-categories/".concat(categoryId),
+      url: "/api/found-categories/".concat(categoryId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -56,7 +56,7 @@ function foundCategory(_ref) {
     var jwtToken = _ref5.jwtToken,
       categoryId = _ref5.categoryId;
     return client({
-      url: "/found-categories/".concat(categoryId),
+      url: "/api/found-categories/".concat(categoryId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

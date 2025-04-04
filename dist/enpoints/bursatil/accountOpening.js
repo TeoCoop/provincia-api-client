@@ -5,7 +5,7 @@ function account(_ref) {
   function getById(_ref2) {
     var accountId = _ref2.accountId;
     return client({
-      url: "/account-opening-bursatils/".concat(accountId),
+      url: "/api/account-opening-bursatils/".concat(accountId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function account(_ref) {
   }
   function getAll() {
     return client({
-      url: "/account-opening-bursatils",
+      url: "/api/account-opening-bursatils",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -25,7 +25,7 @@ function account(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/account-opening-bursatils",
+      url: "/api/account-opening-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -42,7 +42,7 @@ function account(_ref) {
       accountId = _ref4.accountId,
       data = _ref4.data;
     return client({
-      url: "/account-opening-bursatils/".concat(accountId),
+      url: "/api/account-opening-bursatils/".concat(accountId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -58,7 +58,7 @@ function account(_ref) {
     var jwtToken = _ref5.jwtToken,
       accountId = _ref5.accountId;
     return client({
-      url: "/account-opening-bursatils/".concat(accountId),
+      url: "/api/account-opening-bursatils/".concat(accountId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

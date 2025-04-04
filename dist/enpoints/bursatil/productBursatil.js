@@ -5,7 +5,7 @@ function productBursatil(_ref) {
   function getById(_ref2) {
     var productId = _ref2.productId;
     return client({
-      url: "/product-bursatils/".concat(productId),
+      url: "/api/product-bursatils/".concat(productId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function productBursatil(_ref) {
   }
   function getAll() {
     return client({
-      url: "/product-bursatils",
+      url: "/api/product-bursatils",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -26,7 +26,7 @@ function productBursatil(_ref) {
       productId = _ref3.productId,
       data = _ref3.data;
     return client({
-      url: "/product-bursatils/".concat(productId),
+      url: "/api/product-bursatils/".concat(productId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -47,7 +47,7 @@ function productBursatil(_ref) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     return client({
-      url: "/product-bursatils",
+      url: "/api/product-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -68,7 +68,7 @@ function productBursatil(_ref) {
     var jwtToken = _ref5.jwtToken,
       productId = _ref5.productId;
     return client({
-      url: "/product-bursatils/".concat(productId),
+      url: "/api/product-bursatils/".concat(productId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

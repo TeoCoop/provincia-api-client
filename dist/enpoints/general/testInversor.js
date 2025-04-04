@@ -4,7 +4,7 @@ function testInversor(_ref) {
   var client = _ref.client;
   function getAll() {
     return client({
-      url: "/test-inversor",
+      url: "/api/test-inversor",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -15,7 +15,7 @@ function testInversor(_ref) {
     var jwtToken = _ref2.jwtToken,
       data = _ref2.data;
     return client({
-      url: "/test-inversor",
+      url: "/api/test-inversor",
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -31,7 +31,7 @@ function testInversor(_ref) {
   function deleteTest(_ref3) {
     var jwtToken = _ref3.jwtToken;
     return client({
-      url: "/test-inversor",
+      url: "/api/test-inversor",
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

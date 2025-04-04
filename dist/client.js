@@ -49,6 +49,18 @@ function bursatilEndpoints(baseURL) {
     }),
     teamMember: require("./enpoints/bursatil/teamMembers.js")({
       client: client
+    }),
+    aliados: require("./enpoints/bursatil/aliados.js")({
+      client: client
+    }),
+    topicBlog: require("./enpoints/bursatil/topicBlog.js")({
+      client: client
+    }),
+    destacadosHome: require("./enpoints/bursatil/destacadosHome.js")({
+      client: client
+    }),
+    foundsForBursatil: require("./enpoints/bursatil/queryFoundsFromBursatil.js")({
+      client: client
     })
   };
 }
@@ -98,7 +110,7 @@ function authEndpoint(baseURL) {
 }
 function client(options) {
   var env = options.env;
-  var baseURL = env === "development" ? "http://localhost:1337/api" : env === "sandbox" ? "https://provincia.teocoop.site/api" : "https://provincia.teocoop.site/api";
+  var baseURL = env === "development" ? "http://localhost:1337" : env === "sandbox" ? "https://provincia.teocoop.site" : "https://provincia.teocoop.site";
   return {
     bursatil: bursatilEndpoints(baseURL),
     auth: authEndpoint(baseURL),

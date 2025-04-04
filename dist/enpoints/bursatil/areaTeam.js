@@ -11,13 +11,13 @@ function areasBursatil(_ref) {
   function getById(_ref2) {
     var areaId = _ref2.areaId;
     return client({
-      url: "/area-team-bursatils/".concat(areaId),
+      url: "/api/area-team-bursatils/".concat(areaId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/area-team-bursatils",
+      url: "/api/area-team-bursatils",
       method: "get"
     });
   }
@@ -26,7 +26,7 @@ function areasBursatil(_ref) {
       areaId = _ref3.areaId,
       data = _ref3.data;
     return client({
-      url: "/area-team-bursatils/".concat(areaId),
+      url: "/api/area-team-bursatils/".concat(areaId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -38,7 +38,7 @@ function areasBursatil(_ref) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     return client({
-      url: "/area-team-bursatils",
+      url: "/api/area-team-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -50,7 +50,7 @@ function areasBursatil(_ref) {
     var jwtToken = _ref5.jwtToken,
       areaId = _ref5.areaId;
     return client({
-      url: "/area-team-bursatils/".concat(areaId),
+      url: "/api/area-team-bursatils/".concat(areaId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

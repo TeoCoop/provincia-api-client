@@ -5,7 +5,7 @@ function faq(_ref) {
   function getById(_ref2) {
     var faqId = _ref2.faqId;
     return client({
-      url: "/faq-bursatils/".concat(faqId),
+      url: "/api/faq-bursatils/".concat(faqId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function faq(_ref) {
   }
   function getAll() {
     return client({
-      url: "/faq-bursatils",
+      url: "/api/faq-bursatils",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -25,7 +25,7 @@ function faq(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/faq-bursatils",
+      url: "/api/faq-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -42,7 +42,7 @@ function faq(_ref) {
       faqId = _ref4.faqId,
       data = _ref4.data;
     return client({
-      url: "/faq-bursatils/".concat(faqId),
+      url: "/api/faq-bursatils/".concat(faqId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -60,7 +60,7 @@ function faq(_ref) {
     var jwtToken = _ref5.jwtToken,
       faqId = _ref5.faqId;
     return client({
-      url: "/faq-bursatils/".concat(faqId),
+      url: "/api/faq-bursatils/".concat(faqId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

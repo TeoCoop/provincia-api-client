@@ -5,7 +5,7 @@ function auth(_ref) {
   function auth(_ref2) {
     var user = _ref2.user;
     return client({
-      url: "/auth/local",
+      url: "/api/auth/local",
       method: "post",
       data: {
         identifier: user.identifier,
@@ -16,7 +16,7 @@ function auth(_ref) {
   function login(_ref3) {
     var user = _ref3.user;
     return client({
-      url: "/auth/login",
+      url: "/api/auth/login",
       method: "post",
       data: {
         email: user.email,
@@ -27,7 +27,7 @@ function auth(_ref) {
   function verifyTotp(_ref4) {
     var user = _ref4.user;
     return client({
-      url: "/auth/verify-totp",
+      url: "/api/auth/verify-totp",
       method: "post",
       data: {
         email: user.email,

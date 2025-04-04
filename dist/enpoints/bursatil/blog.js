@@ -5,7 +5,7 @@ function blog(_ref) {
   function getById(_ref2) {
     var blogId = _ref2.blogId;
     return client({
-      url: "/blog-bursatils/".concat(blogId),
+      url: "/api/blog-bursatils/".concat(blogId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function blog(_ref) {
   }
   function getAll() {
     return client({
-      url: "/blog-bursatils",
+      url: "/api/blog-bursatils",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -25,7 +25,7 @@ function blog(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/blog-bursatils",
+      url: "/api/blog-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -45,7 +45,7 @@ function blog(_ref) {
       blogId = _ref4.blogId,
       data = _ref4.data;
     return client({
-      url: "/blog-bursatils/".concat(blogId),
+      url: "/api/blog-bursatils/".concat(blogId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -63,7 +63,7 @@ function blog(_ref) {
     var jwtToken = _ref5.jwtToken,
       blogId = _ref5.blogId;
     return client({
-      url: "/blog-bursatils/".concat(blogId),
+      url: "/api/blog-bursatils/".concat(blogId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

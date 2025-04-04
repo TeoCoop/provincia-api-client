@@ -5,7 +5,7 @@ function carterasEficientes(_ref) {
   function getById(_ref2) {
     var carteraId = _ref2.carteraId;
     return client({
-      url: "/carteras-eficientes/".concat(carteraId),
+      url: "/api/carteras-eficientes/".concat(carteraId),
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -14,7 +14,7 @@ function carterasEficientes(_ref) {
   }
   function getAll() {
     return client({
-      url: "/carteras-eficientes",
+      url: "/api/carteras-eficientes",
       method: "get"
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -25,7 +25,7 @@ function carterasEficientes(_ref) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
     return client({
-      url: "/carteras-eficientes",
+      url: "/api/carteras-eficientes",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -43,7 +43,7 @@ function carterasEficientes(_ref) {
       carteraId = _ref4.carteraId,
       data = _ref4.data;
     return client({
-      url: "/carteras-eficientes/".concat(carteraId),
+      url: "/api/carteras-eficientes/".concat(carteraId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -62,7 +62,7 @@ function carterasEficientes(_ref) {
     var jwtToken = _ref5.jwtToken,
       carteraId = _ref5.carteraId;
     return client({
-      url: "/carteras-eficientes/".concat(carteraId),
+      url: "/api/carteras-eficientes/".concat(carteraId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

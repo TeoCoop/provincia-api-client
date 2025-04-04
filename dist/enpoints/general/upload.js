@@ -5,11 +5,10 @@ function upload(_ref) {
   function update(_ref2) {
     var jwtToken = _ref2.jwtToken,
       file = _ref2.file;
-    console.log(file, "assas file");
     var formData = new FormData();
     formData.append("files", file);
     return client({
-      url: "/upload",
+      url: "/api/upload",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken),
