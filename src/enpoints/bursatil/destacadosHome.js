@@ -1,19 +1,25 @@
 function destacadosHome({ client }) {
   function getById({ destacadoId }) {
     return client({
-      url: `/api/destacadps-bursatil/${destacadoId}`,
+      url: `/api/destacados-bursatils/${destacadoId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/api/destacadps-bursatil`,
+      url: `/api/destacados-bursatils`,
+      method: "get",
+    });
+  }
+  function getPanel() {
+    return client({
+      url: "/api/destacados-bursatils/all",
       method: "get",
     });
   }
   function updateDestacado({ jwtToken, destacadoId, data }) {
     return client({
-      url: `/api/destacadps-bursatil/${destacadoId}`,
+      url: `/api/destacados-bursatils/${destacadoId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -23,7 +29,7 @@ function destacadosHome({ client }) {
   }
   function createDestacado({ jwtToken, data }) {
     return client({
-      url: "/api/destacadps-bursatil",
+      url: "/api/destacados-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -33,7 +39,7 @@ function destacadosHome({ client }) {
   }
   function deleteDestacado({ jwtToken, destacadoId }) {
     return client({
-      url: `/api/destacadps-bursatil/${destacadoId}`,
+      url: `/api/destacados-bursatils/${destacadoId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -46,6 +52,7 @@ function destacadosHome({ client }) {
     deleteDestacado,
     getById,
     createDestacado,
+    getPanel,
   };
 }
 module.exports = destacadosHome;
