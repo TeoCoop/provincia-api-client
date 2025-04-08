@@ -247,6 +247,7 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getPanel: () => any;
         };
         foundsForBursatil: {
             get: () => any;
