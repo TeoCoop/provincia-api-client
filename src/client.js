@@ -1,5 +1,7 @@
 import axios from "axios";
-
+/**
+ * @param {string} baseURL
+ */
 function createClient(baseURL) {
   return axios.create({
     baseURL: `${baseURL}`,
@@ -31,6 +33,9 @@ function bursatilEndpoints(baseURL) {
     categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
       client,
     }),
+    categoriesBlog: require("./enpoints/bursatil/categoriesBlog.js")({
+      client,
+    }),
     areaTeam: require("./enpoints/bursatil/areaTeam.js")({
       client,
     }),
@@ -46,9 +51,10 @@ function bursatilEndpoints(baseURL) {
     destacadosHome: require("./enpoints/bursatil/destacadosHome.js")({
       client,
     }),
-    foundsForBursatil: require("./enpoints/bursatil/queryFoundsFromBursatil.js")({
-      client,
-    }),
+    foundsForBursatil:
+      require("./enpoints/bursatil/queryFoundsFromBursatil.js")({
+        client,
+      }),
   };
 }
 

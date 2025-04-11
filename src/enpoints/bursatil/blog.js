@@ -3,9 +3,6 @@ function blog({ client }) {
     return client({
       url: `/api/blog-bursatils/${blogId}`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 
@@ -13,9 +10,6 @@ function blog({ client }) {
     return client({
       url: `/api/blog-bursatils`,
       method: "get",
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
 

@@ -1,26 +1,26 @@
-function faq({ client }) {
-  function getById({ faqId }) {
+function category({ client }) {
+  function getById({ categoryId }) {
     return client({
-      url: `/api/faq-bursatils/${faqId}`,
+      url: `/api/category-blog-bursatils/${categoryId}`,
       method: "get",
     });
   }
 
   function getAll() {
     return client({
-      url: `/api/faq-bursatils`,
+      url: `/api/category-blog-bursatils`,
       method: "get",
     });
   }
 
-  function createFaq({ jwtToken, data }) {
+  function createCategory({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/faq-bursatils`,
+      url: `/api/category-blog-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -29,14 +29,14 @@ function faq({ client }) {
     });
   }
 
-  function updateFaq({ jwtToken, faqId, data }) {
+  function updateCategory({ jwtToken, categoryId, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/faq-bursatils/${faqId}`,
+      url: `/api/category-blog-bursatils/${categoryId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -45,9 +45,9 @@ function faq({ client }) {
     });
   }
 
-  function deleteFaq({ jwtToken, faqId }) {
+  function deleteCategory({ jwtToken, categoryId }) {
     return client({
-      url: `/api/faq-bursatils/${faqId}`,
+      url: `/api/category-blog-bursatils/${categoryId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -58,10 +58,10 @@ function faq({ client }) {
   return {
     getById,
     getAll,
-    createFaq,
-    updateFaq,
-    deleteFaq,
+    createCategory,
+    updateCategory,
+    deleteCategory,
   };
 }
 
-module.exports = faq;
+module.exports = category;
