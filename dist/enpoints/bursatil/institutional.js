@@ -17,6 +17,9 @@ function institutional(_ref) {
   function updateInstitutional(_ref2) {
     var jwtToken = _ref2.jwtToken,
       data = _ref2.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/institutional-bursatil",
       method: "put",
@@ -24,7 +27,7 @@ function institutional(_ref) {
         Authorization: "Bearer ".concat(jwtToken)
       },
       data: {
-        data: _objectSpread({}, data)
+        data: formattedData
       }
     });
   }

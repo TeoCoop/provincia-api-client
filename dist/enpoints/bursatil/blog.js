@@ -7,18 +7,12 @@ function blog(_ref) {
     return client({
       url: "/api/blog-bursatils/".concat(blogId),
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function getAll() {
     return client({
       url: "/api/blog-bursatils",
       method: "get"
-      // headers: {
-      //   Authorization: `Bearer ${jwtToken}`,
-      // },
     });
   }
   function createBlog(_ref3) {

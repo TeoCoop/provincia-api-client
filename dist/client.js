@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.client = client;
 var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+/**
+ * @param {string} baseURL
+ */
 function createClient(baseURL) {
   return _axios["default"].create({
     baseURL: "".concat(baseURL),
@@ -42,6 +45,9 @@ function bursatilEndpoints(baseURL) {
       client: client
     }),
     categoriesVideos: require("./enpoints/bursatil/categoriesVideo.js")({
+      client: client
+    }),
+    categoriesBlog: require("./enpoints/bursatil/categoriesBlog.js")({
       client: client
     }),
     areaTeam: require("./enpoints/bursatil/areaTeam.js")({
