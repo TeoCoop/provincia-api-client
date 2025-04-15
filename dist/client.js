@@ -67,6 +67,9 @@ function bursatilEndpoints(baseURL) {
     }),
     foundsForBursatil: require("./enpoints/bursatil/queryFoundsFromBursatil.js")({
       client: client
+    }),
+    paletteAndColors: require("./enpoints/bursatil/paletteAndColors.js")({
+      client: client
     })
   };
 }
