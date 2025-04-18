@@ -58,6 +58,12 @@ function bursatilEndpoints(baseURL) {
     paletteAndColors: require("./enpoints/bursatil/paletteAndColors.js")({
       client,
     }),
+    seccionAliados: require("./enpoints/bursatil/aliadosSeccion.js")({
+      client,
+    }),
+    homeBursatil: require("./enpoints/bursatil/homeBursatil.js")({
+      client,
+    }),
   };
 }
 

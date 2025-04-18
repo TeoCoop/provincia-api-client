@@ -14,37 +14,35 @@ function blog({ client }) {
   }
 
   function createBlog({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/blog-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          content: data.content,
-          image: data.image,
-          title: data.title,
-          delete: data.delete,
-        },
-      },
+      data: formattedData,
     });
   }
 
   function updateBlog({ jwtToken, blogId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
+    console.log(formattedData, "FORMATO DATA");
     return client({
       url: `/api/blog-bursatils/${blogId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        content: data.content,
-        image: data.image,
-        title: data.title,
-        public: data.public,
-        delete: data.delete,
-      },
+      data: formattedData,
     });
   }
 

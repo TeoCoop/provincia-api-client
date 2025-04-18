@@ -1,24 +1,24 @@
-function teamBursatil({ client }) {
-  function getById({ memberId }) {
+function homeBursatil({ client }) {
+  function getById({ homeCardId }) {
     return client({
-      url: `/api/member-team-bursatils/${memberId}`,
+      url: `/api/home-bursatils/${homeCardId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/api/member-team-bursatils`,
+      url: `/api/home-bursatils`,
       method: "get",
     });
   }
-  function updateMember({ jwtToken, memberId, data }) {
+  function updateHome({ jwtToken, homeCardId, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/member-team-bursatils/${memberId}`,
+      url: `/api/home-bursatils/${homeCardId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -26,14 +26,14 @@ function teamBursatil({ client }) {
       data: formattedData,
     });
   }
-  function createMember({ jwtToken, data }) {
+  function createHome({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: "/api/member-team-bursatils",
+      url: "/api/home-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -41,9 +41,9 @@ function teamBursatil({ client }) {
       data: formattedData,
     });
   }
-  function deleteMember({ jwtToken, memberId }) {
+  function deleteHome({ jwtToken, homeCardId }) {
     return client({
-      url: `/api/member-team-bursatils/${memberId}`,
+      url: `/api/home-bursatils/${homeCardId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -52,10 +52,10 @@ function teamBursatil({ client }) {
   }
   return {
     getAll,
-    updateMember,
-    deleteMember,
+    updateHome,
+    deleteHome,
     getById,
-    createMember,
+    createHome,
   };
 }
-module.exports = teamBursatil;
+module.exports = homeBursatil;

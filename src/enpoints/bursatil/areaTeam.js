@@ -12,23 +12,33 @@ function areasBursatil({ client }) {
     });
   }
   function updateArea({ jwtToken, areaId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/area-team-bursatils/${areaId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function createArea({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: "/api/area-team-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function deleteArea({ jwtToken, areaId }) {
