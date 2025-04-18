@@ -6,30 +6,30 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function areasBursatil(_ref) {
+function homeBursatil(_ref) {
   var client = _ref.client;
   function getById(_ref2) {
-    var areaId = _ref2.areaId;
+    var homeCardId = _ref2.homeCardId;
     return client({
-      url: "/api/area-team-bursatils/".concat(areaId),
+      url: "/api/home-bursatils/".concat(homeCardId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/api/area-team-bursatils",
+      url: "/api/home-bursatils",
       method: "get"
     });
   }
-  function updateArea(_ref3) {
+  function updateHome(_ref3) {
     var jwtToken = _ref3.jwtToken,
-      areaId = _ref3.areaId,
+      homeCardId = _ref3.homeCardId,
       data = _ref3.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/area-team-bursatils/".concat(areaId),
+      url: "/api/home-bursatils/".concat(homeCardId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -37,14 +37,14 @@ function areasBursatil(_ref) {
       data: formattedData
     });
   }
-  function createArea(_ref4) {
+  function createHome(_ref4) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/area-team-bursatils",
+      url: "/api/home-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -52,11 +52,11 @@ function areasBursatil(_ref) {
       data: formattedData
     });
   }
-  function deleteArea(_ref5) {
+  function deleteHome(_ref5) {
     var jwtToken = _ref5.jwtToken,
-      areaId = _ref5.areaId;
+      homeCardId = _ref5.homeCardId;
     return client({
-      url: "/api/area-team-bursatils/".concat(areaId),
+      url: "/api/home-bursatils/".concat(homeCardId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -65,10 +65,10 @@ function areasBursatil(_ref) {
   }
   return {
     getAll: getAll,
-    updateArea: updateArea,
-    deleteArea: deleteArea,
+    updateHome: updateHome,
+    deleteHome: deleteHome,
     getById: getById,
-    createArea: createArea
+    createHome: createHome
   };
 }
-module.exports = areasBursatil;
+module.exports = homeBursatil;

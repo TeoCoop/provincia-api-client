@@ -70,6 +70,12 @@ function bursatilEndpoints(baseURL) {
     }),
     paletteAndColors: require("./enpoints/bursatil/paletteAndColors.js")({
       client: client
+    }),
+    seccionAliados: require("./enpoints/bursatil/aliadosSeccion.js")({
+      client: client
+    }),
+    homeBursatil: require("./enpoints/bursatil/homeBursatil.js")({
+      client: client
     })
   };
 }

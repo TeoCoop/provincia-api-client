@@ -25,25 +25,31 @@ function teamBursatil(_ref) {
     var jwtToken = _ref3.jwtToken,
       memberId = _ref3.memberId,
       data = _ref3.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/member-team-bursatils/".concat(memberId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: _objectSpread({}, data)
+      data: formattedData
     });
   }
   function createMember(_ref4) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/member-team-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: _objectSpread({}, data)
+      data: formattedData
     });
   }
   function deleteMember(_ref5) {
