@@ -17,13 +17,16 @@ function aliadosSeccion(_ref) {
   function updateAliadosSeccion(_ref2) {
     var jwtToken = _ref2.jwtToken,
       data = _ref2.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/aliados-seccion-bursatil",
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: _objectSpread({}, data)
+      data: formattedData
     });
   }
   function deleteAliadosSeccion(_ref3) {

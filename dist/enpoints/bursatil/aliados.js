@@ -25,25 +25,31 @@ function aliados(_ref) {
     var jwtToken = _ref3.jwtToken,
       aliadoId = _ref3.aliadoId,
       data = _ref3.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/aliados/".concat(aliadoId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: _objectSpread({}, data)
+      data: formattedData
     });
   }
   function createAliado(_ref4) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
     return client({
       url: "/api/aliados",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
       },
-      data: _objectSpread({}, data)
+      data: formattedData
     });
   }
   function deleteAliado(_ref5) {
