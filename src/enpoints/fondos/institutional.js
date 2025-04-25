@@ -6,23 +6,18 @@ function institutional({ client }) {
     });
   }
   function updateInstitutional({ jwtToken }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: "/api/institutional-fondos",
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          mision: data.mision,
-          vision: data.vision,
-          values: data.values,
-          team: data.team,
-          code_of_conduct: data.code_of_conduct,
-          directory: data.directory,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
   function deleteInstitutional({ jwtToken }) {

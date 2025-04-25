@@ -14,36 +14,34 @@ function foundCategory({ client }) {
   }
 
   function createCategory({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/found-categories`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        name: data.name,
-        type: data.type,
-        our_founds: data.our_founds,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
   function updateCategory({ jwtToken, categoryId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/found-categories/${categoryId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          name: data.name,
-          type: data.type,
-          our_founds: data.our_founds,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 

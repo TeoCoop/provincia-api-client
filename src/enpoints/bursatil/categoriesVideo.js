@@ -14,34 +14,34 @@ function categoriesVideos({ client }) {
   }
 
   function createCategoriesVideos({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/categories-videos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        categoryName: data.categoryName,
-        video_seccions: data.video_seccions,
-        delete: data.delete,
-      },
+      data: formattedData,
     });
   }
 
   function updateCategoriesVideos({ jwtToken, categoriesId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/categories-videos/${categoriesId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          categoryName: data.categoryName,
-          video_seccions: data.video_seccions,
-          delete: data.delete,
-        },
-      },
+      data: formattedData,
     });
   }
 

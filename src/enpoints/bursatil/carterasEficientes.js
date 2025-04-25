@@ -20,36 +20,34 @@ function carterasEficientes({ client }) {
   }
 
   function createCartera({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/carteras-eficientes`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        name: data.name,
-        type: data.type,
-        our_founds: data.our_founds,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
   function updateCartera({ jwtToken, carteraId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/carteras-eficientes/${carteraId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          name: data.name,
-          type: data.type,
-          our_founds: data.our_founds,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 

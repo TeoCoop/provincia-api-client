@@ -9,22 +9,18 @@ function global({ client }) {
     });
   }
   function updateGlobal({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/global-fondo`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          siteName: data.siteName,
-          favicon: data.favicon,
-          siteDescription: data.siteDescription,
-          defaultSeo: data.defaultSeo,
-          palette: data.palette,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 

@@ -14,52 +14,34 @@ function founds({ client }) {
   }
 
   function createFound({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/our-founds`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        name: data.name,
-        description: data.description,
-        performances: data.performances,
-        holdings: data.holdings,
-        shareValues: data.shareValues,
-        factSheet: data.factSheet,
-        code: data.code,
-        informationAt: data.informationAt,
-        patrimonio: data.patrimonio,
-        fund_category_fondo: data.fund_category_fondo,
-        carteras_eficiente: data.carteras_eficiente,
-        delete: data.delete,
-      },
+      data: formattedData,
     });
   }
 
   function updateFound({ jwtToken, foundId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/our-founds/${foundId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          name: data.name,
-          description: data.description,
-          performances: data.performances,
-          holdings: data.holdings,
-          shareValues: data.shareValues,
-          factSheet: data.factSheet,
-          code: data.code,
-          informationAt: data.informationAt,
-          patrimonio: data.patrimonio,
-          fund_category_fondo: data.fund_category_fondo,
-          carteras_eficiente: data.carteras_eficiente,
-          delete: data.delete,
-        },
-      },
+      data: formattedData,
     });
   }
 

@@ -6,13 +6,18 @@ function aliadosSeccion({ client }) {
     });
   }
   function updateAliadosSeccion({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/aliados-seccion-bursatil`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
 

@@ -20,32 +20,34 @@ function account({ client }) {
   }
 
   function createAccount({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/account-opening-bursatils`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        name: data.name,
-        uploads: data.uploads,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
   function updateAccount({ jwtToken, accountId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/account-opening-bursatils/${accountId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        name: data.name,
-        uploads: data.uploads,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 

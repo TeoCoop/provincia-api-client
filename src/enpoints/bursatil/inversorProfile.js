@@ -1,30 +1,30 @@
-function destacadosHome({ client }) {
-  function getById({ destacadoId }) {
+function inverterProfile({ client }) {
+  function getById({ profileId }) {
     return client({
-      url: `/api/destacados-bursatils/${destacadoId}`,
+      url: `/api/investor-profiles/${profileId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/api/destacados-bursatils`,
+      url: `/api/investor-profiles`,
       method: "get",
     });
   }
-  function getPanel() {
+  function getResult({ value }) {
     return client({
-      url: "/api/destacados-bursatils/all",
+      url: `/api/investor-profiles?value=${value}`,
       method: "get",
     });
   }
-  function updateDestacado({ jwtToken, destacadoId, data }) {
+  function updateProfile({ jwtToken, profileId, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/destacados-bursatils/${destacadoId}`,
+      url: `/api/investor-profiles/${profileId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -32,14 +32,14 @@ function destacadosHome({ client }) {
       data: formattedData,
     });
   }
-  function createDestacado({ jwtToken, data }) {
+  function createProfile({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: "/api/destacados-bursatils",
+      url: "/api/investor-profiles",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -47,9 +47,9 @@ function destacadosHome({ client }) {
       data: formattedData,
     });
   }
-  function deleteDestacado({ jwtToken, destacadoId }) {
+  function deleteProfile({ jwtToken, profileId }) {
     return client({
-      url: `/api/destacados-bursatils/${destacadoId}`,
+      url: `/api/investor-profiles/${profileId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -58,11 +58,11 @@ function destacadosHome({ client }) {
   }
   return {
     getAll,
-    updateDestacado,
-    deleteDestacado,
+    updateProfile,
+    deleteProfile,
     getById,
-    createDestacado,
-    getPanel,
+    createProfile,
+    getResult,
   };
 }
-module.exports = destacadosHome;
+module.exports = inverterProfile;

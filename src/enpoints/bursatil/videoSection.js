@@ -14,38 +14,34 @@ function videoSeccion({ client }) {
   }
 
   function createVideo({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/video-secctions`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        Name: data.Name,
-        url: data.url,
-        description: data.description,
-        categories_videos: data.categories_videos,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
   function updateVideo({ jwtToken, videoId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/video-secctions/${videoId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          Name: data.Name,
-          url: data.url,
-          description: data.description,
-          categories_videos: data.categories_videos,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 

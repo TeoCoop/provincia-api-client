@@ -20,34 +20,34 @@ function faq({ client }) {
   }
 
   function createFaq({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/faq-fondos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        question: data.question,
-        answer: data.answer,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
   function updateFaq({ jwtToken, faqId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/faq-fondos/${faqId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          question: data.question,
-          answer: data.answer,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 

@@ -12,23 +12,33 @@ function paletteAndColors({ client }) {
     });
   }
   function updatePalette({ jwtToken, paletteId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/palette-bursatils/${paletteId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function createPalette({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: "/api/palette-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function deletePalette({ jwtToken, paletteId }) {
@@ -53,23 +63,33 @@ function paletteAndColors({ client }) {
     });
   }
   function updateColor({ jwtToken, colorId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/colors-bursatils/${colorId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function createColor({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: "/api/colors-bursatils",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: { ...data },
+      data: formattedData,
     });
   }
   function deleteColor({ jwtToken, colorId }) {

@@ -20,37 +20,34 @@ function blog({ client }) {
   }
 
   function createBlog({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/blog-fondos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        data: {
-          content: data.content,
-          image: data.image,
-          title: data.title,
-          delete: data.delete
-        },
-      },
+      data: formattedData,
     });
   }
 
   function updateBlog({ jwtToken, blogId, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
     return client({
       url: `/api/blog-fondos/${blogId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: {
-        content: data.content,
-        image: data.image,
-        title: data.title,
-        public: data.public,
-        delete: data.delete
-      },
+      data: formattedData,
     });
   }
 
