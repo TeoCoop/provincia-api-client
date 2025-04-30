@@ -17,7 +17,6 @@ function productBursatil({ client }) {
         ...data,
       },
     };
-    console.log(data, "DATA API CLIENT");
     return client({
       url: `/api/product-bursatils/${productId}`,
       method: "put",

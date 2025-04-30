@@ -6,11 +6,6 @@ function institutional({ client }) {
     });
   }
   function updateInstitutional({ jwtToken, data }) {
-    const formattedData = {
-      data: {
-        ...data,
-      },
-    };
     return client({
       url: "/api/institutional-bursatil",
       method: "put",
@@ -18,7 +13,7 @@ function institutional({ client }) {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        data: formattedData,
+        data: data,
       },
     });
   }

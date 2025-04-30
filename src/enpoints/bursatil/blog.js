@@ -35,7 +35,6 @@ function blog({ client }) {
         ...data,
       },
     };
-    console.log(formattedData, "FORMATO DATA");
     return client({
       url: `/api/blog-bursatils/${blogId}`,
       method: "put",
