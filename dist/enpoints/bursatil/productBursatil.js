@@ -28,7 +28,6 @@ function productBursatil(_ref) {
     var formattedData = {
       data: _objectSpread({}, data)
     };
-    console.log(data, "DATA API CLIENT");
     return client({
       url: "/api/product-bursatils/".concat(productId),
       method: "put",

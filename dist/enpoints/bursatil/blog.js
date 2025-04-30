@@ -43,7 +43,6 @@ function blog(_ref) {
     var formattedData = {
       data: _objectSpread({}, data)
     };
-    console.log(formattedData, "FORMATO DATA");
     return client({
       url: "/api/blog-bursatils/".concat(blogId),
       method: "put",
