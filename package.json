@@ -4,7 +4,7 @@
   "description": "Api client Banco Provincia",
   "homepage": "https://github.com/TeoCoop/provincia-api-client",
   "main": "dist/index.js",
-  "types": "dist/client.d.ts",
+  "types": "dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/TeoCoop/provincia-api-client/issues"
   },
@@ -14,7 +14,7 @@
     "commit": "git add . && git commit --allow-empty -m \"transpiled\"",
     "preversion": "npm run transpile && npm run types && npm run commit",
     "postversion": "git push origin main && git push --tags",
-    "types": "npx -p typescript tsc --project tsconfig.json"
+    "types": "npx -p typescript tsc --project tsconfig.json && cp src/index.d.ts dist/index.d.ts"
   },
   "author": "Cooperativa Teo Coop - https://teocoop.site/",
   "repository": {
