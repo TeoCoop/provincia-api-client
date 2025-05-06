@@ -153,6 +153,25 @@ export function client(options: any): {
                 categoriesId: any;
             }) => any;
         };
+        categoriesBlog: {
+            getById: ({ categoryId }: {
+                categoryId: any;
+            }) => any;
+            getAll: () => any;
+            createCategory: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateCategory: ({ jwtToken, categoryId, data }: {
+                jwtToken: any;
+                categoryId: any;
+                data: any;
+            }) => any;
+            deleteCategory: ({ jwtToken, categoryId }: {
+                jwtToken: any;
+                categoryId: any;
+            }) => any;
+        };
         areaTeam: {
             getAll: () => any;
             updateArea: ({ jwtToken, areaId, data }: {
@@ -247,9 +266,75 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getPanel: () => any;
         };
         foundsForBursatil: {
             get: () => any;
+        };
+        paletteAndColors: {
+            getAllColor: () => any;
+            getByIdColor: ({ colorId }: {
+                colorId: any;
+            }) => any;
+            deleteColor: ({ jwtToken, colorId }: {
+                jwtToken: any;
+                colorId: any;
+            }) => any;
+            createColor: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateColor: ({ jwtToken, colorId, data }: {
+                jwtToken: any;
+                colorId: any;
+                data: any;
+            }) => any;
+            getAllPalettes: () => any;
+            updatePalette: ({ jwtToken, paletteId, data }: {
+                jwtToken: any;
+                paletteId: any;
+                data: any;
+            }) => any;
+            deletePalette: ({ jwtToken, paletteId }: {
+                jwtToken: any;
+                paletteId: any;
+            }) => any;
+            getByIdPalette: ({ paletteId }: {
+                paletteId: any;
+            }) => any;
+            createPalette: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        seccionAliados: {
+            get: () => any;
+            updateAliadosSeccion: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            deleteAliadosSeccion: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+        };
+        homeBursatil: {
+            getAll: () => any;
+            updateHome: ({ jwtToken, homeCardId, data }: {
+                jwtToken: any;
+                homeCardId: any;
+                data: any;
+            }) => any;
+            deleteHome: ({ jwtToken, homeCardId }: {
+                jwtToken: any;
+                homeCardId: any;
+            }) => any;
+            getById: ({ homeCardId }: {
+                homeCardId: any;
+            }) => any;
+            createHome: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
         };
     };
     auth: {
