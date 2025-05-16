@@ -8,7 +8,7 @@ function videoSeccion({ client }) {
 
   function getAll() {
     return client({
-      url: `/api/video-secctions`,
+      url: `/api/video-seccions`,
       method: "get",
     });
   }
