@@ -29,7 +29,7 @@ function contactNewsleter(_ref) {
       }
     });
   }
-  function createAsociado(_ref4) {
+  function createContact(_ref4) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     var formattedData = {
@@ -47,7 +47,7 @@ function contactNewsleter(_ref) {
       data: formattedData
     });
   }
-  function updateAsociado(_ref5) {
+  function updateContact(_ref5) {
     var jwtToken = _ref5.jwtToken,
       contactId = _ref5.contactId,
       data = _ref5.data;
@@ -63,7 +63,7 @@ function contactNewsleter(_ref) {
       data: formattedData
     });
   }
-  function deleteAsociado(_ref6) {
+  function deleteContact(_ref6) {
     var jwtToken = _ref6.jwtToken,
       contactId = _ref6.contactId;
     return client({
@@ -77,9 +77,9 @@ function contactNewsleter(_ref) {
   return {
     getById: getById,
     getAll: getAll,
-    createAsociado: createAsociado,
-    updateAsociado: updateAsociado,
-    deleteAsociado: deleteAsociado
+    createContact: createContact,
+    updateContact: updateContact,
+    deleteContact: deleteContact
   };
 }
 module.exports = contactNewsleter;

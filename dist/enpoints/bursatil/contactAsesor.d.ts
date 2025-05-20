@@ -9,7 +9,7 @@ declare function contactAsesor({ client }: {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    createContact: ({ jwtToken, data }: {
+    createAsesor: ({ jwtToken, data }: {
         jwtToken: any;
         data: any;
     }) => any;
@@ -18,7 +18,7 @@ declare function contactAsesor({ client }: {
         asesorId: any;
         data: any;
     }) => any;
-    deleteContact: ({ jwtToken, asesorId }: {
+    deleteAsesor: ({ jwtToken, asesorId }: {
         jwtToken: any;
         asesorId: any;
     }) => any;

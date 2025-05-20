@@ -29,7 +29,7 @@ function contactAsesor(_ref) {
       }
     });
   }
-  function createContact(_ref4) {
+  function createAsesor(_ref4) {
     var jwtToken = _ref4.jwtToken,
       data = _ref4.data;
     var formattedData = {
@@ -60,7 +60,7 @@ function contactAsesor(_ref) {
       data: formattedData
     });
   }
-  function deleteContact(_ref6) {
+  function deleteAsesor(_ref6) {
     var jwtToken = _ref6.jwtToken,
       asesorId = _ref6.asesorId;
     return client({
@@ -74,9 +74,9 @@ function contactAsesor(_ref) {
   return {
     getById: getById,
     getAll: getAll,
-    createContact: createContact,
+    createAsesor: createAsesor,
     updateContact: updateContact,
-    deleteContact: deleteContact
+    deleteAsesor: deleteAsesor
   };
 }
 module.exports = contactAsesor;

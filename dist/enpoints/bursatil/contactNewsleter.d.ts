@@ -9,16 +9,16 @@ declare function contactNewsleter({ client }: {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    createAsociado: ({ jwtToken, data }: {
+    createContact: ({ jwtToken, data }: {
         jwtToken: any;
         data: any;
     }) => any;
-    updateAsociado: ({ jwtToken, contactId, data }: {
+    updateContact: ({ jwtToken, contactId, data }: {
         jwtToken: any;
         contactId: any;
         data: any;
     }) => any;
-    deleteAsociado: ({ jwtToken, contactId }: {
+    deleteContact: ({ jwtToken, contactId }: {
         jwtToken: any;
         contactId: any;
     }) => any;

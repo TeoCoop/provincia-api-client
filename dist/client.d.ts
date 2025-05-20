@@ -344,16 +344,16 @@ export function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            createAsociado: ({ jwtToken, data }: {
+            createContact: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
             }) => any;
-            updateAsociado: ({ jwtToken, contactId, data }: {
+            updateContact: ({ jwtToken, contactId, data }: {
                 jwtToken: any;
                 contactId: any;
                 data: any;
             }) => any;
-            deleteAsociado: ({ jwtToken, contactId }: {
+            deleteContact: ({ jwtToken, contactId }: {
                 jwtToken: any;
                 contactId: any;
             }) => any;
@@ -366,7 +366,7 @@ export function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            createContact: ({ jwtToken, data }: {
+            createAsesor: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
             }) => any;
@@ -375,7 +375,7 @@ export function client(options: any): {
                 asesorId: any;
                 data: any;
             }) => any;
-            deleteContact: ({ jwtToken, asesorId }: {
+            deleteAsesor: ({ jwtToken, asesorId }: {
                 jwtToken: any;
                 asesorId: any;
             }) => any;
