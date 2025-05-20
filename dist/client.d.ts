@@ -336,6 +336,50 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
+        contactNewsleter: {
+            getById: ({ jwtToken, contactId }: {
+                jwtToken: any;
+                contactId: any;
+            }) => any;
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            createAsociado: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateAsociado: ({ jwtToken, contactId, data }: {
+                jwtToken: any;
+                contactId: any;
+                data: any;
+            }) => any;
+            deleteAsociado: ({ jwtToken, contactId }: {
+                jwtToken: any;
+                contactId: any;
+            }) => any;
+        };
+        contactAsociado: {
+            getById: ({ jwtToken, asesorId }: {
+                jwtToken: any;
+                asesorId: any;
+            }) => any;
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            createContact: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateContact: ({ jwtToken, asesorId, data }: {
+                jwtToken: any;
+                asesorId: any;
+                data: any;
+            }) => any;
+            deleteContact: ({ jwtToken, asesorId }: {
+                jwtToken: any;
+                asesorId: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
