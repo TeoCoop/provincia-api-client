@@ -19,7 +19,7 @@ function contactNewsleter({ client }) {
     });
   }
 
-  function createAsociado({ jwtToken, data }) {
+  function createContact({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
@@ -37,7 +37,7 @@ function contactNewsleter({ client }) {
     });
   }
 
-  function updateAsociado({ jwtToken, contactId, data }) {
+  function updateContact({ jwtToken, contactId, data }) {
     const formattedData = {
       data: {
         ...data,
@@ -53,7 +53,7 @@ function contactNewsleter({ client }) {
     });
   }
 
-  function deleteAsociado({ jwtToken, contactId }) {
+  function deleteContact({ jwtToken, contactId }) {
     return client({
       url: `/api/contact-client-bursatils/${contactId}`,
       method: "delete",
@@ -66,9 +66,9 @@ function contactNewsleter({ client }) {
   return {
     getById,
     getAll,
-    createAsociado,
-    updateAsociado,
-    deleteAsociado,
+    createContact,
+    updateContact,
+    deleteContact,
   };
 }
 

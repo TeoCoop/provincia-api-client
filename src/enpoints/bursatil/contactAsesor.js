@@ -19,7 +19,7 @@ function contactAsesor({ client }) {
     });
   }
 
-  function createContact({ jwtToken, data }) {
+  function createAsesor({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
@@ -51,7 +51,7 @@ function contactAsesor({ client }) {
     });
   }
 
-  function deleteContact({ jwtToken, asesorId }) {
+  function deleteAsesor({ jwtToken, asesorId }) {
     return client({
       url: `/api/asesores-contact-bursatils/${asesorId}`,
       method: "delete",
@@ -64,9 +64,9 @@ function contactAsesor({ client }) {
   return {
     getById,
     getAll,
-    createContact,
+    createAsesor,
     updateContact,
-    deleteContact,
+    deleteAsesor,
   };
 }
 
