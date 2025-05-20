@@ -64,6 +64,12 @@ function bursatilEndpoints(baseURL) {
     homeBursatil: require("./enpoints/bursatil/homeBursatil.js")({
       client,
     }),
+    contactNewsleter: require("./enpoints/bursatil/contactNewsleter.js")({
+      client,
+    }),
+    contactAsociado: require("./enpoints/bursatil/contactAsesor.js")({
+      client,
+    }),
   };
 }
 
