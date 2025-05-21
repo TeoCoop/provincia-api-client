@@ -117,6 +117,9 @@ function generalEnpoints(baseURL) {
     questionTest: require("./enpoints/general/questionTest.js")({
       client: client
     }),
+    inversorProfile: require("./enpoints/general/inversorProfile.js")({
+      client: client
+    }),
     upload: require("./enpoints/general/upload.js")({
       client: client
     })

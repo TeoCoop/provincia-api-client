@@ -422,6 +422,7 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
+        inversorProfile: any;
         upload: {
             update: ({ jwtToken, file }: {
                 jwtToken: any;
