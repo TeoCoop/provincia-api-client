@@ -95,6 +95,7 @@ function generalEnpoints(baseURL) {
   return {
     test: require("./enpoints/general/testInversor.js")({ client }),
     questionTest: require("./enpoints/general/questionTest.js")({ client }),
+    inversorProfile: require("./enpoints/general/inversorProfile.js")({ client }),
     upload: require("./enpoints/general/upload.js")({ client }),
     //acá también vamos a poner el update file
   };
