@@ -1,7 +1,7 @@
 function videoSeccion({ client }) {
   function getById({ videoId }) {
     return client({
-      url: `/api/video-secctions/${videoId}`,
+      url: `/api/video-seccions/${videoId}`,
       method: "get",
     });
   }
@@ -20,7 +20,7 @@ function videoSeccion({ client }) {
       },
     };
     return client({
-      url: `/api/video-secctions`,
+      url: `/api/video-seccions`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -36,7 +36,7 @@ function videoSeccion({ client }) {
       },
     };
     return client({
-      url: `/api/video-secctions/${videoId}`,
+      url: `/api/video-seccions/${videoId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -47,7 +47,7 @@ function videoSeccion({ client }) {
 
   function deleteVideo({ jwtToken, videoId }) {
     return client({
-      url: `/api/video-secctions/${videoId}`,
+      url: `/api/video-seccions/${videoId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
