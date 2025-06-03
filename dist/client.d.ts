@@ -18,6 +18,12 @@ export function client(options: any): {
                 jwtToken: any;
                 blogId: any;
             }) => any;
+            getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
+                year: any;
+                topicDocumentId: any;
+                categoryDocumentId: any;
+                search: any;
+            }) => any;
         };
         institutional: {
             getAll: () => any;
@@ -422,7 +428,28 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
-        inversorProfile: any;
+        inversorProfile: {
+            getAll: () => any;
+            updateProfile: ({ jwtToken, profileId, data }: {
+                jwtToken: any;
+                profileId: any;
+                data: any;
+            }) => any;
+            deleteProfile: ({ jwtToken, profileId }: {
+                jwtToken: any;
+                profileId: any;
+            }) => any;
+            getById: ({ profileId }: {
+                profileId: any;
+            }) => any;
+            createProfile: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            getResult: ({ value }: {
+                value: any;
+            }) => any;
+        };
         upload: {
             update: ({ jwtToken, file }: {
                 jwtToken: any;

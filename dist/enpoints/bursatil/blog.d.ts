@@ -19,4 +19,10 @@ declare function blog({ client }: {
         jwtToken: any;
         blogId: any;
     }) => any;
+    getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
+        year: any;
+        topicDocumentId: any;
+        categoryDocumentId: any;
+        search: any;
+    }) => any;
 };
