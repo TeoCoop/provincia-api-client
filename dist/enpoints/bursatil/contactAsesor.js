@@ -30,8 +30,7 @@ function contactAsesor(_ref) {
     });
   }
   function createAsesor(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+    var data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };

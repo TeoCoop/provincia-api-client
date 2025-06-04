@@ -9,8 +9,7 @@ declare function contactNewsleter({ client }: {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    createContact: ({ jwtToken, data }: {
-        jwtToken: any;
+    createContact: ({ data }: {
         data: any;
     }) => any;
     updateContact: ({ jwtToken, contactId, data }: {

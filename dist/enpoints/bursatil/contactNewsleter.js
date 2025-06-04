@@ -30,8 +30,7 @@ function contactNewsleter(_ref) {
     });
   }
   function createContact(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+    var data = _ref4.data;
     var formattedData = {
       data: _objectSpread(_objectSpread({}, data), {}, {
         isDelete: false,

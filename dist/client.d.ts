@@ -350,8 +350,7 @@ export function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            createContact: ({ jwtToken, data }: {
-                jwtToken: any;
+            createContact: ({ data }: {
                 data: any;
             }) => any;
             updateContact: ({ jwtToken, contactId, data }: {
@@ -372,8 +371,7 @@ export function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            createAsesor: ({ jwtToken, data }: {
-                jwtToken: any;
+            createAsesor: ({ data }: {
                 data: any;
             }) => any;
             updateContact: ({ jwtToken, asesorId, data }: {
