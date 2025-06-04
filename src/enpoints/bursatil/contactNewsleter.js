@@ -19,7 +19,7 @@ function contactNewsleter({ client }) {
     });
   }
 
-  function createContact({ jwtToken, data }) {
+  function createContact({ data }) {
     const formattedData = {
       data: {
         ...data,

@@ -19,7 +19,7 @@ function contactAsesor({ client }) {
     });
   }
 
-  function createAsesor({ jwtToken, data }) {
+  function createAsesor({ data }) {
     const formattedData = {
       data: {
         ...data,
