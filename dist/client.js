@@ -134,7 +134,7 @@ function authEndpoint(baseURL) {
 }
 function client(options) {
   var env = options.env;
-  var baseURL = env === "development" ? "http://localhost:1337" : env === "sandbox" ? "https://provincia-sandbox-api.teocoop.site/" : "https://provincia-prod-api.teocoop.site/";
+  var baseURL = env === "prod" ? "http://https://provincia-prod-api.teocoop.site/:1337" : env === "sandbox" ? "https://provincia-sandbox-api.teocoop.site/" : "http://localhost:1337/";
   return {
     bursatil: bursatilEndpoints(baseURL),
     auth: authEndpoint(baseURL),
