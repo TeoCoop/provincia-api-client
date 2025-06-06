@@ -88,14 +88,16 @@ function fondosEndpoints(baseURL) {
     global: require("./enpoints/fondos/global.js")({
       client,
     }),
+    test: require("./enpoints/bursatil/testInversor.js")({ client }),
+    questionTest: require("./enpoints/bursatil/questionTest.js")({ client }),
+    inversorProfile: require("./enpoints/bursatil/inversorProfile.js")({
+      client,
+    }),
   };
 }
 function generalEnpoints(baseURL) {
   const client = createClient(baseURL);
   return {
-    test: require("./enpoints/general/testInversor.js")({ client }),
-    questionTest: require("./enpoints/general/questionTest.js")({ client }),
-    inversorProfile: require("./enpoints/general/inversorProfile.js")({ client }),
     upload: require("./enpoints/general/upload.js")({ client }),
     //acá también vamos a poner el update file
   };

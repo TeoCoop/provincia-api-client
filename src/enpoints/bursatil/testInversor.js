@@ -1,7 +1,7 @@
 function testInversor({ client }) {
   function getAll() {
     return client({
-      url: `/api/test-inversor`,
+      url: `/api/test-inversor-bursatil`,
       method: "get",
       // headers: {
       //   Authorization: `Bearer ${jwtToken}`,
@@ -10,7 +10,7 @@ function testInversor({ client }) {
   }
   function updateTest({ jwtToken, data }) {
     return client({
-      url: `/api/test-inversor`,
+      url: `/api/test-inversor-bursatil`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -26,7 +26,7 @@ function testInversor({ client }) {
 
   function deleteTest({ jwtToken }) {
     return client({
-      url: `/api/test-inversor`,
+      url: `/api/test-inversor-bursatil`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
