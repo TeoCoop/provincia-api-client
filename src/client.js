@@ -114,7 +114,7 @@ export function client(options) {
       ? "http://localhost:1337"
       : env === "sandbox"
       ? "https://provincia-sandbox-api.teocoop.site/"
-      : "https://provincia-sandbox-api.teocoop.site/";
+      : "https://provincia-prod-api.teocoop.site/";
   return {
     bursatil: bursatilEndpoints(baseURL),
     auth: authEndpoint(baseURL),
