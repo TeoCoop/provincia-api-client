@@ -105,21 +105,21 @@ function fondosEndpoints(baseURL) {
     }),
     global: require("./enpoints/fondos/global.js")({
       client: client
+    }),
+    test: require("./enpoints/bursatil/testInversor.js")({
+      client: client
+    }),
+    questionTest: require("./enpoints/bursatil/questionTest.js")({
+      client: client
+    }),
+    inversorProfile: require("./enpoints/bursatil/inversorProfile.js")({
+      client: client
     })
   };
 }
 function generalEnpoints(baseURL) {
   var client = createClient(baseURL);
   return {
-    test: require("./enpoints/general/testInversor.js")({
-      client: client
-    }),
-    questionTest: require("./enpoints/general/questionTest.js")({
-      client: client
-    }),
-    inversorProfile: require("./enpoints/general/inversorProfile.js")({
-      client: client
-    }),
     upload: require("./enpoints/general/upload.js")({
       client: client
     })
