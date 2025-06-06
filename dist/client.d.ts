@@ -384,6 +384,57 @@ export function client(options: any): {
                 asesorId: any;
             }) => any;
         };
+        test: {
+            getAll: () => any;
+            updateTest: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            deleteTest: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+        };
+        questionTest: {
+            getAll: () => any;
+            updatedQuestion: ({ jwtToken, questionId, data }: {
+                jwtToken: any;
+                questionId: any;
+                data: any;
+            }) => any;
+            deleteCuestion: ({ jwtToken, questionId }: {
+                jwtToken: any;
+                questionId: any;
+            }) => any;
+            getById: ({ questionId }: {
+                questionId: any;
+            }) => any;
+            createQuestion: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        inversorProfile: {
+            getAll: () => any;
+            updateProfile: ({ jwtToken, profileId, data }: {
+                jwtToken: any;
+                profileId: any;
+                data: any;
+            }) => any;
+            deleteProfile: ({ jwtToken, profileId }: {
+                jwtToken: any;
+                profileId: any;
+            }) => any;
+            getById: ({ profileId }: {
+                profileId: any;
+            }) => any;
+            createProfile: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            getResult: ({ value }: {
+                value: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
@@ -498,57 +549,6 @@ export function client(options: any): {
             }) => any;
             deleteGlobal: ({ jwtToken }: {
                 jwtToken: any;
-            }) => any;
-        };
-        test: {
-            getAll: () => any;
-            updateTest: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            deleteTest: ({ jwtToken }: {
-                jwtToken: any;
-            }) => any;
-        };
-        questionTest: {
-            getAll: () => any;
-            updatedQuestion: ({ jwtToken, questionId, data }: {
-                jwtToken: any;
-                questionId: any;
-                data: any;
-            }) => any;
-            deleteCuestion: ({ jwtToken, questionId }: {
-                jwtToken: any;
-                questionId: any;
-            }) => any;
-            getById: ({ questionId }: {
-                questionId: any;
-            }) => any;
-            createQuestion: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-        };
-        inversorProfile: {
-            getAll: () => any;
-            updateProfile: ({ jwtToken, profileId, data }: {
-                jwtToken: any;
-                profileId: any;
-                data: any;
-            }) => any;
-            deleteProfile: ({ jwtToken, profileId }: {
-                jwtToken: any;
-                profileId: any;
-            }) => any;
-            getById: ({ profileId }: {
-                profileId: any;
-            }) => any;
-            createProfile: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            getResult: ({ value }: {
-                value: any;
             }) => any;
         };
     };

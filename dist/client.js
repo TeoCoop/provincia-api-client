@@ -82,6 +82,15 @@ function bursatilEndpoints(baseURL) {
     }),
     contactAsociado: require("./enpoints/bursatil/contactAsesor.js")({
       client: client
+    }),
+    test: require("./enpoints/bursatil/testInversor.js")({
+      client: client
+    }),
+    questionTest: require("./enpoints/bursatil/questionTest.js")({
+      client: client
+    }),
+    inversorProfile: require("./enpoints/bursatil/inversorProfile.js")({
+      client: client
     })
   };
 }
@@ -104,15 +113,6 @@ function fondosEndpoints(baseURL) {
       client: client
     }),
     global: require("./enpoints/fondos/global.js")({
-      client: client
-    }),
-    test: require("./enpoints/bursatil/testInversor.js")({
-      client: client
-    }),
-    questionTest: require("./enpoints/bursatil/questionTest.js")({
-      client: client
-    }),
-    inversorProfile: require("./enpoints/bursatil/inversorProfile.js")({
       client: client
     })
   };
