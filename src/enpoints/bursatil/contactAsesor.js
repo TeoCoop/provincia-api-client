@@ -28,9 +28,7 @@ function contactAsesor({ client }) {
     return client({
       url: `/api/asesores-contact-bursatils`,
       method: "post",
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
+
       data: formattedData,
     });
   }
