@@ -40,9 +40,6 @@ function contactNewsleter(_ref) {
     return client({
       url: "/api/contact-client-bursatils",
       method: "post",
-      headers: {
-        Authorization: "Bearer ".concat(jwtToken)
-      },
       data: formattedData
     });
   }
