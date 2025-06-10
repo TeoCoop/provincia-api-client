@@ -20,57 +20,63 @@ function blog({ client }) {
   }
   function getFilters({ year, topicDocumentId, categoryDocumentId, search }) {
     const query = `
-      query BlogBursatil(
-        $year: DateTime
-        $topicDocumentId: ID
-        $categoryDocumentId: ID
-        $search: String
+     query BlogFondos(
+      $year: DateTime
+      $topicDocumentId: ID
+      $categoryDocumentId: ID
+      $search: String
+    ) {
+      blogFondos(
+        filters: {
+          and: [
+            {
+              isDelete: {
+                eq: false
+              }
+            }
+            {
+              createdAt: {
+                gte: $year
+              }
+            }
+            {
+              topic_blog_fondos: {
+                documentId: {
+                  eq: $topicDocumentId
+                }
+              }
+            }
+            {
+              category_blog_fondos: {
+                documentId: {
+                  eq: $categoryDocumentId
+                }
+              }
+            }
+            {
+              or: [
+                { title: { containsi: $search } }
+                { subtitle: { containsi: $search } }
+                { content: { containsi: $search } }
+              ]
+            }
+          ]
+        }
       ) {
-        blogBursatils(
-          filters: {
-            and: [
-              {
-                createdAt: {
-                  gte: $year
-                }
-              }
-              {
-                topic_blog_fondos: {
-                  documentId: {
-                    eq: $topicDocumentId
-                  }
-                }
-              }
-              {
-                category_blog_fondos: {
-                  documentId: {
-                    eq: $categoryDocumentId
-                  }
-                }
-              }
-              {
-                or: [
-                  { title: { containsi: $search } }
-                  { subtitle: { containsi: $search } }
-                  { content: { containsi: $search } }
-                ]
-              }
-            ]
-          }
-        ) {
-          createdAt
-          title
-          subtitle
-          content
-          author
-          topic_blog_fondos {
-            topic
-          }
-          category_blog_fondos {
-            name
-          }
+        createdAt
+        title
+        subtitle
+        content
+        author
+        topic_blog_fondos {
+          topic
+        }
+        category_blog_fondos {
+          name
         }
       }
+    }
+
     `;
 
     const variables = {

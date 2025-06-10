@@ -12,7 +12,77 @@ function founds({ client }) {
       method: "get",
     });
   }
+  function getFilters() {
+    const query = `
+        query OurFounds(
+        $caracteristicaDocumentId: ID
+        $tipoActivoDocumentId: ID
+        $valueInversorId: ID
+      ) {
+        ourFounds(
+          filters: {
+            and: [
+              {
+                caracteristicas_fondos: {
+                  documentId: { eq: $caracteristicaDocumentId }
+                }
+              }
+              {
+                tipos_activos_fondos: {
+                  documentId: { eq: $tipoActivoDocumentId }
+                }
+              }
+              {
+                inversor_profile_fondos:   {
+                  documentId: { eq: $valueInversorId }
+                }
+              }
+            ]
+          }
+        ) {
+        name
+        description
+        numero_fondo
+        moneda
+        informationAt
+        patrimonio
+        link
+        documentId
+        factSheet {
+          url
+        }
+      caracteristicas_fondos {
+        value
+        documentId
+      }
+      tipos_activos_fondos {
+        value
+        documentId
+      }
+      inversor_profile_fondos {
+        title
+        description
+        documentId
+        shortDescription
+      }
+        }
+      }
+`;
+    const variables = {
+      caracteristicaDocumentId,
+      tipoActivoDocumentId,
+      valueInversorId,
+    };
 
+    return client({
+      url: `/graphql`,
+      method: "post",
+      data: {
+        query,
+        variables,
+      },
+    });
+  }
   function createFound({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -61,6 +131,7 @@ function founds({ client }) {
     createFound,
     updateFound,
     deleteFound,
+    getFilters
   };
 }
 

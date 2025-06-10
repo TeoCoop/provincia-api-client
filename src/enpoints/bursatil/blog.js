@@ -23,6 +23,11 @@ function blog({ client }) {
         blogBursatils(
           filters: {
             and: [
+            {
+              isDelete: {
+                eq: false
+              }
+            }
               {
                 createdAt: {
                   gte: $year
