@@ -18,7 +18,77 @@ function blog({ client }) {
       // },
     });
   }
+  function getFilters({ year, topicDocumentId, categoryDocumentId, search }) {
+    const query = `
+      query BlogBursatil(
+        $year: DateTime
+        $topicDocumentId: ID
+        $categoryDocumentId: ID
+        $search: String
+      ) {
+        blogBursatils(
+          filters: {
+            and: [
+              {
+                createdAt: {
+                  gte: $year
+                }
+              }
+              {
+                topic_blog_fondos: {
+                  documentId: {
+                    eq: $topicDocumentId
+                  }
+                }
+              }
+              {
+                category_blog_fondos: {
+                  documentId: {
+                    eq: $categoryDocumentId
+                  }
+                }
+              }
+              {
+                or: [
+                  { title: { containsi: $search } }
+                  { subtitle: { containsi: $search } }
+                  { content: { containsi: $search } }
+                ]
+              }
+            ]
+          }
+        ) {
+          createdAt
+          title
+          subtitle
+          content
+          author
+          topic_blog_fondos {
+            topic
+          }
+          category_blog_fondos {
+            name
+          }
+        }
+      }
+    `;
 
+    const variables = {
+      year,
+      topicDocumentId,
+      categoryDocumentId,
+      search,
+    };
+
+    return client({
+      url: `/graphql`,
+      method: "post",
+      data: {
+        query,
+        variables,
+      },
+    });
+  }
   function createBlog({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -67,6 +137,7 @@ function blog({ client }) {
     createBlog,
     updateBlog,
     deleteBlog,
+    getFilters,
   };
 }
 
