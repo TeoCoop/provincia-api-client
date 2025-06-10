@@ -114,6 +114,39 @@ function fondosEndpoints(baseURL) {
     }),
     global: require("./enpoints/fondos/global.js")({
       client: client
+    }),
+    areaTeam: require("./enpoints/fondos/areaTeam.js")({
+      client: client
+    }),
+    categoriesBlog: require("./enpoints/fondos/categoriesBlog.js")({
+      client: client
+    }),
+    categoriesVideos: require("./enpoints/fondos/categoriesVideo.js")({
+      client: client
+    }),
+    homeFondos: require("./enpoints/fondos/homeFondos.js")({
+      client: client
+    }),
+    paletteAndColors: require("./enpoints/fondos/paletteAndColors.js")({
+      client: client
+    }),
+    questionTest: require("./enpoints/fondos/questionTest.js")({
+      client: client
+    }),
+    teamMember: require("./enpoints/fondos/teamMembers.js")({
+      client: client
+    }),
+    inversorProfile: require("./enpoints/fondos/inversorProfile.js")({
+      client: client
+    }),
+    test: require("./enpoints/fondos/testInversor.js")({
+      client: client
+    }),
+    topicBlog: require("./enpoints/fondos/topicBlog.js")({
+      client: client
+    }),
+    videoTutorial: require("./enpoints/fondos/videoSection.js")({
+      client: client
     })
   };
 }

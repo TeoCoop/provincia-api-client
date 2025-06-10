@@ -474,6 +474,12 @@ export function client(options: any): {
                 jwtToken: any;
                 blogId: any;
             }) => any;
+            getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
+                year: any;
+                topicDocumentId: any;
+                categoryDocumentId: any;
+                search: any;
+            }) => any;
         };
         institutional: {
             getAll: () => any;
@@ -549,6 +555,226 @@ export function client(options: any): {
             }) => any;
             deleteGlobal: ({ jwtToken }: {
                 jwtToken: any;
+            }) => any;
+        };
+        areaTeam: {
+            getAll: () => any;
+            updateArea: ({ jwtToken, areaId, data }: {
+                jwtToken: any;
+                areaId: any;
+                data: any;
+            }) => any;
+            deleteArea: ({ jwtToken, areaId }: {
+                jwtToken: any;
+                areaId: any;
+            }) => any;
+            getById: ({ areaId }: {
+                areaId: any;
+            }) => any;
+            createArea: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        categoriesBlog: {
+            getById: ({ categoryId }: {
+                categoryId: any;
+            }) => any;
+            getAll: () => any;
+            createCategory: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateCategory: ({ jwtToken, categoryId, data }: {
+                jwtToken: any;
+                categoryId: any;
+                data: any;
+            }) => any;
+            deleteCategory: ({ jwtToken, categoryId }: {
+                jwtToken: any;
+                categoryId: any;
+            }) => any;
+        };
+        categoriesVideos: {
+            getById: ({ categoriesId }: {
+                categoriesId: any;
+            }) => any;
+            getAll: () => any;
+            createCategoriesVideos: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateCategoriesVideos: ({ jwtToken, categoriesId, data }: {
+                jwtToken: any;
+                categoriesId: any;
+                data: any;
+            }) => any;
+            deleteCategoriesVideos: ({ jwtToken, categoriesId }: {
+                jwtToken: any;
+                categoriesId: any;
+            }) => any;
+        };
+        homeFondos: {
+            getAll: () => any;
+            updateHome: ({ jwtToken, homeCardId, data }: {
+                jwtToken: any;
+                homeCardId: any;
+                data: any;
+            }) => any;
+            deleteHome: ({ jwtToken, homeCardId }: {
+                jwtToken: any;
+                homeCardId: any;
+            }) => any;
+            getById: ({ homeCardId }: {
+                homeCardId: any;
+            }) => any;
+            createHome: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        paletteAndColors: {
+            getAllColor: () => any;
+            getByIdColor: ({ colorId }: {
+                colorId: any;
+            }) => any;
+            deleteColor: ({ jwtToken, colorId }: {
+                jwtToken: any;
+                colorId: any;
+            }) => any;
+            createColor: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateColor: ({ jwtToken, colorId, data }: {
+                jwtToken: any;
+                colorId: any;
+                data: any;
+            }) => any;
+            getAllPalettes: () => any;
+            updatePalette: ({ jwtToken, paletteId, data }: {
+                jwtToken: any;
+                paletteId: any;
+                data: any;
+            }) => any;
+            deletePalette: ({ jwtToken, paletteId }: {
+                jwtToken: any;
+                paletteId: any;
+            }) => any;
+            getByIdPalette: ({ paletteId }: {
+                paletteId: any;
+            }) => any;
+            createPalette: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        questionTest: {
+            getAll: () => any;
+            updatedQuestion: ({ jwtToken, questionId, data }: {
+                jwtToken: any;
+                questionId: any;
+                data: any;
+            }) => any;
+            deleteCuestion: ({ jwtToken, questionId }: {
+                jwtToken: any;
+                questionId: any;
+            }) => any;
+            getById: ({ questionId }: {
+                questionId: any;
+            }) => any;
+            createQuestion: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        teamMember: {
+            getAll: () => any;
+            updateMember: ({ jwtToken, memberId, data }: {
+                jwtToken: any;
+                memberId: any;
+                data: any;
+            }) => any;
+            deleteMember: ({ jwtToken, memberId }: {
+                jwtToken: any;
+                memberId: any;
+            }) => any;
+            getById: ({ memberId }: {
+                memberId: any;
+            }) => any;
+            createMember: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        inversorProfile: {
+            getAll: () => any;
+            updateProfile: ({ jwtToken, profileId, data }: {
+                jwtToken: any;
+                profileId: any;
+                data: any;
+            }) => any;
+            deleteProfile: ({ jwtToken, profileId }: {
+                jwtToken: any;
+                profileId: any;
+            }) => any;
+            getById: ({ profileId }: {
+                profileId: any;
+            }) => any;
+            createProfile: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            getResult: ({ value }: {
+                value: any;
+            }) => any;
+        };
+        test: {
+            getAll: () => any;
+            updateTest: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            deleteTest: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+        };
+        topicBlog: {
+            getAll: () => any;
+            updateTopic: ({ jwtToken, topicId, data }: {
+                jwtToken: any;
+                topicId: any;
+                data: any;
+            }) => any;
+            deleteTopic: ({ jwtToken, topicId }: {
+                jwtToken: any;
+                topicId: any;
+            }) => any;
+            getById: ({ topicId }: {
+                topicId: any;
+            }) => any;
+            createTopic: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        videoTutorial: {
+            getById: ({ videoId }: {
+                videoId: any;
+            }) => any;
+            getAll: () => any;
+            createVideo: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+            updateVideo: ({ jwtToken, videoId, data }: {
+                jwtToken: any;
+                videoId: any;
+                data: any;
+            }) => any;
+            deleteVideo: ({ jwtToken, videoId }: {
+                jwtToken: any;
+                videoId: any;
             }) => any;
         };
     };
