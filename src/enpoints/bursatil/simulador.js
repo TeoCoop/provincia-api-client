@@ -10,3 +10,4 @@ function simuladorRendimiento({ client }) {
     simular,
   };
 }
+module.exports = simuladorRendimiento;
