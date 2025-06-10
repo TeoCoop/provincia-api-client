@@ -105,9 +105,7 @@ function fondosEndpoints(baseURL) {
     homeFondos: require("./enpoints/fondos/homeFondos.js")({
       client,
     }),
-    inversorProfile: require("./enpoints/fondos/inversorProfile.js")({
-      client,
-    }),
+
     paletteAndColors: require("./enpoints/fondos/paletteAndColors.js")({
       client,
     }),
@@ -115,6 +113,10 @@ function fondosEndpoints(baseURL) {
     teamMember: require("./enpoints/fondos/teamMembers.js")({
       client,
     }),
+    inversorProfile: require("./enpoints/fondos/inversorProfile.js")({
+      client,
+    }),
+    test: require("./enpoints/fondos/testInversor.js")({ client }),
     topicBlog: require("./enpoints/fondos/topicBlog.js")({
       client,
     }),
