@@ -1,7 +1,7 @@
-function institutional({ client }) {
+function nuestroEquipo({ client }) {
   function getAll() {
     return client({
-      url: "/api/institutional-fondo",
+      url: "/api/nuestro-equipo-fondo",
       method: "get",
     });
   }
@@ -12,7 +12,7 @@ function institutional({ client }) {
       },
     };
     return client({
-      url: "/api/institutional-fondo",
+      url: "/api/nuestro-equipo-fondo",
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -22,7 +22,7 @@ function institutional({ client }) {
   }
   function deleteInstitutional({ jwtToken }) {
     return client({
-      url: "/api/institutional-fondo",
+      url: "/api/nuestro-equipo-fondo",
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -35,4 +35,4 @@ function institutional({ client }) {
     deleteInstitutional,
   };
 }
-module.exports = institutional;
+module.exports = nuestroEquipo;
