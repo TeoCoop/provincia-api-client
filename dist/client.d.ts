@@ -532,6 +532,7 @@ export function client(options: any): {
                 jwtToken: any;
                 foundId: any;
             }) => any;
+            getFilters: () => any;
         };
         areaTeam: {
             getAll: () => any;

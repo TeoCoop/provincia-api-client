@@ -21,6 +21,22 @@ function founds(_ref) {
       method: "get"
     });
   }
+  function getFilters() {
+    var query = "\n        query OurFounds(\n        $caracteristicaDocumentId: ID\n        $tipoActivoDocumentId: ID\n        $valueInversorId: ID\n      ) {\n        ourFounds(\n          filters: {\n            and: [\n              {\n                caracteristicas_fondos: {\n                  documentId: { eq: $caracteristicaDocumentId }\n                }\n              }\n              {\n                tipos_activos_fondos: {\n                  documentId: { eq: $tipoActivoDocumentId }\n                }\n              }\n              {\n                inversor_profile_fondos:   {\n                  documentId: { eq: $valueInversorId }\n                }\n              }\n            ]\n          }\n        ) {\n        name\n        description\n        numero_fondo\n        moneda\n        informationAt\n        patrimonio\n        link\n        documentId\n        factSheet {\n          url\n        }\n      caracteristicas_fondos {\n        value\n        documentId\n      }\n      tipos_activos_fondos {\n        value\n        documentId\n      }\n      inversor_profile_fondos {\n        title\n        description\n        documentId\n        shortDescription\n      }\n        }\n      }\n";
+    var variables = {
+      caracteristicaDocumentId: caracteristicaDocumentId,
+      tipoActivoDocumentId: tipoActivoDocumentId,
+      valueInversorId: valueInversorId
+    };
+    return client({
+      url: "/graphql",
+      method: "post",
+      data: {
+        query: query,
+        variables: variables
+      }
+    });
+  }
   function createFound(_ref3) {
     var jwtToken = _ref3.jwtToken,
       data = _ref3.data;
@@ -68,7 +84,8 @@ function founds(_ref) {
     getAll: getAll,
     createFound: createFound,
     updateFound: updateFound,
-    deleteFound: deleteFound
+    deleteFound: deleteFound,
+    getFilters: getFilters
   };
 }
 module.exports = founds;

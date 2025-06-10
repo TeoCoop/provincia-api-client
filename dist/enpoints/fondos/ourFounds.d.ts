@@ -19,4 +19,5 @@ declare function founds({ client }: {
         jwtToken: any;
         foundId: any;
     }) => any;
+    getFilters: () => any;
 };
