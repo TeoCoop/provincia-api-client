@@ -91,6 +91,9 @@ function bursatilEndpoints(baseURL) {
     }),
     inversorProfile: require("./enpoints/bursatil/inversorProfile.js")({
       client: client
+    }),
+    simulador: require("./enpoints/bursatil/simulador.js")({
+      client: client
     })
   };
 }

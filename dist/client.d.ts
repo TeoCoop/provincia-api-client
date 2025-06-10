@@ -435,6 +435,11 @@ export function client(options: any): {
                 value: any;
             }) => any;
         };
+        simulador: {
+            simular: ({ data }: {
+                data: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
