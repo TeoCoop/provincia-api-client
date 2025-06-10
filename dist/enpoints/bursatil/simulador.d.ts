@@ -1,3 +1,4 @@
+export = simuladorRendimiento;
 declare function simuladorRendimiento({ client }: {
     client: any;
 }): {

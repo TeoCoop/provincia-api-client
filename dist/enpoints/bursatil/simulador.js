@@ -14,3 +14,4 @@ function simuladorRendimiento(_ref) {
     simular: simular
   };
 }
+module.exports = simuladorRendimiento;
