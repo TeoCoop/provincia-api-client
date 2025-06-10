@@ -763,5 +763,7 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
         };
+        tiposActivos: typeof import("./enpoints/fondos/typeActiveFound.js");
+        caracteristicasFound: typeof import("./enpoints/fondos/caracteristicasFound.js");
     };
 };

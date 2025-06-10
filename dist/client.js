@@ -147,7 +147,9 @@ function fondosEndpoints(baseURL) {
     }),
     nuestroEquipo: require("./enpoints/fondos/nuestroEquipo.js")({
       client: client
-    })
+    }),
+    tiposActivos: require("./enpoints/fondos/typeActiveFound.js"),
+    caracteristicasFound: require("./enpoints/fondos/caracteristicasFound.js")
   };
 }
 function generalEnpoints(baseURL) {
