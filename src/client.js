@@ -123,6 +123,9 @@ function fondosEndpoints(baseURL) {
     videoTutorial: require("./enpoints/fondos/videoSection.js")({
       client,
     }),
+    nuestroEquipo: require("./enpoints/fondos/nuestroEquipo.js")({
+      client,
+    }),
   };
 }
 function generalEnpoints(baseURL) {
