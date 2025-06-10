@@ -777,5 +777,14 @@ export function client(options: any): {
                 videoId: any;
             }) => any;
         };
+        nuestroEquipo: {
+            getAll: () => any;
+            updateInstitutional: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            deleteInstitutional: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+        };
     };
 };
