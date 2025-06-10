@@ -83,14 +83,10 @@ function fondosEndpoints(baseURL) {
   return {
     blog: require("./enpoints/fondos/blog.js")({ client }),
     institutional: require("./enpoints/fondos/institutional.js")({ client }),
-    category: require("./enpoints/fondos/foundCategory.js")({ client }),
     faqs: require("./enpoints/fondos/faqs.js")({
       client,
     }),
     founds: require("./enpoints/fondos/ourFounds.js")({
-      client,
-    }),
-    global: require("./enpoints/fondos/global.js")({
       client,
     }),
     areaTeam: require("./enpoints/fondos/areaTeam.js")({
@@ -105,7 +101,6 @@ function fondosEndpoints(baseURL) {
     homeFondos: require("./enpoints/fondos/homeFondos.js")({
       client,
     }),
-
     paletteAndColors: require("./enpoints/fondos/paletteAndColors.js")({
       client,
     }),
