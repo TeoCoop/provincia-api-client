@@ -1,18 +1,12 @@
 function simuladorRendimiento({ client }) {
   function simular({ data }) {
-    const formattedData = {
-      data: {
-        ...data,
-      },
-    };
     return client({
       url: "/api/simulador/simular",
       method: "post",
-      data: formattedData,
+      data, // 👈 directamente, sin envolver en { data: ... }
     });
   }
   return {
     simular,
   };
 }
-module.exports = simuladorRendimiento;
