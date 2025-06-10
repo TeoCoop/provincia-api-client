@@ -490,25 +490,6 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
         };
-        category: {
-            getById: ({ categoryId }: {
-                categoryId: any;
-            }) => any;
-            getAll: () => any;
-            createCategory: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            updateCategory: ({ jwtToken, categoryId, data }: {
-                jwtToken: any;
-                categoryId: any;
-                data: any;
-            }) => any;
-            deleteCategory: ({ jwtToken, categoryId }: {
-                jwtToken: any;
-                categoryId: any;
-            }) => any;
-        };
         faqs: {
             getById: ({ faqId }: {
                 faqId: any;
@@ -545,16 +526,6 @@ export function client(options: any): {
             deleteFound: ({ jwtToken, foundId }: {
                 jwtToken: any;
                 foundId: any;
-            }) => any;
-        };
-        global: {
-            getAll: () => any;
-            updateGlobal: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            deleteGlobal: ({ jwtToken }: {
-                jwtToken: any;
             }) => any;
         };
         areaTeam: {

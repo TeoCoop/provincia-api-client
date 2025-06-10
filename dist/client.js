@@ -103,16 +103,10 @@ function fondosEndpoints(baseURL) {
     institutional: require("./enpoints/fondos/institutional.js")({
       client: client
     }),
-    category: require("./enpoints/fondos/foundCategory.js")({
-      client: client
-    }),
     faqs: require("./enpoints/fondos/faqs.js")({
       client: client
     }),
     founds: require("./enpoints/fondos/ourFounds.js")({
-      client: client
-    }),
-    global: require("./enpoints/fondos/global.js")({
       client: client
     }),
     areaTeam: require("./enpoints/fondos/areaTeam.js")({
