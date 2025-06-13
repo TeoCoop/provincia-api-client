@@ -765,5 +765,10 @@ export function client(options: any): {
         };
         tiposActivos: typeof import("./enpoints/fondos/typeActiveFound.js");
         caracteristicasFound: typeof import("./enpoints/fondos/caracteristicasFound.js");
+        simulador: {
+            simular: ({ data }: {
+                data: any;
+            }) => any;
+        };
     };
 };
