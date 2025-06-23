@@ -7,6 +7,7 @@ function queryFondosBursatil({ client }) {
         isFound
         description
         title
+        caracteristicas
         shortDescription
         pageUrl
         documentId
