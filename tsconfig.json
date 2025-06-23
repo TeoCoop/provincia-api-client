@@ -5,7 +5,9 @@
     "outDir": "dist",
     "allowJs": true,
     "moduleResolution": "node",
-    "strict": true
+    "strict": true,
+    "target": "es2017", // o superior
+    "lib": ["es2017", "dom"] // o ["es2019", "dom"] si querés más moderno
   },
   "include": ["src"]
 }
