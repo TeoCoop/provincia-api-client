@@ -18,7 +18,13 @@ function queryFondosBursatil({ client }) {
         patrimonio
         updatedAt
         publishedAt
-        factSheet
+        factSheet {
+          url
+          documentId
+          id
+          name
+          mime
+        }     
       }
     }
   `;
