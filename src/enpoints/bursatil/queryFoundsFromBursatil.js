@@ -18,6 +18,7 @@ function queryFondosBursatil({ client }) {
         patrimonio
         updatedAt
         publishedAt
+        factSheet
       }
     }
   `;
