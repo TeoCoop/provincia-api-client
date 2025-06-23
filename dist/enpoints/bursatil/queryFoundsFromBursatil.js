@@ -3,7 +3,7 @@
 function queryFondosBursatil(_ref) {
   var client = _ref.client;
   function get() {
-    var query = "\n    query ExampleQuery($filters: ProductBursatilFiltersInput, $ourFoundsFilters2: OurFoundFiltersInput) {\n      productBursatils(filters: $filters) {\n        title\n        isFound\n        description\n        title\n        shortDescription\n        pageUrl\n        documentId\n      }\n      ourFounds(filters: $ourFoundsFilters2) {\n        name\n        description\n        documentId\n        patrimonio\n        updatedAt\n        publishedAt\n        factSheet\n      }\n    }\n  ";
+    var query = "\n    query ExampleQuery($filters: ProductBursatilFiltersInput, $ourFoundsFilters2: OurFoundFiltersInput) {\n      productBursatils(filters: $filters) {\n        title\n        isFound\n        description\n        title\n        shortDescription\n        pageUrl\n        documentId\n      }\n      ourFounds(filters: $ourFoundsFilters2) {\n        name\n        description\n        documentId\n        patrimonio\n        updatedAt\n        publishedAt\n        factSheet {\n          url\n          documentId\n          id\n          name\n          mime\n        }     \n      }\n    }\n  ";
     var variables = {
       filters: {
         isFound: {
