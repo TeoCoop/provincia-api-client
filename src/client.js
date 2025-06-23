@@ -147,7 +147,7 @@ export function client(options) {
   const { env } = options;
   const baseURL =
     env === "prod"
-      ? "https://provincia-prod-api.teocoop.site"
+      ? "https://provincia-prod-api.teocoop.site/"
       : env === "sandbox"
       ? "https://provincia-sandbox-api.teocoop.site/"
       : "http://localhost:1337/";
