@@ -21,7 +21,6 @@ function queryFondosBursatil({ client }) {
         factSheet {
           url
           documentId
-          id
           name
           mime
         }     
