@@ -16,7 +16,7 @@ function auth(_ref) {
   function login(_ref3) {
     var user = _ref3.user;
     return client({
-      url: "/api/auth/login",
+      url: "/api/auth/login/request-code",
       method: "post",
       data: {
         email: user.email,
@@ -26,12 +26,14 @@ function auth(_ref) {
   }
   function verifyTotp(_ref4) {
     var user = _ref4.user;
+    // 1. Renamed for clarity
     return client({
-      url: "/api/auth/verify-totp",
+      url: "/api/auth/login/verify-code",
+      // 2. Added /api prefix
       method: "post",
       data: {
         email: user.email,
-        token: user.token
+        code: user.token // 3. Changed payload key from 'token' to 'code'
       }
     });
   }
