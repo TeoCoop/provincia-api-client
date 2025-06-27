@@ -1,41 +1,42 @@
-function auth({client}) {
-  function auth({user}) {
+function auth({ client }) {
+  function auth({ user }) {
     return client({
       url: `/api/auth/local`,
       method: "post",
       data: {
         identifier: user.identifier,
-        password: user.password
-      }
+        password: user.password,
+      },
     });
   }
 
-  function login({user}) {
+  function login({ user }) {
     return client({
-      url: `/api/auth/login`,
+      url: `/api/auth/login/request-code`,
       method: "post",
       data: {
         email: user.email,
-        password: user.password
-      }
+        password: user.password,
+      },
     });
   }
 
-  function verifyTotp({user}) {
+  function verifyTotp({ user }) {
+    // 1. Renamed for clarity
     return client({
-      url: `/api/auth/verify-totp`,
+      url: `/api/auth/login/verify-code`, // 2. Added /api prefix
       method: "post",
       data: {
         email: user.email,
-        token: user.token
-      }
+        code: user.token, // 3. Changed payload key from 'token' to 'code'
+      },
     });
   }
 
   return {
     auth,
     login,
-    verifyTotp
+    verifyTotp,
   };
 }
 
