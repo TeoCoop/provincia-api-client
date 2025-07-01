@@ -11,20 +11,20 @@ function inverterProfile(_ref) {
   function getById(_ref2) {
     var profileId = _ref2.profileId;
     return client({
-      url: "/api/investor-profile-bursatils/".concat(profileId),
+      url: "/api/inversor-profile-bursatils/".concat(profileId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/api/investor-profile-bursatils",
+      url: "/api/inversor-profile-bursatils",
       method: "get"
     });
   }
   function getResult(_ref3) {
     var value = _ref3.value;
     return client({
-      url: "/api/investor-profile-bursatils?value=".concat(value),
+      url: "/api/inversor-profile-bursatils?value=".concat(value),
       method: "get"
     });
   }
@@ -36,7 +36,7 @@ function inverterProfile(_ref) {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/investor-profile-bursatils/".concat(profileId),
+      url: "/api/inversor-profile-bursatils/".concat(profileId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -51,7 +51,7 @@ function inverterProfile(_ref) {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/investor-profile-bursatils",
+      url: "/api/inversor-profile-bursatils",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -63,7 +63,7 @@ function inverterProfile(_ref) {
     var jwtToken = _ref6.jwtToken,
       profileId = _ref6.profileId;
     return client({
-      url: "/api/investor-profile-bursatils/".concat(profileId),
+      url: "/api/inversor-profile-bursatils/".concat(profileId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
