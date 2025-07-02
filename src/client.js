@@ -129,6 +129,14 @@ function fondosEndpoints(baseURL) {
     simulador: require("./enpoints/fondos/simulador.js")({
       client,
     }),
+    informacionParaInversor:
+      require("./enpoints/fondos/informacionParaInversor.js")({
+        client,
+      }),
+    informacionParaInversorFile:
+      require("./enpoints/fondos/informacionParaInversorFile.js")({
+        client,
+      }),
   };
 }
 function generalEnpoints(baseURL) {
