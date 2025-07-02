@@ -770,5 +770,43 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
+        informacionParaInversor: {
+            getAll: () => any;
+            updateInformacion: ({ jwtToken, infoId, data }: {
+                jwtToken: any;
+                infoId: any;
+                data: any;
+            }) => any;
+            deleteInformacion: ({ jwtToken, infoId }: {
+                jwtToken: any;
+                infoId: any;
+            }) => any;
+            getById: ({ infoId }: {
+                infoId: any;
+            }) => any;
+            createInformacion: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        informacionParaInversorFile: {
+            getAll: () => any;
+            updateFile: ({ jwtToken, fileId, data }: {
+                jwtToken: any;
+                fileId: any;
+                data: any;
+            }) => any;
+            deleteFile: ({ jwtToken, fileId }: {
+                jwtToken: any;
+                fileId: any;
+            }) => any;
+            getById: ({ fileId }: {
+                fileId: any;
+            }) => any;
+            createFile: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
     };
 };

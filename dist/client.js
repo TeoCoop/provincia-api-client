@@ -152,6 +152,12 @@ function fondosEndpoints(baseURL) {
     caracteristicasFound: require("./enpoints/fondos/caracteristicasFound.js"),
     simulador: require("./enpoints/fondos/simulador.js")({
       client: client
+    }),
+    informacionParaInversor: require("./enpoints/fondos/informacionParaInversor.js")({
+      client: client
+    }),
+    informacionParaInversorFile: require("./enpoints/fondos/informacionParaInversorFile.js")({
+      client: client
     })
   };
 }
