@@ -158,6 +158,9 @@ function fondosEndpoints(baseURL) {
     }),
     informacionParaInversorFile: require("./enpoints/fondos/informacionParaInversorFile.js")({
       client: client
+    }),
+    cuotaParte: require("./enpoints/fondos/cuotaParte.js")({
+      client: client
     })
   };
 }
