@@ -11,13 +11,13 @@ function categoriesVideos(_ref) {
   function getById(_ref2) {
     var categoriesId = _ref2.categoriesId;
     return client({
-      url: "/api/categories-videos-fondos/".concat(categoriesId),
+      url: "/api/categories-video-fondos/".concat(categoriesId),
       method: "get"
     });
   }
   function getAll() {
     return client({
-      url: "/api/categories-videos-fondos",
+      url: "/api/categories-video-fondos",
       method: "get"
     });
   }
@@ -28,7 +28,7 @@ function categoriesVideos(_ref) {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/categories-videos-fondos",
+      url: "/api/categories-video-fondos",
       method: "post",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -44,7 +44,7 @@ function categoriesVideos(_ref) {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/categories-videos-fondos/".concat(categoriesId),
+      url: "/api/categories-video-fondos/".concat(categoriesId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -56,7 +56,7 @@ function categoriesVideos(_ref) {
     var jwtToken = _ref5.jwtToken,
       categoriesId = _ref5.categoriesId;
     return client({
-      url: "/api/categories-videos-fondos/".concat(categoriesId),
+      url: "/api/categories-video-fondos/".concat(categoriesId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
