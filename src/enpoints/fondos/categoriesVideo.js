@@ -1,14 +1,14 @@
 function categoriesVideos({ client }) {
   function getById({ categoriesId }) {
     return client({
-      url: `/api/categories-videos-fondos/${categoriesId}`,
+      url: `/api/categories-video-fondos/${categoriesId}`,
       method: "get",
     });
   }
 
   function getAll() {
     return client({
-      url: `/api/categories-videos-fondos`,
+      url: `/api/categories-video-fondos`,
       method: "get",
     });
   }
@@ -20,7 +20,7 @@ function categoriesVideos({ client }) {
       },
     };
     return client({
-      url: `/api/categories-videos-fondos`,
+      url: `/api/categories-video-fondos`,
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -36,7 +36,7 @@ function categoriesVideos({ client }) {
       },
     };
     return client({
-      url: `/api/categories-videos-fondos/${categoriesId}`,
+      url: `/api/categories-video-fondos/${categoriesId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -47,7 +47,7 @@ function categoriesVideos({ client }) {
 
   function deleteCategoriesVideos({ jwtToken, categoriesId }) {
     return client({
-      url: `/api/categories-videos-fondos/${categoriesId}`,
+      url: `/api/categories-video-fondos/${categoriesId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
