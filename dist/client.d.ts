@@ -763,8 +763,44 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
         };
-        tiposActivos: typeof import("./enpoints/fondos/typeActiveFound.js");
-        caracteristicasFound: typeof import("./enpoints/fondos/caracteristicasFound.js");
+        tiposActivos: {
+            getAll: () => any;
+            updateActivo: ({ jwtToken, activoId, data }: {
+                jwtToken: any;
+                activoId: any;
+                data: any;
+            }) => any;
+            deleteActivo: ({ jwtToken, activoId }: {
+                jwtToken: any;
+                activoId: any;
+            }) => any;
+            getById: ({ activoId }: {
+                activoId: any;
+            }) => any;
+            createActivo: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
+        caracteristicasFound: {
+            getAll: () => any;
+            updateCaracteristica: ({ jwtToken, caracteristicaId, data }: {
+                jwtToken: any;
+                caracteristicaId: any;
+                data: any;
+            }) => any;
+            deleteCaracteristica: ({ jwtToken, caracteristicaId }: {
+                jwtToken: any;
+                caracteristicaId: any;
+            }) => any;
+            getById: ({ caracteristicaId }: {
+                caracteristicaId: any;
+            }) => any;
+            createCaracteristica: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
         simulador: {
             simular: ({ data }: {
                 data: any;

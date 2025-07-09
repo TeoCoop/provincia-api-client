@@ -148,8 +148,12 @@ function fondosEndpoints(baseURL) {
     nuestroEquipo: require("./enpoints/fondos/nuestroEquipo.js")({
       client: client
     }),
-    tiposActivos: require("./enpoints/fondos/typeActiveFound.js"),
-    caracteristicasFound: require("./enpoints/fondos/caracteristicasFound.js"),
+    tiposActivos: require("./enpoints/fondos/typeActiveFound.js")({
+      client: client
+    }),
+    caracteristicasFound: require("./enpoints/fondos/caracteristicasFound.js")({
+      client: client
+    }),
     simulador: require("./enpoints/fondos/simulador.js")({
       client: client
     }),
