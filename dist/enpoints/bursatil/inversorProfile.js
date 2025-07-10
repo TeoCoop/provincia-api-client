@@ -23,6 +23,7 @@ function inverterProfile(_ref) {
   }
   function getResult(_ref3) {
     var value = _ref3.value;
+    console.log(value);
     return client({
       url: "/api/inversor-profile-bursatils?value=".concat(value),
       method: "get"
