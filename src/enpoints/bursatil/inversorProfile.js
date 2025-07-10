@@ -12,11 +12,13 @@ function inverterProfile({ client }) {
     });
   }
   function getResult({ value }) {
+    console.log(value);
     return client({
       url: `/api/inversor-profile-bursatils?value=${value}`,
       method: "get",
     });
   }
+
   function updateProfile({ jwtToken, profileId, data }) {
     const formattedData = {
       data: {
