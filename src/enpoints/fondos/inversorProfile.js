@@ -1,19 +1,19 @@
 function inverterProfile({ client }) {
   function getById({ profileId }) {
     return client({
-      url: `/api/investor-profile-fondos/${profileId}`,
+      url: `/api/inversor-profile-fondos/${profileId}`,
       method: "get",
     });
   }
   function getAll() {
     return client({
-      url: `/api/investor-profile-fondos`,
+      url: `/api/inversor-profile-fondos`,
       method: "get",
     });
   }
   function getResult({ value }) {
     return client({
-      url: `/api/investor-profile-fondos?value=${value}`,
+      url: `/api/inversor-profile-fondos?value=${value}`,
       method: "get",
     });
   }
@@ -24,7 +24,7 @@ function inverterProfile({ client }) {
       },
     };
     return client({
-      url: `/api/investor-profile-fondos/${profileId}`,
+      url: `/api/inversor-profile-fondos/${profileId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -39,7 +39,7 @@ function inverterProfile({ client }) {
       },
     };
     return client({
-      url: "/api/investor-profile-fondos",
+      url: "/api/inversor-profile-fondos",
       method: "post",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -49,7 +49,7 @@ function inverterProfile({ client }) {
   }
   function deleteProfile({ jwtToken, profileId }) {
     return client({
-      url: `/api/investor-profile-fondos/${profileId}`,
+      url: `/api/inversor-profile-fondos/${profileId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
