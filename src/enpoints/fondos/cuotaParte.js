@@ -5,12 +5,43 @@ function cuotaParteFound({ client }) {
       method: "get",
     });
   }
-  function getAll({ numero_fondo, clase_fondo }) {
+  function getAll({ numero_fondo, clase_fondo, page = 1, pageSize = 20 }) {
+    const params = new URLSearchParams({
+      "filters[numero_fondo][$eq]": String(numero_fondo),
+      "filters[clase_fondo][$eq]": clase_fondo,
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+
     return client({
-      url: `/api/cuota-partes?filters%5Bnumero_fondo%5D[$eq]=${numero_fondo}&filters%5Bclase_fondo%5D[$eq]=${clase_fondo}`,
+      url: `/api/cuota-partes?${params.toString()}`,
       method: "get",
     });
   }
+
+  function getByRange({
+    numero_fondo,
+    clase_fondo,
+    fecha_inicio,
+    fecha_fin,
+    page = 1,
+    pageSize = 20,
+  }) {
+    const params = new URLSearchParams({
+      numero_fondo: String(numero_fondo),
+      clase_fondo,
+      fecha_inicio,
+      fecha_fin,
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+
+    return client({
+      url: `/api/cuota-partes?${params.toString()}`,
+      method: "get",
+    });
+  }
+
   function updateCuotaParte({ jwtToken, cuotaParteId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +87,7 @@ function cuotaParteFound({ client }) {
     deleteCuotaParte,
     getById,
     createCuotaParte,
+    getByRange,
   };
 }
 module.exports = cuotaParteFound;
