@@ -17,7 +17,13 @@ function categoriesVideos(_ref) {
   }
   function getAll() {
     return client({
-      url: "/api/categories-videos",
+      url: "/api/categories-videos?includeEmpty=false",
+      method: "get"
+    });
+  }
+  function getAllPanel() {
+    return client({
+      url: "/api/categories-videos?includeEmpty=true",
       method: "get"
     });
   }
@@ -68,7 +74,8 @@ function categoriesVideos(_ref) {
     getAll: getAll,
     createCategoriesVideos: createCategoriesVideos,
     updateCategoriesVideos: updateCategoriesVideos,
-    deleteCategoriesVideos: deleteCategoriesVideos
+    deleteCategoriesVideos: deleteCategoriesVideos,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = categoriesVideos;

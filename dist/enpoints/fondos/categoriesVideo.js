@@ -17,7 +17,13 @@ function categoriesVideos(_ref) {
   }
   function getAll() {
     return client({
-      url: "/api/categories-video-fondos",
+      url: "/categories-video-fondos?includeEmpty=false",
+      method: "get"
+    });
+  }
+  function getAllPanel() {
+    return client({
+      url: "/api/categories-video-fondos?includeEmpty=true",
       method: "get"
     });
   }
@@ -68,7 +74,8 @@ function categoriesVideos(_ref) {
     getAll: getAll,
     createCategoriesVideos: createCategoriesVideos,
     updateCategoriesVideos: updateCategoriesVideos,
-    deleteCategoriesVideos: deleteCategoriesVideos
+    deleteCategoriesVideos: deleteCategoriesVideos,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = categoriesVideos;

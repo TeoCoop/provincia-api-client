@@ -158,6 +158,7 @@ export function client(options: any): {
                 jwtToken: any;
                 categoriesId: any;
             }) => any;
+            getAllPanel: () => any;
         };
         categoriesBlog: {
             getById: ({ categoryId }: {
@@ -533,6 +534,9 @@ export function client(options: any): {
                 foundId: any;
             }) => any;
             getFilters: () => any;
+            getByDocumentId: ({ foundDocumentId }: {
+                foundDocumentId: any;
+            }) => any;
         };
         areaTeam: {
             getAll: () => any;
@@ -590,6 +594,7 @@ export function client(options: any): {
                 jwtToken: any;
                 categoriesId: any;
             }) => any;
+            getAllPanel: () => any;
         };
         homeFondos: {
             getAll: () => any;

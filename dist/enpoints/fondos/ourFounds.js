@@ -15,6 +15,13 @@ function founds(_ref) {
       method: "get"
     });
   }
+  function getByDocumentId(_ref3) {
+    var foundDocumentId = _ref3.foundDocumentId;
+    return client({
+      url: "/api/our-found/document/".concat(foundDocumentId),
+      method: "get"
+    });
+  }
   function getAll() {
     return client({
       url: "/api/our-founds",
@@ -37,9 +44,9 @@ function founds(_ref) {
       }
     });
   }
-  function createFound(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function createFound(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,10 +59,10 @@ function founds(_ref) {
       data: formattedData
     });
   }
-  function updateFound(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      foundId = _ref4.foundId,
-      data = _ref4.data;
+  function updateFound(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      foundId = _ref5.foundId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -68,9 +75,9 @@ function founds(_ref) {
       data: formattedData
     });
   }
-  function deleteFound(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      foundId = _ref5.foundId;
+  function deleteFound(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      foundId = _ref6.foundId;
     return client({
       url: "/api/our-founds/".concat(foundId),
       method: "delete",
@@ -85,7 +92,8 @@ function founds(_ref) {
     createFound: createFound,
     updateFound: updateFound,
     deleteFound: deleteFound,
-    getFilters: getFilters
+    getFilters: getFilters,
+    getByDocumentId: getByDocumentId
   };
 }
 module.exports = founds;

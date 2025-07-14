@@ -20,4 +20,7 @@ declare function founds({ client }: {
         foundId: any;
     }) => any;
     getFilters: () => any;
+    getByDocumentId: ({ foundDocumentId }: {
+        foundDocumentId: any;
+    }) => any;
 };

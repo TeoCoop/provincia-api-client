@@ -19,4 +19,5 @@ declare function categoriesVideos({ client }: {
         jwtToken: any;
         categoriesId: any;
     }) => any;
+    getAllPanel: () => any;
 };
