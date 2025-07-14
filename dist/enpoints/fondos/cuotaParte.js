@@ -17,16 +17,48 @@ function cuotaParteFound(_ref) {
   }
   function getAll(_ref3) {
     var numero_fondo = _ref3.numero_fondo,
-      clase_fondo = _ref3.clase_fondo;
+      clase_fondo = _ref3.clase_fondo,
+      _ref3$page = _ref3.page,
+      page = _ref3$page === void 0 ? 1 : _ref3$page,
+      _ref3$pageSize = _ref3.pageSize,
+      pageSize = _ref3$pageSize === void 0 ? 20 : _ref3$pageSize;
+    var params = new URLSearchParams({
+      "filters[numero_fondo][$eq]": String(numero_fondo),
+      "filters[clase_fondo][$eq]": clase_fondo,
+      page: String(page),
+      pageSize: String(pageSize)
+    });
     return client({
-      url: "/api/cuota-partes?filters%5Bnumero_fondo%5D[$eq]=".concat(numero_fondo, "&filters%5Bclase_fondo%5D[$eq]=").concat(clase_fondo),
+      url: "/api/cuota-partes?".concat(params.toString()),
       method: "get"
     });
   }
-  function updateCuotaParte(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      cuotaParteId = _ref4.cuotaParteId,
-      data = _ref4.data;
+  function getByRange(_ref4) {
+    var numero_fondo = _ref4.numero_fondo,
+      clase_fondo = _ref4.clase_fondo,
+      fecha_inicio = _ref4.fecha_inicio,
+      fecha_fin = _ref4.fecha_fin,
+      _ref4$page = _ref4.page,
+      page = _ref4$page === void 0 ? 1 : _ref4$page,
+      _ref4$pageSize = _ref4.pageSize,
+      pageSize = _ref4$pageSize === void 0 ? 20 : _ref4$pageSize;
+    var params = new URLSearchParams({
+      numero_fondo: String(numero_fondo),
+      clase_fondo: clase_fondo,
+      fecha_inicio: fecha_inicio,
+      fecha_fin: fecha_fin,
+      page: String(page),
+      pageSize: String(pageSize)
+    });
+    return client({
+      url: "/api/cuota-partes?".concat(params.toString()),
+      method: "get"
+    });
+  }
+  function updateCuotaParte(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      cuotaParteId = _ref5.cuotaParteId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -39,9 +71,9 @@ function cuotaParteFound(_ref) {
       data: formattedData
     });
   }
-  function createCuotaParte(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      data = _ref5.data;
+  function createCuotaParte(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      data = _ref6.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -54,9 +86,9 @@ function cuotaParteFound(_ref) {
       data: formattedData
     });
   }
-  function deleteCuotaParte(_ref6) {
-    var jwtToken = _ref6.jwtToken,
-      cuotaParteId = _ref6.cuotaParteId;
+  function deleteCuotaParte(_ref7) {
+    var jwtToken = _ref7.jwtToken,
+      cuotaParteId = _ref7.cuotaParteId;
     return client({
       url: "/api/cuota-partes/".concat(cuotaParteId),
       method: "delete",
@@ -70,7 +102,8 @@ function cuotaParteFound(_ref) {
     updateCuotaParte: updateCuotaParte,
     deleteCuotaParte: deleteCuotaParte,
     getById: getById,
-    createCuotaParte: createCuotaParte
+    createCuotaParte: createCuotaParte,
+    getByRange: getByRange
   };
 }
 module.exports = cuotaParteFound;
