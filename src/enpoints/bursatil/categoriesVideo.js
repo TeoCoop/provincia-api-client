@@ -8,7 +8,13 @@ function categoriesVideos({ client }) {
 
   function getAll() {
     return client({
-      url: `/api/categories-videos`,
+      url: `/api/categories-videos?includeEmpty=false`,
+      method: "get",
+    });
+  }
+  function getAllPanel() {
+    return client({
+      url: `/api/categories-videos?includeEmpty=true`,
       method: "get",
     });
   }
@@ -61,6 +67,7 @@ function categoriesVideos({ client }) {
     createCategoriesVideos,
     updateCategoriesVideos,
     deleteCategoriesVideos,
+    getAllPanel,
   };
 }
 

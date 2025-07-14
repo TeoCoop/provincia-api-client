@@ -5,6 +5,12 @@ function founds({ client }) {
       method: "get",
     });
   }
+  function getByDocumentId({ foundDocumentId }) {
+    return client({
+      url: `/api/our-found/document/${foundDocumentId}`,
+      method: "get",
+    });
+  }
 
   function getAll() {
     return client({
@@ -131,7 +137,8 @@ function founds({ client }) {
     createFound,
     updateFound,
     deleteFound,
-    getFilters
+    getFilters,
+    getByDocumentId,
   };
 }
 
