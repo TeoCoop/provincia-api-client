@@ -17,7 +17,7 @@ function categoriesVideos(_ref) {
   }
   function getAll() {
     return client({
-      url: "/categories-video-fondos?includeEmpty=false",
+      url: "/api/categories-video-fondos?includeEmpty=false",
       method: "get"
     });
   }
