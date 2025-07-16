@@ -460,6 +460,7 @@ export function client(options: any): {
                 file: any;
             }) => any;
         };
+        blogMedia: any;
     };
     fondos: {
         blog: {

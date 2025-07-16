@@ -173,6 +173,9 @@ function generalEnpoints(baseURL) {
   return {
     upload: require("./enpoints/general/upload.js")({
       client: client
+    }),
+    blogMedia: require("./enpoints/fondos/blogMedia.js")({
+      client: client
     })
     //acá también vamos a poner el update file
   };
