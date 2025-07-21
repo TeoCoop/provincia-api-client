@@ -41,6 +41,9 @@ function bursatilEndpoints(baseURL) {
     carterasEficientes: require("./enpoints/bursatil/carterasEficientes.js")({
       client: client
     }),
+    instrumentosSelected: require("./enpoints/bursatil/instrumentos.js")({
+      client: client
+    }),
     videoTutorial: require("./enpoints/bursatil/videoSection.js")({
       client: client
     }),

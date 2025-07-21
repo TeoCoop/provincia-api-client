@@ -121,6 +121,27 @@ export function client(options: any): {
                 carteraId: any;
             }) => any;
         };
+        instrumentosSelected: {
+            getById: ({ instrumentoId }: {
+                instrumentoId: any;
+            }) => any;
+            getAll: () => any;
+            createInstrumento: {
+                ({ jwtToken, data }: {
+                    jwtToken: any;
+                    data: any;
+                }): any;
+                ({ jwtToken, instrumentoId }: {
+                    jwtToken: any;
+                    instrumentoId: any;
+                }): any;
+            };
+            updateInstrumento: ({ jwtToken, instrumentoId, data }: {
+                jwtToken: any;
+                instrumentoId: any;
+                data: any;
+            }) => any;
+        };
         videoTutorial: {
             getById: ({ videoId }: {
                 videoId: any;
