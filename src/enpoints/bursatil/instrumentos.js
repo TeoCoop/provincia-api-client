@@ -47,7 +47,7 @@ function instrumento({ client }) {
 
   function deleteInstrumento({ jwtToken, instrumentoId }) {
     return client({
-      url: `/api/instrumentos-selecteds${instrumentoId}`,
+      url: `/api/instrumentos-selecteds/${instrumentoId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
