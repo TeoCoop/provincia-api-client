@@ -56,7 +56,7 @@ function instrumento(_ref) {
     var jwtToken = _ref5.jwtToken,
       instrumentoId = _ref5.instrumentoId;
     return client({
-      url: "/api/instrumentos-selecteds".concat(instrumentoId),
+      url: "/api/instrumentos-selecteds/".concat(instrumentoId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
