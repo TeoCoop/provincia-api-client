@@ -45,7 +45,7 @@ function instrumento({ client }) {
     });
   }
 
-  function createInstrumento({ jwtToken, instrumentoId }) {
+  function deleteInstrumento({ jwtToken, instrumentoId }) {
     return client({
       url: `/api/instrumentos-selecteds${instrumentoId}`,
       method: "delete",
@@ -60,7 +60,7 @@ function instrumento({ client }) {
     getAll,
     createInstrumento,
     updateInstrumento,
-    createInstrumento,
+    deleteInstrumento,
   };
 }
 
