@@ -52,7 +52,7 @@ function instrumento(_ref) {
       data: formattedData
     });
   }
-  function createInstrumento(_ref5) {
+  function deleteInstrumento(_ref5) {
     var jwtToken = _ref5.jwtToken,
       instrumentoId = _ref5.instrumentoId;
     return client({
@@ -63,11 +63,12 @@ function instrumento(_ref) {
       }
     });
   }
-  return _defineProperty({
+  return {
     getById: getById,
     getAll: getAll,
     createInstrumento: createInstrumento,
-    updateInstrumento: updateInstrumento
-  }, "createInstrumento", createInstrumento);
+    updateInstrumento: updateInstrumento,
+    deleteInstrumento: deleteInstrumento
+  };
 }
 module.exports = instrumento;
