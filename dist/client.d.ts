@@ -460,6 +460,15 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
+        libreria: {
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateLibreriaBursatil: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
     };
     auth: {
         auth: ({ user }: {
@@ -913,6 +922,15 @@ export function client(options: any): {
                 fecha_fin: any;
                 page?: number | undefined;
                 pageSize?: number | undefined;
+            }) => any;
+        };
+        libreria: {
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateLibreriaFondos: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
             }) => any;
         };
     };
