@@ -81,6 +81,9 @@ function bursatilEndpoints(baseURL) {
     simulador: require("./enpoints/bursatil/simulador.js")({
       client,
     }),
+    libreria: require("./enpoints/bursatil/libreria.js")({
+      client,
+    }),
   };
 }
 
@@ -145,6 +148,9 @@ function fondosEndpoints(baseURL) {
         client,
       }),
     cuotaParte: require("./enpoints/fondos/cuotaParte.js")({
+      client,
+    }),
+    libreria: require("./enpoints/fondos/libreria.js")({
       client,
     }),
   };
