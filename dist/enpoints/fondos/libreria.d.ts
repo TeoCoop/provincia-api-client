@@ -1,12 +1,25 @@
-export = libreriaFondos;
-declare function libreriaFondos({ client }: {
+export = libreriaBursatil;
+declare function libreriaBursatil({ client }: {
     client: any;
 }): {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    updateLibreriaFondos: ({ jwtToken, data }: {
+    updateFile: ({ jwtToken, data, fileId }: {
         jwtToken: any;
         data: any;
+        fileId: any;
+    }) => any;
+    createFile: ({ jwtToken, data }: {
+        jwtToken: any;
+        data: any;
+    }) => any;
+    deleteFile: ({ jwtToken, fileId }: {
+        jwtToken: any;
+        fileId: any;
+    }) => any;
+    getById: ({ jwtToken, fileId }: {
+        jwtToken: any;
+        fileId: any;
     }) => any;
 };

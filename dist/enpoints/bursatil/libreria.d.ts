@@ -5,8 +5,21 @@ declare function libreriaBursatil({ client }: {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    updateLibreriaBursatil: ({ jwtToken, data }: {
+    updateFile: ({ jwtToken, data, fileId }: {
         jwtToken: any;
         data: any;
+        fileId: any;
+    }) => any;
+    createFile: ({ jwtToken, data }: {
+        jwtToken: any;
+        data: any;
+    }) => any;
+    deleteFile: ({ jwtToken, fileId }: {
+        jwtToken: any;
+        fileId: any;
+    }) => any;
+    getById: ({ jwtToken, fileId }: {
+        jwtToken: any;
+        fileId: any;
     }) => any;
 };
