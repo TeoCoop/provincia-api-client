@@ -1,13 +1,19 @@
 function libreriaBursatil({ client }) {
-  function getAll({ jwtToken }) {
+  function getAll({ jwtToken, page = 1, pageSize = 20 }) {
+    const params = new URLSearchParams({
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+
     return client({
-      url: "/api/libreria-bursatils",
+      url: `/api/libreria-bursatils?${params.toString()}`,
       method: "get",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
     });
   }
+
   function getById({ jwtToken, fileId }) {
     return client({
       url: `/api/libreria-bursatils/${fileId}`,

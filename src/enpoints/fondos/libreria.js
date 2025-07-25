@@ -1,13 +1,19 @@
 function libreriaBursatil({ client }) {
-  function getAll({ jwtToken }) {
+  function getAll({ jwtToken, page = 1, pageSize = 20 }) {
+    const params = new URLSearchParams({
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+
     return client({
-      url: "/api/libreria-fondos",
+      url: `/api/libreria-fondos?${params.toString()}`,
       method: "get",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
     });
   }
+
   function getById({ jwtToken, fileId }) {
     return client({
       url: `/api/libreria-fondos/${fileId}`,
