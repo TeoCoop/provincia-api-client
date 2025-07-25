@@ -1,8 +1,8 @@
 function libreriaBursatil({ client }) {
   function getAll({ jwtToken, page = 1, pageSize = 20 }) {
     const params = new URLSearchParams({
-      page: String(page),
-      pageSize: String(pageSize),
+      "pagination[page]": String(page),
+      "pagination[pageSize]": String(pageSize),
     });
 
     return client({
