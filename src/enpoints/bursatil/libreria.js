@@ -1,29 +1,70 @@
 function libreriaBursatil({ client }) {
   function getAll({ jwtToken }) {
     return client({
-      url: "/api/libreria-bursatil",
+      url: "/api/libreria-bursatils",
       method: "get",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
     });
   }
-  function updateLibreriaBursatil({ jwtToken, data }) {
+  function getById({ jwtToken, fileId }) {
     return client({
-      url: "/api/libreria-bursatil",
+      url: `/api/libreria-bursatils/${fileId}`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
+  function updateFile({ jwtToken, data, fileId }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
+    return client({
+      url: `/api/libreria-bursatils/${fileId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       data: {
-        data: data,
+        formattedData,
       },
+    });
+  }
+  function deleteFile({ jwtToken, fileId }) {
+    return client({
+      url: `/api/libreria-bursatils/${fileId}`,
+      method: "delete",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
+  function createFile({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
+    return client({
+      url: "/api/libreria-bursatils",
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      data: formattedData,
     });
   }
 
   return {
     getAll,
-    updateLibreriaBursatil,
+    updateFile,
+    createFile,
+    deleteFile,
+    getById,
   };
 }
 module.exports = libreriaBursatil;
