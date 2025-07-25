@@ -15,8 +15,8 @@ function libreriaBursatil(_ref) {
       _ref2$pageSize = _ref2.pageSize,
       pageSize = _ref2$pageSize === void 0 ? 20 : _ref2$pageSize;
     var params = new URLSearchParams({
-      page: String(page),
-      pageSize: String(pageSize)
+      "pagination[page]": String(page),
+      "pagination[pageSize]": String(pageSize)
     });
     return client({
       url: "/api/libreria-bursatils?".concat(params.toString()),
