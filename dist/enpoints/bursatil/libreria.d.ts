@@ -2,8 +2,10 @@ export = libreriaBursatil;
 declare function libreriaBursatil({ client }: {
     client: any;
 }): {
-    getAll: ({ jwtToken }: {
+    getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
+        page?: number | undefined;
+        pageSize?: number | undefined;
     }) => any;
     updateFile: ({ jwtToken, data, fileId }: {
         jwtToken: any;

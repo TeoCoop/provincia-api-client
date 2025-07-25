@@ -9,9 +9,17 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 function libreriaBursatil(_ref) {
   var client = _ref.client;
   function getAll(_ref2) {
-    var jwtToken = _ref2.jwtToken;
+    var jwtToken = _ref2.jwtToken,
+      _ref2$page = _ref2.page,
+      page = _ref2$page === void 0 ? 1 : _ref2$page,
+      _ref2$pageSize = _ref2.pageSize,
+      pageSize = _ref2$pageSize === void 0 ? 20 : _ref2$pageSize;
+    var params = new URLSearchParams({
+      page: String(page),
+      pageSize: String(pageSize)
+    });
     return client({
-      url: "/api/libreria-bursatils",
+      url: "/api/libreria-bursatils?".concat(params.toString()),
       method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

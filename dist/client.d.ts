@@ -461,8 +461,10 @@ export function client(options: any): {
             }) => any;
         };
         libreria: {
-            getAll: ({ jwtToken }: {
+            getAll: ({ jwtToken, page, pageSize }: {
                 jwtToken: any;
+                page?: number | undefined;
+                pageSize?: number | undefined;
             }) => any;
             updateFile: ({ jwtToken, data, fileId }: {
                 jwtToken: any;
@@ -938,8 +940,10 @@ export function client(options: any): {
             }) => any;
         };
         libreria: {
-            getAll: ({ jwtToken }: {
+            getAll: ({ jwtToken, page, pageSize }: {
                 jwtToken: any;
+                page?: number | undefined;
+                pageSize?: number | undefined;
             }) => any;
             updateFile: ({ jwtToken, data, fileId }: {
                 jwtToken: any;
