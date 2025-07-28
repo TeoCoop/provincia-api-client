@@ -81,13 +81,11 @@ function blogMedia(_ref) {
       data: formattedData
     });
   }
-  return {
+  return _defineProperty(_defineProperty({
     getAll: getAll,
     updateFile: updateFile,
-    deleteBlogMedia: deleteBlogMedia,
-    getById: getById,
     deleteFile: deleteFile,
-    createFile: createFile
-  };
+    getById: getById
+  }, "deleteFile", deleteFile), "createFile", createFile);
 }
 module.exports = blogMedia;

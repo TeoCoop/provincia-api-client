@@ -12,12 +12,11 @@ declare function blogMedia({ client }: {
         data: any;
         fileId: any;
     }) => any;
-    deleteBlogMedia: any;
-    getById: ({ jwtToken, fileId }: {
+    deleteFile: ({ jwtToken, fileId }: {
         jwtToken: any;
         fileId: any;
     }) => any;
-    deleteFile: ({ jwtToken, fileId }: {
+    getById: ({ jwtToken, fileId }: {
         jwtToken: any;
         fileId: any;
     }) => any;
