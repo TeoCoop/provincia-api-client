@@ -67,7 +67,7 @@ function blogMedia({ client }) {
   return {
     getAll,
     updateFile,
-    deleteBlogMedia,
+    deleteFile,
     getById,
     deleteFile,
     createFile,
