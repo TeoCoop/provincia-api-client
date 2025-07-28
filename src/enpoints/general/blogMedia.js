@@ -64,9 +64,6 @@ function blogMedia({ client }) {
       data: formattedData,
     });
   }
-
-  // Nuevo método que sube el archivo y actualiza el blog-media
-
   return {
     getAll,
     updateFile,
