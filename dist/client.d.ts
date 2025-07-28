@@ -504,19 +504,29 @@ export function client(options: any): {
             }) => any;
         };
         blogMedia: {
-            getAll: () => any;
-            updateBlogMedia: ({ jwtToken, data }: {
+            getAll: ({ jwtToken, page, pageSize }: {
+                jwtToken: any;
+                page?: number | undefined;
+                pageSize?: number | undefined;
+            }) => any;
+            updateFile: ({ jwtToken, data, fileId }: {
+                jwtToken: any;
+                data: any;
+                fileId: any;
+            }) => any;
+            deleteBlogMedia: any;
+            getById: ({ jwtToken, fileId }: {
+                jwtToken: any;
+                fileId: any;
+            }) => any;
+            deleteFile: ({ jwtToken, fileId }: {
+                jwtToken: any;
+                fileId: any;
+            }) => any;
+            createFile: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
             }) => any;
-            deleteBlogMedia: ({ jwtToken }: {
-                jwtToken: any;
-            }) => any;
-            uploadAndUpdate: ({ jwtToken, file, name }: {
-                jwtToken: any;
-                file: any;
-                name: any;
-            }) => Promise<any>;
         };
     };
     fondos: {
