@@ -5,7 +5,7 @@ function institutional({ client }) {
       method: "get",
     });
   }
-  function updateInstitutional({ jwtToken }) {
+  function updateInstitutional({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
