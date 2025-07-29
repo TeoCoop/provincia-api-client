@@ -556,8 +556,9 @@ export function client(options: any): {
         };
         institutional: {
             getAll: () => any;
-            updateInstitutional: ({ jwtToken }: {
+            updateInstitutional: ({ jwtToken, data }: {
                 jwtToken: any;
+                data: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
                 jwtToken: any;

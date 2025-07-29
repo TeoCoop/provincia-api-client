@@ -15,7 +15,8 @@ function institutional(_ref) {
     });
   }
   function updateInstitutional(_ref2) {
-    var jwtToken = _ref2.jwtToken;
+    var jwtToken = _ref2.jwtToken,
+      data = _ref2.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
