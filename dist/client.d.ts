@@ -973,6 +973,12 @@ export function client(options: any): {
                 fileId: any;
             }) => any;
         };
-        destacadoPopUp: any;
+        destacadoPopUp: {
+            getAll: (isPublic: any) => any;
+            updateDestacado: ({ jwtToken, data }: {
+                jwtToken: any;
+                data: any;
+            }) => any;
+        };
     };
 };
