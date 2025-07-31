@@ -973,5 +973,6 @@ export function client(options: any): {
                 fileId: any;
             }) => any;
         };
+        destacadoPopUp: any;
     };
 };

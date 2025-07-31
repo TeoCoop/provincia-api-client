@@ -174,6 +174,9 @@ function fondosEndpoints(baseURL) {
     }),
     libreria: require("./enpoints/fondos/libreria.js")({
       client: client
+    }),
+    destacadoPopUp: require("./enpoints/fondos/destacado.js")({
+      client: client
     })
   };
 }
