@@ -605,6 +605,7 @@ export function client(options: any): {
             getByDocumentId: ({ foundDocumentId }: {
                 foundDocumentId: any;
             }) => any;
+            getOnlyNameAndNumber: () => any;
         };
         areaTeam: {
             getAll: () => any;

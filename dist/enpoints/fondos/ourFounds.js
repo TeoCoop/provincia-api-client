@@ -28,6 +28,16 @@ function founds(_ref) {
       method: "get"
     });
   }
+  function getOnlyNameAndNumber() {
+    var query = "\n    query {\n      ourFounds {\n        name\n        numero_fondo\n      }\n    }\n  ";
+    return axios({
+      url: "/graphql",
+      method: "post",
+      data: {
+        query: query
+      }
+    });
+  }
   function getFilters() {
     var query = "\n        query OurFounds(\n        $caracteristicaDocumentId: ID\n        $tipoActivoDocumentId: ID\n        $valueInversorId: ID\n      ) {\n        ourFounds(\n          filters: {\n            and: [\n              {\n                caracteristicas_fondos: {\n                  documentId: { eq: $caracteristicaDocumentId }\n                }\n              }\n              {\n                tipos_activos_fondos: {\n                  documentId: { eq: $tipoActivoDocumentId }\n                }\n              }\n              {\n                inversor_profile_fondos:   {\n                  documentId: { eq: $valueInversorId }\n                }\n              }\n            ]\n          }\n        ) {\n        name\n        description\n        numero_fondo\n        moneda\n        informationAt\n        patrimonio\n        link\n        documentId\n        factSheet {\n          url\n        }\n      caracteristicas_fondos {\n        value\n        documentId\n      }\n      tipos_activos_fondos {\n        value\n        documentId\n      }\n      inversor_profile_fondos {\n        title\n        description\n        documentId\n        shortDescription\n      }\n        }\n      }\n";
     var variables = {
@@ -93,7 +103,8 @@ function founds(_ref) {
     updateFound: updateFound,
     deleteFound: deleteFound,
     getFilters: getFilters,
-    getByDocumentId: getByDocumentId
+    getByDocumentId: getByDocumentId,
+    getOnlyNameAndNumber: getOnlyNameAndNumber
   };
 }
 module.exports = founds;

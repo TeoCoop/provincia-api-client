@@ -23,4 +23,5 @@ declare function founds({ client }: {
     getByDocumentId: ({ foundDocumentId }: {
         foundDocumentId: any;
     }) => any;
+    getOnlyNameAndNumber: () => any;
 };
