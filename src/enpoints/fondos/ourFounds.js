@@ -27,8 +27,7 @@ function founds({ client }) {
       }
     }
   `;
-
-    return axios({
+    return client({
       url: "/graphql",
       method: "post",
       data: {
