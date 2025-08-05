@@ -30,7 +30,7 @@ function founds(_ref) {
   }
   function getOnlyNameAndNumber() {
     var query = "\n    query {\n      ourFounds {\n        name\n        numero_fondo\n      }\n    }\n  ";
-    return axios({
+    return client({
       url: "/graphql",
       method: "post",
       data: {
