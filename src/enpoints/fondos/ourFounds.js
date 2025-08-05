@@ -18,6 +18,24 @@ function founds({ client }) {
       method: "get",
     });
   }
+  function getOnlyNameAndNumber() {
+    const query = `
+    query {
+      ourFounds {
+        name
+        numero_fondo
+      }
+    }
+  `;
+
+    return axios({
+      url: "/graphql",
+      method: "post",
+      data: {
+        query,
+      },
+    });
+  }
   function getFilters() {
     const query = `
         query OurFounds(
@@ -139,6 +157,7 @@ function founds({ client }) {
     deleteFound,
     getFilters,
     getByDocumentId,
+    getOnlyNameAndNumber,
   };
 }
 
