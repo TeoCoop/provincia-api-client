@@ -73,6 +73,7 @@ function questionTest({ client }) {
     deleteCuestion,
     getById,
     createQuestion,
+    getAllPanel,
   };
 }
 module.exports = questionTest;
