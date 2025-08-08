@@ -21,15 +21,19 @@ function categoriesVideos(_ref) {
       method: "get"
     });
   }
-  function getAllPanel() {
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
     return client({
       url: "/api/categories-videos?includeEmpty=true",
-      method: "get"
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
     });
   }
-  function createCategoriesVideos(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function createCategoriesVideos(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -42,10 +46,10 @@ function categoriesVideos(_ref) {
       data: formattedData
     });
   }
-  function updateCategoriesVideos(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      categoriesId = _ref4.categoriesId,
-      data = _ref4.data;
+  function updateCategoriesVideos(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      categoriesId = _ref5.categoriesId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -58,9 +62,9 @@ function categoriesVideos(_ref) {
       data: formattedData
     });
   }
-  function deleteCategoriesVideos(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      categoriesId = _ref5.categoriesId;
+  function deleteCategoriesVideos(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      categoriesId = _ref6.categoriesId;
     return client({
       url: "/api/categories-videos/".concat(categoriesId),
       method: "delete",

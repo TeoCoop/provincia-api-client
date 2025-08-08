@@ -19,4 +19,7 @@ declare function videoSeccion({ client }: {
         jwtToken: any;
         videoId: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

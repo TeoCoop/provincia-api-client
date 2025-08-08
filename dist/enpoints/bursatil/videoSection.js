@@ -21,9 +21,19 @@ function videoSeccion(_ref) {
       method: "get"
     });
   }
-  function createVideo(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/video-seccions",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function createVideo(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -36,10 +46,10 @@ function videoSeccion(_ref) {
       data: formattedData
     });
   }
-  function updateVideo(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      videoId = _ref4.videoId,
-      data = _ref4.data;
+  function updateVideo(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      videoId = _ref5.videoId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function videoSeccion(_ref) {
       data: formattedData
     });
   }
-  function deleteVideo(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      videoId = _ref5.videoId;
+  function deleteVideo(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      videoId = _ref6.videoId;
     return client({
       url: "/api/video-seccions/".concat(videoId),
       method: "delete",
@@ -68,7 +78,8 @@ function videoSeccion(_ref) {
     getAll: getAll,
     createVideo: createVideo,
     updateVideo: updateVideo,
-    deleteVideo: deleteVideo
+    deleteVideo: deleteVideo,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = videoSeccion;

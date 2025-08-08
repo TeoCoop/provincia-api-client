@@ -29,9 +29,6 @@ function bursatilEndpoints(baseURL) {
     product: require("./enpoints/bursatil/productBursatil.js")({
       client: client
     }),
-    accountOppening: require("./enpoints/bursatil/accountOpening.js")({
-      client: client
-    }),
     faqs: require("./enpoints/bursatil/faqs.js")({
       client: client
     }),
@@ -72,9 +69,6 @@ function bursatilEndpoints(baseURL) {
       client: client
     }),
     paletteAndColors: require("./enpoints/bursatil/paletteAndColors.js")({
-      client: client
-    }),
-    seccionAliados: require("./enpoints/bursatil/aliadosSeccion.js")({
       client: client
     }),
     homeBursatil: require("./enpoints/bursatil/homeBursatil.js")({

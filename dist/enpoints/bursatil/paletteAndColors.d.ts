@@ -36,4 +36,7 @@ declare function paletteAndColors({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

@@ -21,10 +21,20 @@ function aliados(_ref) {
       method: "get"
     });
   }
-  function updateAliado(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      aliadoId = _ref3.aliadoId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/aliados",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateAliado(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      aliadoId = _ref4.aliadoId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function aliados(_ref) {
       data: formattedData
     });
   }
-  function createAliado(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createAliado(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function aliados(_ref) {
       data: formattedData
     });
   }
-  function deleteAliado(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      aliadoId = _ref5.aliadoId;
+  function deleteAliado(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      aliadoId = _ref6.aliadoId;
     return client({
       url: "/api/aliados/".concat(aliadoId),
       method: "delete",
@@ -68,7 +78,8 @@ function aliados(_ref) {
     updateAliado: updateAliado,
     deleteAliado: deleteAliado,
     getById: getById,
-    createAliado: createAliado
+    createAliado: createAliado,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = aliados;

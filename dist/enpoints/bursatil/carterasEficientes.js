@@ -27,9 +27,19 @@ function carterasEficientes(_ref) {
       // },
     });
   }
-  function createCartera(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/carteras-eficientes",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function createCartera(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -42,10 +52,10 @@ function carterasEficientes(_ref) {
       data: formattedData
     });
   }
-  function updateCartera(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      carteraId = _ref4.carteraId,
-      data = _ref4.data;
+  function updateCartera(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      carteraId = _ref5.carteraId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -58,9 +68,9 @@ function carterasEficientes(_ref) {
       data: formattedData
     });
   }
-  function deleteCartera(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      carteraId = _ref5.carteraId;
+  function deleteCartera(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      carteraId = _ref6.carteraId;
     return client({
       url: "/api/carteras-eficientes/".concat(carteraId),
       method: "delete",
@@ -74,7 +84,8 @@ function carterasEficientes(_ref) {
     getAll: getAll,
     createCartera: createCartera,
     updateCartera: updateCartera,
-    deleteCartera: deleteCartera
+    deleteCartera: deleteCartera,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = carterasEficientes;

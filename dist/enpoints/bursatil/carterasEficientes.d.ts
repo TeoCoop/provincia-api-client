@@ -19,4 +19,7 @@ declare function carterasEficientes({ client }: {
         jwtToken: any;
         carteraId: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

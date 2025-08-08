@@ -19,4 +19,7 @@ declare function instrumento({ client }: {
         jwtToken: any;
         instrumentoId: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

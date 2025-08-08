@@ -21,10 +21,20 @@ function paletteAndColors(_ref) {
       method: "get"
     });
   }
-  function updatePalette(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      paletteId = _ref3.paletteId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/palette-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updatePalette(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      paletteId = _ref4.paletteId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function paletteAndColors(_ref) {
       data: formattedData
     });
   }
-  function createPalette(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createPalette(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function paletteAndColors(_ref) {
       data: formattedData
     });
   }
-  function deletePalette(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      paletteId = _ref5.paletteId;
+  function deletePalette(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      paletteId = _ref6.paletteId;
     return client({
       url: "/api/palette-bursatils/".concat(paletteId),
       method: "delete",
@@ -63,8 +73,8 @@ function paletteAndColors(_ref) {
       }
     });
   }
-  function getByIdColor(_ref6) {
-    var colorId = _ref6.colorId;
+  function getByIdColor(_ref7) {
+    var colorId = _ref7.colorId;
     return client({
       url: "/api/colors-bursatils/".concat(colorId),
       method: "get"
@@ -76,10 +86,10 @@ function paletteAndColors(_ref) {
       method: "get"
     });
   }
-  function updateColor(_ref7) {
-    var jwtToken = _ref7.jwtToken,
-      colorId = _ref7.colorId,
-      data = _ref7.data;
+  function updateColor(_ref8) {
+    var jwtToken = _ref8.jwtToken,
+      colorId = _ref8.colorId,
+      data = _ref8.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -92,9 +102,9 @@ function paletteAndColors(_ref) {
       data: formattedData
     });
   }
-  function createColor(_ref8) {
-    var jwtToken = _ref8.jwtToken,
-      data = _ref8.data;
+  function createColor(_ref9) {
+    var jwtToken = _ref9.jwtToken,
+      data = _ref9.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -107,9 +117,9 @@ function paletteAndColors(_ref) {
       data: formattedData
     });
   }
-  function deleteColor(_ref9) {
-    var jwtToken = _ref9.jwtToken,
-      colorId = _ref9.colorId;
+  function deleteColor(_ref10) {
+    var jwtToken = _ref10.jwtToken,
+      colorId = _ref10.colorId;
     return client({
       url: "/api/colors-bursatils/".concat(colorId),
       method: "delete",
@@ -128,7 +138,8 @@ function paletteAndColors(_ref) {
     updatePalette: updatePalette,
     deletePalette: deletePalette,
     getByIdPalette: getByIdPalette,
-    createPalette: createPalette
+    createPalette: createPalette,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = paletteAndColors;

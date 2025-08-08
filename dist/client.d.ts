@@ -24,6 +24,9 @@ export function client(options: any): {
                 categoryDocumentId: any;
                 search: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         institutional: {
             getAll: () => any;
@@ -32,6 +35,9 @@ export function client(options: any): {
                 data: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
@@ -54,25 +60,6 @@ export function client(options: any): {
                 data: any;
             }) => any;
         };
-        accountOppening: {
-            getById: ({ accountId }: {
-                accountId: any;
-            }) => any;
-            getAll: () => any;
-            createAccount: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            updateAccount: ({ jwtToken, accountId, data }: {
-                jwtToken: any;
-                accountId: any;
-                data: any;
-            }) => any;
-            deleteAccount: ({ jwtToken, accountId }: {
-                jwtToken: any;
-                accountId: any;
-            }) => any;
-        };
         faqs: {
             getById: ({ faqId }: {
                 faqId: any;
@@ -91,6 +78,9 @@ export function client(options: any): {
                 jwtToken: any;
                 faqId: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         global: {
             getAll: () => any;
@@ -99,6 +89,9 @@ export function client(options: any): {
                 data: any;
             }) => any;
             deleteGlobal: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
@@ -120,6 +113,9 @@ export function client(options: any): {
                 jwtToken: any;
                 carteraId: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         instrumentosSelected: {
             getById: ({ instrumentoId }: {
@@ -138,6 +134,9 @@ export function client(options: any): {
             deleteInstrumento: ({ jwtToken, instrumentoId }: {
                 jwtToken: any;
                 instrumentoId: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         videoTutorial: {
@@ -158,6 +157,9 @@ export function client(options: any): {
                 jwtToken: any;
                 videoId: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         categoriesVideos: {
             getById: ({ categoriesId }: {
@@ -177,7 +179,9 @@ export function client(options: any): {
                 jwtToken: any;
                 categoriesId: any;
             }) => any;
-            getAllPanel: () => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         categoriesBlog: {
             getById: ({ categoryId }: {
@@ -196,6 +200,9 @@ export function client(options: any): {
             deleteCategory: ({ jwtToken, categoryId }: {
                 jwtToken: any;
                 categoryId: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         areaTeam: {
@@ -216,6 +223,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         teamMember: {
             getAll: () => any;
@@ -234,6 +244,9 @@ export function client(options: any): {
             createMember: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         aliados: {
@@ -254,6 +267,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         topicBlog: {
             getAll: () => any;
@@ -272,6 +288,9 @@ export function client(options: any): {
             createTopic: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         destacadosHome: {
@@ -292,7 +311,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
-            getPanel: () => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         foundsForBursatil: {
             get: () => any;
@@ -332,14 +353,7 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
-        };
-        seccionAliados: {
-            get: () => any;
-            updateAliadosSeccion: ({ jwtToken, data }: {
-                jwtToken: any;
-                data: any;
-            }) => any;
-            deleteAliadosSeccion: ({ jwtToken }: {
+            getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
@@ -360,6 +374,9 @@ export function client(options: any): {
             createHome: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         contactNewsleter: {
@@ -410,6 +427,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
             deleteTest: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
@@ -453,6 +473,9 @@ export function client(options: any): {
             }) => any;
             getResult: ({ value }: {
                 value: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         simulador: {

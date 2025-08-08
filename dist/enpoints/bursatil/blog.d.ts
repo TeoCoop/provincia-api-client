@@ -25,4 +25,7 @@ declare function blog({ client }: {
         categoryDocumentId: any;
         search: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

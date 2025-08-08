@@ -10,4 +10,7 @@ declare function global({ client }: {
     deleteGlobal: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

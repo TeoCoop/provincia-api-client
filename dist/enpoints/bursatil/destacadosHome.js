@@ -21,16 +21,20 @@ function destacadosHome(_ref) {
       method: "get"
     });
   }
-  function getPanel() {
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
     return client({
       url: "/api/destacados-bursatils/all",
-      method: "get"
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
     });
   }
-  function updateDestacado(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      destacadoId = _ref3.destacadoId,
-      data = _ref3.data;
+  function updateDestacado(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      destacadoId = _ref4.destacadoId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -43,9 +47,9 @@ function destacadosHome(_ref) {
       data: formattedData
     });
   }
-  function createDestacado(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createDestacado(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -58,9 +62,9 @@ function destacadosHome(_ref) {
       data: formattedData
     });
   }
-  function deleteDestacado(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      destacadoId = _ref5.destacadoId;
+  function deleteDestacado(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      destacadoId = _ref6.destacadoId;
     return client({
       url: "/api/destacados-bursatils/".concat(destacadoId),
       method: "delete",
@@ -75,7 +79,7 @@ function destacadosHome(_ref) {
     deleteDestacado: deleteDestacado,
     getById: getById,
     createDestacado: createDestacado,
-    getPanel: getPanel
+    getAllPanel: getAllPanel
   };
 }
 module.exports = destacadosHome;

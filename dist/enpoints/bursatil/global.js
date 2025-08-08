@@ -17,9 +17,19 @@ function global(_ref) {
       // },
     });
   }
-  function updateGlobal(_ref2) {
-    var jwtToken = _ref2.jwtToken,
-      data = _ref2.data;
+  function getAllPanel(_ref2) {
+    var jwtToken = _ref2.jwtToken;
+    return client({
+      url: "/api/global-bursatil",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateGlobal(_ref3) {
+    var jwtToken = _ref3.jwtToken,
+      data = _ref3.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -32,8 +42,8 @@ function global(_ref) {
       data: formattedData
     });
   }
-  function deleteGlobal(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function deleteGlobal(_ref4) {
+    var jwtToken = _ref4.jwtToken;
     return client({
       url: "/api/global-bursatil",
       method: "delete",
@@ -45,7 +55,8 @@ function global(_ref) {
   return {
     getAll: getAll,
     updateGlobal: updateGlobal,
-    deleteGlobal: deleteGlobal
+    deleteGlobal: deleteGlobal,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = global;

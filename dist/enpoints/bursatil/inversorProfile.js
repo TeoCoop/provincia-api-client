@@ -21,18 +21,28 @@ function inverterProfile(_ref) {
       method: "get"
     });
   }
-  function getResult(_ref3) {
-    var value = _ref3.value;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/inversor-profile-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function getResult(_ref4) {
+    var value = _ref4.value;
     console.log(value);
     return client({
       url: "/api/inversor-profile-bursatils?value=".concat(value),
       method: "get"
     });
   }
-  function updateProfile(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      profileId = _ref4.profileId,
-      data = _ref4.data;
+  function updateProfile(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      profileId = _ref5.profileId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -45,9 +55,9 @@ function inverterProfile(_ref) {
       data: formattedData
     });
   }
-  function createProfile(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      data = _ref5.data;
+  function createProfile(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      data = _ref6.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -60,9 +70,9 @@ function inverterProfile(_ref) {
       data: formattedData
     });
   }
-  function deleteProfile(_ref6) {
-    var jwtToken = _ref6.jwtToken,
-      profileId = _ref6.profileId;
+  function deleteProfile(_ref7) {
+    var jwtToken = _ref7.jwtToken,
+      profileId = _ref7.profileId;
     return client({
       url: "/api/inversor-profile-bursatils/".concat(profileId),
       method: "delete",
@@ -77,7 +87,8 @@ function inverterProfile(_ref) {
     deleteProfile: deleteProfile,
     getById: getById,
     createProfile: createProfile,
-    getResult: getResult
+    getResult: getResult,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = inverterProfile;

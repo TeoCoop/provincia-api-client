@@ -19,4 +19,7 @@ declare function category({ client }: {
         jwtToken: any;
         categoryId: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

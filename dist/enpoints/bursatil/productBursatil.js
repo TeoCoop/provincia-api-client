@@ -21,10 +21,20 @@ function productBursatil(_ref) {
       method: "get"
     });
   }
-  function updateProduct(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      productId = _ref3.productId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/product-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateProduct(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      productId = _ref4.productId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function productBursatil(_ref) {
       data: formattedData
     });
   }
-  function createProduct(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createProduct(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function productBursatil(_ref) {
       data: formattedData
     });
   }
-  function deleteProduct(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      productId = _ref5.productId;
+  function deleteProduct(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      productId = _ref6.productId;
     return client({
       url: "/api/product-bursatils/".concat(productId),
       method: "delete",

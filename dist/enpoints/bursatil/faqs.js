@@ -21,9 +21,19 @@ function faq(_ref) {
       method: "get"
     });
   }
-  function createFaq(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/faq-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function createFaq(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -36,10 +46,10 @@ function faq(_ref) {
       data: formattedData
     });
   }
-  function updateFaq(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      faqId = _ref4.faqId,
-      data = _ref4.data;
+  function updateFaq(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      faqId = _ref5.faqId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function faq(_ref) {
       data: formattedData
     });
   }
-  function deleteFaq(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      faqId = _ref5.faqId;
+  function deleteFaq(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      faqId = _ref6.faqId;
     return client({
       url: "/api/faq-bursatils/".concat(faqId),
       method: "delete",
@@ -68,7 +78,8 @@ function faq(_ref) {
     getAll: getAll,
     createFaq: createFaq,
     updateFaq: updateFaq,
-    deleteFaq: deleteFaq
+    deleteFaq: deleteFaq,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = faq;

@@ -19,5 +19,7 @@ declare function destacadosHome({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
-    getPanel: () => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

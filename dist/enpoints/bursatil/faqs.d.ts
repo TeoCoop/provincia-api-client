@@ -19,4 +19,7 @@ declare function faq({ client }: {
         jwtToken: any;
         faqId: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

@@ -21,11 +21,21 @@ function blog(_ref) {
       method: "get"
     });
   }
-  function getFilters(_ref3) {
-    var year = _ref3.year,
-      topicDocumentId = _ref3.topicDocumentId,
-      categoryDocumentId = _ref3.categoryDocumentId,
-      search = _ref3.search;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/blog-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function getFilters(_ref4) {
+    var year = _ref4.year,
+      topicDocumentId = _ref4.topicDocumentId,
+      categoryDocumentId = _ref4.categoryDocumentId,
+      search = _ref4.search;
     var query = "\n      query BlogBursatil(\n        $year: DateTime\n        $topicDocumentId: ID\n        $categoryDocumentId: ID\n        $search: String\n      ) {\n        blogBursatils(\n          filters: {\n            and: [\n            {\n              isDelete: {\n                eq: false\n              }\n            }\n              {\n                createdAt: {\n                  gte: $year\n                }\n              }\n              {\n                topic_blog_bursatils: {\n                  documentId: {\n                    eq: $topicDocumentId\n                  }\n                }\n              }\n              {\n                category_blog_bursatil: {\n                  documentId: {\n                    eq: $categoryDocumentId\n                  }\n                }\n              }\n              {\n                or: [\n                  { title: { containsi: $search } }\n                  { subtitle: { containsi: $search } }\n                  { content: { containsi: $search } }\n                ]\n              }\n            ]\n          }\n        ) {\n          createdAt\n          title\n          subtitle\n          content\n          author\n          topic_blog_bursatils {\n            topic\n          }\n          category_blog_bursatil {\n            name\n          }\n        }\n      }\n    ";
     var variables = {
       year: year,
@@ -42,9 +52,9 @@ function blog(_ref) {
       }
     });
   }
-  function createBlog(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createBlog(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -57,10 +67,10 @@ function blog(_ref) {
       data: formattedData
     });
   }
-  function updateBlog(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      blogId = _ref5.blogId,
-      data = _ref5.data;
+  function updateBlog(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      blogId = _ref6.blogId,
+      data = _ref6.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -73,9 +83,9 @@ function blog(_ref) {
       data: formattedData
     });
   }
-  function deleteBlog(_ref6) {
-    var jwtToken = _ref6.jwtToken,
-      blogId = _ref6.blogId;
+  function deleteBlog(_ref7) {
+    var jwtToken = _ref7.jwtToken,
+      blogId = _ref7.blogId;
     return client({
       url: "/api/blog-bursatils/".concat(blogId),
       method: "delete",
@@ -90,7 +100,8 @@ function blog(_ref) {
     createBlog: createBlog,
     updateBlog: updateBlog,
     deleteBlog: deleteBlog,
-    getFilters: getFilters
+    getFilters: getFilters,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = blog;

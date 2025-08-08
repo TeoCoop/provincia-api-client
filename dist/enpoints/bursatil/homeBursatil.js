@@ -21,10 +21,20 @@ function homeBursatil(_ref) {
       method: "get"
     });
   }
-  function updateHome(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      homeCardId = _ref3.homeCardId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/home-bursatils",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateHome(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      homeCardId = _ref4.homeCardId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function homeBursatil(_ref) {
       data: formattedData
     });
   }
-  function createHome(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createHome(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function homeBursatil(_ref) {
       data: formattedData
     });
   }
-  function deleteHome(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      homeCardId = _ref5.homeCardId;
+  function deleteHome(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      homeCardId = _ref6.homeCardId;
     return client({
       url: "/api/home-bursatils/".concat(homeCardId),
       method: "delete",
@@ -68,7 +78,8 @@ function homeBursatil(_ref) {
     updateHome: updateHome,
     deleteHome: deleteHome,
     getById: getById,
-    createHome: createHome
+    createHome: createHome,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = homeBursatil;

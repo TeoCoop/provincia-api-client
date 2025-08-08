@@ -10,4 +10,7 @@ declare function institutional({ client }: {
     deleteInstitutional: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

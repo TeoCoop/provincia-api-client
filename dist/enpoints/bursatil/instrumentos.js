@@ -21,9 +21,19 @@ function instrumento(_ref) {
       method: "get"
     });
   }
-  function createInstrumento(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/instrumentos-selecteds",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function createInstrumento(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -36,10 +46,10 @@ function instrumento(_ref) {
       data: formattedData
     });
   }
-  function updateInstrumento(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      instrumentoId = _ref4.instrumentoId,
-      data = _ref4.data;
+  function updateInstrumento(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      instrumentoId = _ref5.instrumentoId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function instrumento(_ref) {
       data: formattedData
     });
   }
-  function deleteInstrumento(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      instrumentoId = _ref5.instrumentoId;
+  function deleteInstrumento(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      instrumentoId = _ref6.instrumentoId;
     return client({
       url: "/api/instrumentos-selecteds/".concat(instrumentoId),
       method: "delete",
@@ -68,7 +78,8 @@ function instrumento(_ref) {
     getAll: getAll,
     createInstrumento: createInstrumento,
     updateInstrumento: updateInstrumento,
-    deleteInstrumento: deleteInstrumento
+    deleteInstrumento: deleteInstrumento,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = instrumento;

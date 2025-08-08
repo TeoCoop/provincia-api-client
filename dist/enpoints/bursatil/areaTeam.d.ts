@@ -19,4 +19,7 @@ declare function areasBursatil({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };
