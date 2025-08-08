@@ -65,6 +65,7 @@ function productBursatil({ client }) {
     deleteProduct,
     getById,
     createProduct,
+    getAllPanel,
   };
 }
 module.exports = productBursatil;
