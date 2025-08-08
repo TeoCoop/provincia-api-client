@@ -11,6 +11,15 @@ function homeBursatil({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/home-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateHome({ jwtToken, homeCardId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function homeBursatil({ client }) {
     deleteHome,
     getById,
     createHome,
+    getAllPanel,
   };
 }
 module.exports = homeBursatil;

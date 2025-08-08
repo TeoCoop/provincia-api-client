@@ -12,7 +12,15 @@ function category({ client }) {
       method: "get",
     });
   }
-
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/category-blog-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function createCategory({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -61,6 +69,7 @@ function category({ client }) {
     createCategory,
     updateCategory,
     deleteCategory,
+    getAllPanel,
   };
 }
 

@@ -11,6 +11,15 @@ function paletteAndColors({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/palette-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updatePalette({ jwtToken, paletteId, data }) {
     const formattedData = {
       data: {
@@ -112,6 +121,7 @@ function paletteAndColors({ client }) {
     deletePalette,
     getByIdPalette,
     createPalette,
+    getAllPanel,
   };
 }
 module.exports = paletteAndColors;

@@ -11,6 +11,15 @@ function aliados({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/aliados`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateAliado({ jwtToken, aliadoId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function aliados({ client }) {
     deleteAliado,
     getById,
     createAliado,
+    getAllPanel,
   };
 }
 module.exports = aliados;

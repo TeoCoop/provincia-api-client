@@ -18,7 +18,15 @@ function carterasEficientes({ client }) {
       // },
     });
   }
-
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/carteras-eficientes`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function createCartera({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -67,6 +75,7 @@ function carterasEficientes({ client }) {
     createCartera,
     updateCartera,
     deleteCartera,
+    getAllPanel,
   };
 }
 

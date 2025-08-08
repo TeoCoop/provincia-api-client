@@ -12,7 +12,15 @@ function faq({ client }) {
       method: "get",
     });
   }
-
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/faq-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function createFaq({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -61,6 +69,7 @@ function faq({ client }) {
     createFaq,
     updateFaq,
     deleteFaq,
+    getAllPanel,
   };
 }
 

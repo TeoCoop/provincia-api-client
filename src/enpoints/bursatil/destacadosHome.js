@@ -11,10 +11,13 @@ function destacadosHome({ client }) {
       method: "get",
     });
   }
-  function getPanel() {
+  function getAllPanel({ jwtToken }) {
     return client({
       url: "/api/destacados-bursatils/all",
       method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
     });
   }
   function updateDestacado({ jwtToken, destacadoId, data }) {
@@ -62,7 +65,7 @@ function destacadosHome({ client }) {
     deleteDestacado,
     getById,
     createDestacado,
-    getPanel,
+    getAllPanel,
   };
 }
 module.exports = destacadosHome;

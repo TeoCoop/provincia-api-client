@@ -8,6 +8,15 @@ function global({ client }) {
       // },
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/global-bursatil`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateGlobal({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -20,7 +29,7 @@ function global({ client }) {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      data: formattedData
+      data: formattedData,
     });
   }
 
@@ -38,6 +47,7 @@ function global({ client }) {
     getAll,
     updateGlobal,
     deleteGlobal,
+    getAllPanel,
   };
 }
 

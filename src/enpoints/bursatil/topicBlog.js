@@ -11,6 +11,15 @@ function topicBlog({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/topic-blog-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateTopic({ jwtToken, topicId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function topicBlog({ client }) {
     deleteTopic,
     getById,
     createTopic,
+    getAllPanel,
   };
 }
 module.exports = topicBlog;

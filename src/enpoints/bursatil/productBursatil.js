@@ -11,6 +11,15 @@ function productBursatil({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/product-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateProduct({ jwtToken, productId, data }) {
     const formattedData = {
       data: {

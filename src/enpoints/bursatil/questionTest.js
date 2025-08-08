@@ -17,6 +17,15 @@ function questionTest({ client }) {
       // },
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/questions`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updatedQuestion({ jwtToken, questionId, data }) {
     return client({
       url: `/api/questions/${questionId}`,
@@ -28,7 +37,7 @@ function questionTest({ client }) {
         data: {
           answer: data.answer,
           question: data.question,
-          delete: data.delete
+          delete: data.delete,
         },
       },
     });
@@ -44,7 +53,7 @@ function questionTest({ client }) {
         data: {
           answer: data.answer,
           question: data.question,
-          delete: data.delete
+          delete: data.delete,
         },
       },
     });

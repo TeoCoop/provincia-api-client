@@ -8,6 +8,15 @@ function testInversor({ client }) {
       // },
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/test-inversor-bursatil`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateTest({ jwtToken, data }) {
     return client({
       url: `/api/test-inversor-bursatil`,
@@ -37,6 +46,7 @@ function testInversor({ client }) {
   return {
     getAll,
     updateTest,
+    getAllPanel,
     deleteTest,
   };
 }

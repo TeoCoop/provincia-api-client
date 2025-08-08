@@ -12,6 +12,15 @@ function instrumento({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/instrumentos-selecteds`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
 
   function createInstrumento({ jwtToken, data }) {
     const formattedData = {
@@ -61,6 +70,7 @@ function instrumento({ client }) {
     createInstrumento,
     updateInstrumento,
     deleteInstrumento,
+    getAllPanel,
   };
 }
 

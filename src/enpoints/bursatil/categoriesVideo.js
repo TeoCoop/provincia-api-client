@@ -12,10 +12,13 @@ function categoriesVideos({ client }) {
       method: "get",
     });
   }
-  function getAllPanel() {
+  function getAllPanel({ jwtToken }) {
     return client({
       url: `/api/categories-videos?includeEmpty=true`,
       method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
     });
   }
 

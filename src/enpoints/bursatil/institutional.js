@@ -5,6 +5,15 @@ function institutional({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: "/api/institutional-bursatil",
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateInstitutional({ jwtToken, data }) {
     return client({
       url: "/api/institutional-bursatil",
@@ -30,6 +39,7 @@ function institutional({ client }) {
     getAll,
     updateInstitutional,
     deleteInstitutional,
+    getAllPanel,
   };
 }
 module.exports = institutional;

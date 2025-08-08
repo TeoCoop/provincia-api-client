@@ -12,6 +12,15 @@ function blog({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/blog-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function getFilters({ year, topicDocumentId, categoryDocumentId, search }) {
     const query = `
       query BlogBursatil(
@@ -137,7 +146,8 @@ function blog({ client }) {
     createBlog,
     updateBlog,
     deleteBlog,
-    getFilters
+    getFilters,
+    getAllPanel,
   };
 }
 

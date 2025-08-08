@@ -12,6 +12,15 @@ function videoSeccion({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/video-seccions`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
 
   function createVideo({ jwtToken, data }) {
     const formattedData = {
@@ -61,6 +70,7 @@ function videoSeccion({ client }) {
     createVideo,
     updateVideo,
     deleteVideo,
+    getAllPanel,
   };
 }
 

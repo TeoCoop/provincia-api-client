@@ -11,6 +11,15 @@ function inverterProfile({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/inversor-profile-bursatils`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function getResult({ value }) {
     console.log(value);
     return client({
@@ -65,6 +74,7 @@ function inverterProfile({ client }) {
     getById,
     createProfile,
     getResult,
+    getAllPanel,
   };
 }
 module.exports = inverterProfile;
