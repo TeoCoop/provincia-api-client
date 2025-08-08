@@ -78,7 +78,8 @@ function productBursatil(_ref) {
     updateProduct: updateProduct,
     deleteProduct: deleteProduct,
     getById: getById,
-    createProduct: createProduct
+    createProduct: createProduct,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = productBursatil;

@@ -84,7 +84,8 @@ function questionTest(_ref) {
     updatedQuestion: updatedQuestion,
     deleteCuestion: deleteCuestion,
     getById: getById,
-    createQuestion: createQuestion
+    createQuestion: createQuestion,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = questionTest;

@@ -59,6 +59,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         faqs: {
             getById: ({ faqId }: {
@@ -451,6 +454,9 @@ export function client(options: any): {
             createQuestion: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         inversorProfile: {
