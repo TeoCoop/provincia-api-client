@@ -517,11 +517,13 @@ export function client(options: any): {
             auth: ({ user }: {
                 user: any;
             }) => any;
-            login: ({ user }: {
+            login: ({ user, access_token }: {
                 user: any;
+                access_token: any;
             }) => any;
-            verifyTotp: ({ user }: {
+            verifyTotp: ({ user, access_token }: {
                 user: any;
+                access_token: any;
             }) => any;
         };
     };
@@ -1014,11 +1016,13 @@ export function client(options: any): {
             auth: ({ user }: {
                 user: any;
             }) => any;
-            login: ({ user }: {
+            login: ({ user, access_token }: {
                 user: any;
+                access_token: any;
             }) => any;
-            verifyTotp: ({ user }: {
+            verifyTotp: ({ user, access_token }: {
                 user: any;
+                access_token: any;
             }) => any;
         };
     };

@@ -14,18 +14,23 @@ function auth(_ref) {
     });
   }
   function login(_ref3) {
-    var user = _ref3.user;
+    var user = _ref3.user,
+      access_token = _ref3.access_token;
     return client({
       url: "/api/login/fondos/request-code",
       method: "post",
       data: {
         email: user.email,
         password: user.password
+      },
+      headers: {
+        Authorization: "Bearer ".concat(access_token)
       }
     });
   }
   function verifyTotp(_ref4) {
-    var user = _ref4.user;
+    var user = _ref4.user,
+      access_token = _ref4.access_token;
     // 1. Renamed for clarity
     return client({
       url: "/api/login/fondos/verify-code",
@@ -34,6 +39,9 @@ function auth(_ref) {
       data: {
         email: user.email,
         code: user.token // 3. Changed payload key from 'token' to 'code'
+      },
+      headers: {
+        Authorization: "Bearer ".concat(access_token)
       }
     });
   }
