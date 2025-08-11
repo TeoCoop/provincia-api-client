@@ -94,6 +94,9 @@ function bursatilEndpoints(baseURL) {
     }),
     libreria: require("./enpoints/bursatil/libreria.js")({
       client: client
+    }),
+    authBursatil: require("./enpoints/bursatil/auth.js")({
+      client: client
     })
   };
 }
@@ -171,6 +174,9 @@ function fondosEndpoints(baseURL) {
     }),
     destacadoPopUp: require("./enpoints/fondos/destacados.js")({
       client: client
+    }),
+    authFondos: require("./enpoints/fondos/auth.js")({
+      client: client
     })
   };
 }
@@ -186,18 +192,11 @@ function generalEnpoints(baseURL) {
     //acá también vamos a poner el update file
   };
 }
-function authEndpoint(baseURL) {
-  var client = createClient(baseURL);
-  return require("./enpoints/auth/auth.js")({
-    client: client
-  });
-}
 function client(options) {
   var env = options.env;
   var baseURL = env === "prod" ? "https://provincia-prod-api.teocoop.site/" : env === "sandbox" ? "https://provincia-sandbox-api.teocoop.site/" : "http://localhost:1337/";
   return {
     bursatil: bursatilEndpoints(baseURL),
-    auth: authEndpoint(baseURL),
     general: generalEnpoints(baseURL),
     fondos: fondosEndpoints(baseURL)
   };

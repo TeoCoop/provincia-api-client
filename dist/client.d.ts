@@ -513,17 +513,17 @@ export function client(options: any): {
                 fileId: any;
             }) => any;
         };
-    };
-    auth: {
-        auth: ({ user }: {
-            user: any;
-        }) => any;
-        login: ({ user }: {
-            user: any;
-        }) => any;
-        verifyTotp: ({ user }: {
-            user: any;
-        }) => any;
+        authBursatil: {
+            auth: ({ user }: {
+                user: any;
+            }) => any;
+            login: ({ user }: {
+                user: any;
+            }) => any;
+            verifyTotp: ({ user }: {
+                user: any;
+            }) => any;
+        };
     };
     general: {
         upload: {
@@ -1008,6 +1008,17 @@ export function client(options: any): {
             updateDestacado: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+        };
+        authFondos: {
+            auth: ({ user }: {
+                user: any;
+            }) => any;
+            login: ({ user }: {
+                user: any;
+            }) => any;
+            verifyTotp: ({ user }: {
+                user: any;
             }) => any;
         };
     };
