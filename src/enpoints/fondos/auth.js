@@ -12,7 +12,7 @@ function auth({ client }) {
 
   function login({ user }) {
     return client({
-      url: `/api/auth/login/request-code`,
+      url: `/api/login/fondos/request-code`,
       method: "post",
       data: {
         email: user.email,
@@ -24,7 +24,7 @@ function auth({ client }) {
   function verifyTotp({ user }) {
     // 1. Renamed for clarity
     return client({
-      url: `/api/auth/login/verify-code`, // 2. Added /api prefix
+      url: `/api/login/fondos/verify-code`, // 2. Added /api prefix
       method: "post",
       data: {
         email: user.email,

@@ -78,6 +78,7 @@ function bursatilEndpoints(baseURL) {
     libreria: require("./enpoints/bursatil/libreria.js")({
       client,
     }),
+    authBursatil: require("./enpoints/bursatil/auth.js")({ client }),
   };
 }
 
@@ -150,6 +151,7 @@ function fondosEndpoints(baseURL) {
     destacadoPopUp: require("./enpoints/fondos/destacados.js")({
       client,
     }),
+    authFondos: require("./enpoints/fondos/auth.js")({ client }),
   };
 }
 function generalEnpoints(baseURL) {
@@ -159,10 +161,6 @@ function generalEnpoints(baseURL) {
     blogMedia: require("./enpoints/general/blogMedia.js")({ client }),
     //acá también vamos a poner el update file
   };
-}
-function authEndpoint(baseURL) {
-  const client = createClient(baseURL);
-  return require("./enpoints/auth/auth.js")({ client });
 }
 
 export function client(options) {
@@ -175,7 +173,6 @@ export function client(options) {
       : "http://localhost:1337/";
   return {
     bursatil: bursatilEndpoints(baseURL),
-    auth: authEndpoint(baseURL),
     general: generalEnpoints(baseURL),
     fondos: fondosEndpoints(baseURL),
   };
