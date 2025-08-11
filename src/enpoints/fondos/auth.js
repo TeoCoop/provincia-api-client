@@ -10,7 +10,7 @@ function auth({ client }) {
     });
   }
 
-  function login({ user }) {
+  function login({ user, access_token }) {
     return client({
       url: `/api/login/fondos/request-code`,
       method: "post",
@@ -18,10 +18,13 @@ function auth({ client }) {
         email: user.email,
         password: user.password,
       },
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
     });
   }
 
-  function verifyTotp({ user }) {
+  function verifyTotp({ user, access_token }) {
     // 1. Renamed for clarity
     return client({
       url: `/api/login/fondos/verify-code`, // 2. Added /api prefix
@@ -29,6 +32,9 @@ function auth({ client }) {
       data: {
         email: user.email,
         code: user.token, // 3. Changed payload key from 'token' to 'code'
+      },
+      headers: {
+        Authorization: `Bearer ${access_token}`,
       },
     });
   }
