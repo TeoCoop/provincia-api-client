@@ -39,7 +39,7 @@ function founds(_ref) {
     });
   }
   function getOnlyNameAndNumber() {
-    var query = "\n    query {\n      ourFounds {\n        name\n        numero_fondo\n      }\n    }\n  ";
+    var query = "\n    query {\n      ourFounds {\n        name\n        numero_fondo\n         clase_fondo {\n          clase\n        }\n      }\n    }\n  ";
     return client({
       url: "/graphql",
       method: "post",
