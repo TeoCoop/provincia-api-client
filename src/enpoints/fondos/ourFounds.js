@@ -33,6 +33,9 @@ function founds({ client }) {
       ourFounds {
         name
         numero_fondo
+         clase_fondo {
+          clase
+        }
       }
     }
   `;
