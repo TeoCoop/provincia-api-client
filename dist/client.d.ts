@@ -584,12 +584,18 @@ export function client(options: any): {
                 categoryDocumentId: any;
                 search: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         institutional: {
             getAll: () => any;
             updateInstitutional: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
                 jwtToken: any;
@@ -608,6 +614,9 @@ export function client(options: any): {
                 jwtToken: any;
                 faqId: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
             deleteFaq: ({ jwtToken, faqId }: {
                 jwtToken: any;
@@ -637,6 +646,9 @@ export function client(options: any): {
                 foundDocumentId: any;
             }) => any;
             getOnlyNameAndNumber: () => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         areaTeam: {
             getAll: () => any;
@@ -656,6 +668,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         categoriesBlog: {
             getById: ({ categoryId }: {
@@ -674,6 +689,9 @@ export function client(options: any): {
             deleteCategory: ({ jwtToken, categoryId }: {
                 jwtToken: any;
                 categoryId: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         categoriesVideos: {
@@ -714,6 +732,7 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: (jwtToken: any) => any;
         };
         paletteAndColors: {
             getAllColor: () => any;
@@ -769,6 +788,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         teamMember: {
             getAll: () => any;
@@ -787,6 +809,9 @@ export function client(options: any): {
             createMember: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         inversorProfile: {
@@ -810,6 +835,9 @@ export function client(options: any): {
             getResult: ({ value }: {
                 value: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         test: {
             getAll: () => any;
@@ -818,6 +846,9 @@ export function client(options: any): {
                 data: any;
             }) => any;
             deleteTest: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
@@ -839,6 +870,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         videoTutorial: {
             getById: ({ videoId }: {
@@ -858,6 +892,9 @@ export function client(options: any): {
                 jwtToken: any;
                 videoId: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         nuestroEquipo: {
             getAll: () => any;
@@ -865,6 +902,9 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
@@ -886,6 +926,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         caracteristicasFound: {
             getAll: () => any;
@@ -904,6 +947,9 @@ export function client(options: any): {
             createCaracteristica: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         simulador: {
@@ -929,6 +975,9 @@ export function client(options: any): {
                 jwtToken: any;
                 data: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         informacionParaInversorFile: {
             getAll: () => any;
@@ -947,6 +996,9 @@ export function client(options: any): {
             createFile: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
             }) => any;
         };
         cuotaParte: {
@@ -1010,6 +1062,10 @@ export function client(options: any): {
             updateDestacado: ({ jwtToken, data }: {
                 jwtToken: any;
                 data: any;
+            }) => any;
+            getAllPanel: ({ isPublic, jwtToken }: {
+                isPublic: any;
+                jwtToken: any;
             }) => any;
         };
         authFondos: {

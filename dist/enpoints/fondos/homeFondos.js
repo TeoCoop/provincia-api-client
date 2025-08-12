@@ -21,6 +21,15 @@ function homeFondos(_ref) {
       method: "get"
     });
   }
+  function getAllPanel(jwtToken) {
+    return client({
+      url: "/api/home-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
   function updateHome(_ref3) {
     var jwtToken = _ref3.jwtToken,
       homeCardId = _ref3.homeCardId,
@@ -68,7 +77,8 @@ function homeFondos(_ref) {
     updateHome: updateHome,
     deleteHome: deleteHome,
     getById: getById,
-    createHome: createHome
+    createHome: createHome,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = homeFondos;

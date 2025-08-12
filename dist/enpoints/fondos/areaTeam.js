@@ -21,10 +21,20 @@ function areasFondos(_ref) {
       method: "get"
     });
   }
-  function updateArea(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      areaId = _ref3.areaId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/area-team-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateArea(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      areaId = _ref4.areaId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function areasFondos(_ref) {
       data: formattedData
     });
   }
-  function createArea(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createArea(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function areasFondos(_ref) {
       data: formattedData
     });
   }
-  function deleteArea(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      areaId = _ref5.areaId;
+  function deleteArea(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      areaId = _ref6.areaId;
     return client({
       url: "/api/area-team-fondos/".concat(areaId),
       method: "delete",
@@ -68,7 +78,8 @@ function areasFondos(_ref) {
     updateArea: updateArea,
     deleteArea: deleteArea,
     getById: getById,
-    createArea: createArea
+    createArea: createArea,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = areasFondos;

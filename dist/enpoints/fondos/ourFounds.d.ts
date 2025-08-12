@@ -24,4 +24,7 @@ declare function founds({ client }: {
         foundDocumentId: any;
     }) => any;
     getOnlyNameAndNumber: () => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

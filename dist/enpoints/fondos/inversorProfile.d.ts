@@ -22,4 +22,7 @@ declare function inverterProfile({ client }: {
     getResult: ({ value }: {
         value: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

@@ -14,9 +14,19 @@ function institutional(_ref) {
       method: "get"
     });
   }
-  function updateInstitutional(_ref2) {
-    var jwtToken = _ref2.jwtToken,
-      data = _ref2.data;
+  function getAllPanel(_ref2) {
+    var jwtToken = _ref2.jwtToken;
+    return client({
+      url: "/api/institutional-fondo",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateInstitutional(_ref3) {
+    var jwtToken = _ref3.jwtToken,
+      data = _ref3.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -29,8 +39,8 @@ function institutional(_ref) {
       data: formattedData
     });
   }
-  function deleteInstitutional(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function deleteInstitutional(_ref4) {
+    var jwtToken = _ref4.jwtToken;
     return client({
       url: "/api/institutional-fondo",
       method: "delete",
@@ -42,6 +52,7 @@ function institutional(_ref) {
   return {
     getAll: getAll,
     updateInstitutional: updateInstitutional,
+    getAllPanel: getAllPanel,
     deleteInstitutional: deleteInstitutional
   };
 }

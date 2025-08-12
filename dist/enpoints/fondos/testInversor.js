@@ -11,9 +11,19 @@ function testInversor(_ref) {
       // },
     });
   }
-  function updateTest(_ref2) {
-    var jwtToken = _ref2.jwtToken,
-      data = _ref2.data;
+  function getAllPanel(_ref2) {
+    var jwtToken = _ref2.jwtToken;
+    return client({
+      url: "/api/test-inversor-fondo",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateTest(_ref3) {
+    var jwtToken = _ref3.jwtToken,
+      data = _ref3.data;
     return client({
       url: "/api/test-inversor-fondo",
       method: "put",
@@ -28,8 +38,8 @@ function testInversor(_ref) {
       }
     });
   }
-  function deleteTest(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function deleteTest(_ref4) {
+    var jwtToken = _ref4.jwtToken;
     return client({
       url: "/api/test-inversor-fondo",
       method: "delete",
@@ -41,7 +51,8 @@ function testInversor(_ref) {
   return {
     getAll: getAll,
     updateTest: updateTest,
-    deleteTest: deleteTest
+    deleteTest: deleteTest,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = testInversor;

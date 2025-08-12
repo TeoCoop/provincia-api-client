@@ -21,10 +21,20 @@ function questionTest(_ref) {
       // },
     });
   }
-  function updatedQuestion(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      questionId = _ref3.questionId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/questions-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updatedQuestion(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      questionId = _ref4.questionId,
+      data = _ref4.data;
     return client({
       url: "/api/questions-fondos/".concat(questionId),
       method: "put",
@@ -40,9 +50,9 @@ function questionTest(_ref) {
       }
     });
   }
-  function createQuestion(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createQuestion(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     return client({
       url: "/api/questions-fondos",
       method: "post",
@@ -58,9 +68,9 @@ function questionTest(_ref) {
       }
     });
   }
-  function deleteCuestion(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      questionId = _ref5.questionId;
+  function deleteCuestion(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      questionId = _ref6.questionId;
     return client({
       url: "/api/questions-fondos/".concat(questionId),
       method: "delete",
@@ -74,7 +84,8 @@ function questionTest(_ref) {
     updatedQuestion: updatedQuestion,
     deleteCuestion: deleteCuestion,
     getById: getById,
-    createQuestion: createQuestion
+    createQuestion: createQuestion,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = questionTest;

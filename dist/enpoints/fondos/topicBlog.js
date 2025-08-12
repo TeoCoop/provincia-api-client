@@ -21,10 +21,20 @@ function topicBlog(_ref) {
       method: "get"
     });
   }
-  function updateTopic(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      topicId = _ref3.topicId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/topic-blog-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateTopic(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      topicId = _ref4.topicId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function topicBlog(_ref) {
       data: formattedData
     });
   }
-  function createTopic(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createTopic(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function topicBlog(_ref) {
       data: formattedData
     });
   }
-  function deleteTopic(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      topicId = _ref5.topicId;
+  function deleteTopic(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      topicId = _ref6.topicId;
     return client({
       url: "/api/topic-blog-fondos/".concat(topicId),
       method: "delete",
@@ -68,7 +78,8 @@ function topicBlog(_ref) {
     updateTopic: updateTopic,
     deleteTopic: deleteTopic,
     getById: getById,
-    createTopic: createTopic
+    createTopic: createTopic,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = topicBlog;

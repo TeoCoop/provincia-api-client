@@ -19,4 +19,7 @@ declare function teamFondos({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

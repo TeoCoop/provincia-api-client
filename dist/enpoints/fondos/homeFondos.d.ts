@@ -19,4 +19,5 @@ declare function homeFondos({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
+    getAllPanel: (jwtToken: any) => any;
 };

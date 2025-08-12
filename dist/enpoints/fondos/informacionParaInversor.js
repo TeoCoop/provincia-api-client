@@ -21,10 +21,20 @@ function informacionParaElInversor(_ref) {
       method: "get"
     });
   }
-  function updateInformacion(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      infoId = _ref3.infoId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/informacion-para-inversors",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateInformacion(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      infoId = _ref4.infoId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function informacionParaElInversor(_ref) {
       data: formattedData
     });
   }
-  function createInformacion(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createInformacion(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function informacionParaElInversor(_ref) {
       data: formattedData
     });
   }
-  function deleteInformacion(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      infoId = _ref5.infoId;
+  function deleteInformacion(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      infoId = _ref6.infoId;
     return client({
       url: "/api/informacion-para-inversors/".concat(infoId),
       method: "delete",
@@ -68,7 +78,8 @@ function informacionParaElInversor(_ref) {
     updateInformacion: updateInformacion,
     deleteInformacion: deleteInformacion,
     getById: getById,
-    createInformacion: createInformacion
+    createInformacion: createInformacion,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = informacionParaElInversor;

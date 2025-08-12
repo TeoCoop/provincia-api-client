@@ -28,6 +28,16 @@ function founds(_ref) {
       method: "get"
     });
   }
+  function getAllPanel(_ref4) {
+    var jwtToken = _ref4.jwtToken;
+    return client({
+      url: "/api/our-founds",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
   function getOnlyNameAndNumber() {
     var query = "\n    query {\n      ourFounds {\n        name\n        numero_fondo\n      }\n    }\n  ";
     return client({
@@ -54,9 +64,9 @@ function founds(_ref) {
       }
     });
   }
-  function createFound(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createFound(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -69,10 +79,10 @@ function founds(_ref) {
       data: formattedData
     });
   }
-  function updateFound(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      foundId = _ref5.foundId,
-      data = _ref5.data;
+  function updateFound(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      foundId = _ref6.foundId,
+      data = _ref6.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -85,9 +95,9 @@ function founds(_ref) {
       data: formattedData
     });
   }
-  function deleteFound(_ref6) {
-    var jwtToken = _ref6.jwtToken,
-      foundId = _ref6.foundId;
+  function deleteFound(_ref7) {
+    var jwtToken = _ref7.jwtToken,
+      foundId = _ref7.foundId;
     return client({
       url: "/api/our-founds/".concat(foundId),
       method: "delete",
@@ -104,7 +114,8 @@ function founds(_ref) {
     deleteFound: deleteFound,
     getFilters: getFilters,
     getByDocumentId: getByDocumentId,
-    getOnlyNameAndNumber: getOnlyNameAndNumber
+    getOnlyNameAndNumber: getOnlyNameAndNumber,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = founds;

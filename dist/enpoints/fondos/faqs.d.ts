@@ -15,6 +15,9 @@ declare function faq({ client }: {
         faqId: any;
         data: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
     deleteFaq: ({ jwtToken, faqId }: {
         jwtToken: any;
         faqId: any;

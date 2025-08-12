@@ -21,10 +21,20 @@ function caracteristicasFound(_ref) {
       method: "get"
     });
   }
-  function updateCaracteristica(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      caracteristicaId = _ref3.caracteristicaId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/caracteristicas-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateCaracteristica(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      caracteristicaId = _ref4.caracteristicaId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function caracteristicasFound(_ref) {
       data: formattedData
     });
   }
-  function createCaracteristica(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createCaracteristica(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function caracteristicasFound(_ref) {
       data: formattedData
     });
   }
-  function deleteCaracteristica(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      caracteristicaId = _ref5.caracteristicaId;
+  function deleteCaracteristica(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      caracteristicaId = _ref6.caracteristicaId;
     return client({
       url: "/api/caracteristicas-fondos/".concat(caracteristicaId),
       method: "delete",
@@ -68,7 +78,8 @@ function caracteristicasFound(_ref) {
     updateCaracteristica: updateCaracteristica,
     deleteCaracteristica: deleteCaracteristica,
     getById: getById,
-    createCaracteristica: createCaracteristica
+    createCaracteristica: createCaracteristica,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = caracteristicasFound;

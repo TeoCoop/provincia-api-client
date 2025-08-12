@@ -10,4 +10,7 @@ declare function testInversor({ client }: {
     deleteTest: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

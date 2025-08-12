@@ -21,10 +21,20 @@ function informacionParaElInversorFile(_ref) {
       method: "get"
     });
   }
-  function updateFile(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      fileId = _ref3.fileId,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/informacion-inversor-files",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateFile(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      fileId = _ref4.fileId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -37,9 +47,9 @@ function informacionParaElInversorFile(_ref) {
       data: formattedData
     });
   }
-  function createFile(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      data = _ref4.data;
+  function createFile(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function informacionParaElInversorFile(_ref) {
       data: formattedData
     });
   }
-  function deleteFile(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      fileId = _ref5.fileId;
+  function deleteFile(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      fileId = _ref6.fileId;
     return client({
       url: "/api/informacion-inversor-files/".concat(fileId),
       method: "delete",
@@ -68,7 +78,8 @@ function informacionParaElInversorFile(_ref) {
     updateFile: updateFile,
     deleteFile: deleteFile,
     getById: getById,
-    createFile: createFile
+    createFile: createFile,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = informacionParaElInversorFile;

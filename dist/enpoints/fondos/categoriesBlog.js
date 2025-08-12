@@ -21,9 +21,19 @@ function category(_ref) {
       method: "get"
     });
   }
-  function createCategory(_ref3) {
-    var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+  function getAllPanel(_ref3) {
+    var jwtToken = _ref3.jwtToken;
+    return client({
+      url: "/api/category-blog-fondos",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function createCategory(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -36,10 +46,10 @@ function category(_ref) {
       data: formattedData
     });
   }
-  function updateCategory(_ref4) {
-    var jwtToken = _ref4.jwtToken,
-      categoryId = _ref4.categoryId,
-      data = _ref4.data;
+  function updateCategory(_ref5) {
+    var jwtToken = _ref5.jwtToken,
+      categoryId = _ref5.categoryId,
+      data = _ref5.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -52,9 +62,9 @@ function category(_ref) {
       data: formattedData
     });
   }
-  function deleteCategory(_ref5) {
-    var jwtToken = _ref5.jwtToken,
-      categoryId = _ref5.categoryId;
+  function deleteCategory(_ref6) {
+    var jwtToken = _ref6.jwtToken,
+      categoryId = _ref6.categoryId;
     return client({
       url: "/api/category-blog-fondos/".concat(categoryId),
       method: "delete",
@@ -68,7 +78,8 @@ function category(_ref) {
     getAll: getAll,
     createCategory: createCategory,
     updateCategory: updateCategory,
-    deleteCategory: deleteCategory
+    deleteCategory: deleteCategory,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = category;
