@@ -11,6 +11,15 @@ function informacionParaElInversorFile({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/informacion-inversor-files`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateFile({ jwtToken, fileId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function informacionParaElInversorFile({ client }) {
     deleteFile,
     getById,
     createFile,
+    getAllPanel,
   };
 }
 module.exports = informacionParaElInversorFile;

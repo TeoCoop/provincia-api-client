@@ -11,6 +11,15 @@ function homeFondos({ client }) {
       method: "get",
     });
   }
+  function getAllPanel(jwtToken) {
+    return client({
+      url: `/api/home-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateHome({ jwtToken, homeCardId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function homeFondos({ client }) {
     deleteHome,
     getById,
     createHome,
+    getAllPanel,
   };
 }
 module.exports = homeFondos;

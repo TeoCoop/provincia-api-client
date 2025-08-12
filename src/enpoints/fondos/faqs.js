@@ -18,6 +18,15 @@ function faq({ client }) {
       // },
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/faq-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
 
   function createFaq({ jwtToken, data }) {
     const formattedData = {
@@ -66,6 +75,7 @@ function faq({ client }) {
     getAll,
     createFaq,
     updateFaq,
+    getAllPanel,
     deleteFaq,
   };
 }

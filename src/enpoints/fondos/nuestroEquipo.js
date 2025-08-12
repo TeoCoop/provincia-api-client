@@ -5,6 +5,15 @@ function nuestroEquipo({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: "/api/nuestro-equipo-fondo",
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateInstitutional({ jwtToken }) {
     const formattedData = {
       data: {
@@ -33,6 +42,7 @@ function nuestroEquipo({ client }) {
     getAll,
     updateInstitutional,
     deleteInstitutional,
+    getAllPanel,
   };
 }
 module.exports = nuestroEquipo;

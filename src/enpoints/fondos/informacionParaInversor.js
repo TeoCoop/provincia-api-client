@@ -11,6 +11,15 @@ function informacionParaElInversor({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/informacion-para-inversors`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateInformacion({ jwtToken, infoId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function informacionParaElInversor({ client }) {
     deleteInformacion,
     getById,
     createInformacion,
+    getAllPanel,
   };
 }
 module.exports = informacionParaElInversor;

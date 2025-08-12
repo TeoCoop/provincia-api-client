@@ -5,6 +5,15 @@ function institutional({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: "/api/institutional-fondo",
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateInstitutional({ jwtToken, data }) {
     const formattedData = {
       data: {
@@ -32,6 +41,7 @@ function institutional({ client }) {
   return {
     getAll,
     updateInstitutional,
+    getAllPanel,
     deleteInstitutional,
   };
 }

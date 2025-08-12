@@ -11,6 +11,15 @@ function inverterProfile({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/inversor-profile-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function getResult({ value }) {
     return client({
       url: `/api/inversor-profile-fondos?value=${value}`,
@@ -63,6 +72,7 @@ function inverterProfile({ client }) {
     getById,
     createProfile,
     getResult,
+    getAllPanel,
   };
 }
 module.exports = inverterProfile;

@@ -11,6 +11,15 @@ function teamFondos({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/member-team-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateMember({ jwtToken, memberId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function teamFondos({ client }) {
     deleteMember,
     getById,
     createMember,
+    getAllPanel,
   };
 }
 module.exports = teamFondos;

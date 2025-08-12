@@ -18,6 +18,15 @@ function founds({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/our-founds`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function getOnlyNameAndNumber() {
     const query = `
     query {
@@ -157,6 +166,7 @@ function founds({ client }) {
     getFilters,
     getByDocumentId,
     getOnlyNameAndNumber,
+    getAllPanel,
   };
 }
 

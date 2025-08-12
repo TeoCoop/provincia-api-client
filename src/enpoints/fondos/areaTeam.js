@@ -11,6 +11,15 @@ function areasFondos({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/area-team-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateArea({ jwtToken, areaId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function areasFondos({ client }) {
     deleteArea,
     getById,
     createArea,
+    getAllPanel,
   };
 }
 module.exports = areasFondos;

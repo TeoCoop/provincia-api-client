@@ -5,6 +5,15 @@ function destacadoPopUp({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ isPublic, jwtToken }) {
+    return client({
+      url: `/api/destacado-fondo?public=${isPublic}`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateDestacado({ jwtToken, data }) {
     return client({
       url: "/api/destacado-fondo",
@@ -21,6 +30,7 @@ function destacadoPopUp({ client }) {
   return {
     getAll,
     updateDestacado,
+    getAllPanel,
   };
 }
 module.exports = destacadoPopUp;

@@ -11,6 +11,15 @@ function caracteristicasFound({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/caracteristicas-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateCaracteristica({ jwtToken, caracteristicaId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function caracteristicasFound({ client }) {
     deleteCaracteristica,
     getById,
     createCaracteristica,
+    getAllPanel,
   };
 }
 module.exports = caracteristicasFound;

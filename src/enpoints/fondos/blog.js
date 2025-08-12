@@ -9,6 +9,15 @@ function blog({ client }) {
     });
   }
 
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/blog-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function getAll() {
     return client({
       url: `/api/blog-fondos`,
@@ -144,6 +153,7 @@ function blog({ client }) {
     updateBlog,
     deleteBlog,
     getFilters,
+    getAllPanel,
   };
 }
 

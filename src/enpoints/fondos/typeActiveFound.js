@@ -11,6 +11,15 @@ function typeActive({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: `/api/tipos-activos-fondos`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateActivo({ jwtToken, activoId, data }) {
     const formattedData = {
       data: {
@@ -56,6 +65,7 @@ function typeActive({ client }) {
     deleteActivo,
     getById,
     createActivo,
+    getAllPanel,
   };
 }
 module.exports = typeActive;
