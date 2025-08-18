@@ -32,4 +32,11 @@ declare function cuotaParteFound({ client }: {
         page?: number | undefined;
         pageSize?: number | undefined;
     }) => any;
+    getTestingPermisosPanel: ({ jwtToken, numero_fondo, clase_fondo, page, pageSize, }: {
+        jwtToken: any;
+        numero_fondo: any;
+        clase_fondo: any;
+        page?: number | undefined;
+        pageSize?: number | undefined;
+    }) => any;
 };
