@@ -18,6 +18,28 @@ function cuotaParteFound({ client }) {
       method: "get",
     });
   }
+  function getTestingPermisosPanel({
+    jwtToken,
+    numero_fondo,
+    clase_fondo,
+    page = 1,
+    pageSize = 1,
+  }) {
+    const params = new URLSearchParams({
+      "filters[numero_fondo][$eq]": String(numero_fondo),
+      "filters[clase_fondo][$eq]": clase_fondo,
+      page: String(page),
+      pageSize: String(pageSize),
+    });
+
+    return client({
+      url: `/api/cuota-partes?${params.toString()}`,
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
 
   function getByRange({
     numero_fondo,
@@ -88,6 +110,7 @@ function cuotaParteFound({ client }) {
     getById,
     createCuotaParte,
     getByRange,
+    getTestingPermisosPanel,
   };
 }
 module.exports = cuotaParteFound;
