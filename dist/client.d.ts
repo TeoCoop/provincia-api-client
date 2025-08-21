@@ -905,6 +905,9 @@ export function client(options: any): {
             deleteNuestroEquipo: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
         };
         tiposActivos: {
             getAll: () => any;

@@ -10,4 +10,7 @@ declare function nuestroEquipo({ client }: {
     deleteNuestroEquipo: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
+    getAllPanel: ({ jwtToken }: {
+        jwtToken: any;
+    }) => any;
 };

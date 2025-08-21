@@ -14,9 +14,19 @@ function nuestroEquipo(_ref) {
       method: "get"
     });
   }
-  function updateNuestroEquipo(_ref2) {
-    var jwtToken = _ref2.jwtToken,
-      data = _ref2.data;
+  function getAllPanel(_ref2) {
+    var jwtToken = _ref2.jwtToken;
+    return client({
+      url: "/api/nuestro-equipo-fondo",
+      method: "get",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      }
+    });
+  }
+  function updateNuestroEquipo(_ref3) {
+    var jwtToken = _ref3.jwtToken,
+      data = _ref3.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -29,8 +39,8 @@ function nuestroEquipo(_ref) {
       data: formattedData
     });
   }
-  function deleteNuestroEquipo(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function deleteNuestroEquipo(_ref4) {
+    var jwtToken = _ref4.jwtToken;
     return client({
       url: "/api/nuestro-equipo-fondo",
       method: "delete",
@@ -42,7 +52,8 @@ function nuestroEquipo(_ref) {
   return {
     getAll: getAll,
     updateNuestroEquipo: updateNuestroEquipo,
-    deleteNuestroEquipo: deleteNuestroEquipo
+    deleteNuestroEquipo: deleteNuestroEquipo,
+    getAllPanel: getAllPanel
   };
 }
 module.exports = nuestroEquipo;
