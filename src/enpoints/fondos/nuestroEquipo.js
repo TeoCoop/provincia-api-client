@@ -5,16 +5,7 @@ function nuestroEquipo({ client }) {
       method: "get",
     });
   }
-  function getAllPanel({ jwtToken }) {
-    return client({
-      url: "/api/nuestro-equipo-fondo",
-      method: "get",
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-    });
-  }
-  function updateInstitutional({ jwtToken }) {
+  function updateNuestroEquipo({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
@@ -29,7 +20,7 @@ function nuestroEquipo({ client }) {
       data: formattedData,
     });
   }
-  function deleteInstitutional({ jwtToken }) {
+  function deleteNuestroEquipo({ jwtToken }) {
     return client({
       url: "/api/nuestro-equipo-fondo",
       method: "delete",
@@ -40,9 +31,8 @@ function nuestroEquipo({ client }) {
   }
   return {
     getAll,
-    updateInstitutional,
-    deleteInstitutional,
-    getAllPanel,
+    updateNuestroEquipo,
+    deleteNuestroEquipo,
   };
 }
 module.exports = nuestroEquipo;
