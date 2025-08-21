@@ -33,6 +33,7 @@ function founds({ client }) {
       ourFounds(filters: { isDelete: { eq: false } }) {
         name
         numero_fondo
+        documentId
          clase_fondo {
           clase
         }
