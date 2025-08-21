@@ -14,18 +14,9 @@ function nuestroEquipo(_ref) {
       method: "get"
     });
   }
-  function getAllPanel(_ref2) {
-    var jwtToken = _ref2.jwtToken;
-    return client({
-      url: "/api/nuestro-equipo-fondo",
-      method: "get",
-      headers: {
-        Authorization: "Bearer ".concat(jwtToken)
-      }
-    });
-  }
-  function updateInstitutional(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+  function updateNuestroEquipo(_ref2) {
+    var jwtToken = _ref2.jwtToken,
+      data = _ref2.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -38,8 +29,8 @@ function nuestroEquipo(_ref) {
       data: formattedData
     });
   }
-  function deleteInstitutional(_ref4) {
-    var jwtToken = _ref4.jwtToken;
+  function deleteNuestroEquipo(_ref3) {
+    var jwtToken = _ref3.jwtToken;
     return client({
       url: "/api/nuestro-equipo-fondo",
       method: "delete",
@@ -50,9 +41,8 @@ function nuestroEquipo(_ref) {
   }
   return {
     getAll: getAll,
-    updateInstitutional: updateInstitutional,
-    deleteInstitutional: deleteInstitutional,
-    getAllPanel: getAllPanel
+    updateNuestroEquipo: updateNuestroEquipo,
+    deleteNuestroEquipo: deleteNuestroEquipo
   };
 }
 module.exports = nuestroEquipo;

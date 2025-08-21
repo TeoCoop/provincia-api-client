@@ -898,13 +898,11 @@ export function client(options: any): {
         };
         nuestroEquipo: {
             getAll: () => any;
-            updateInstitutional: ({ jwtToken }: {
+            updateNuestroEquipo: ({ jwtToken, data }: {
                 jwtToken: any;
+                data: any;
             }) => any;
-            deleteInstitutional: ({ jwtToken }: {
-                jwtToken: any;
-            }) => any;
-            getAllPanel: ({ jwtToken }: {
+            deleteNuestroEquipo: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
         };
