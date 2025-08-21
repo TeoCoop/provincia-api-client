@@ -30,7 +30,7 @@ function founds({ client }) {
   function getOnlyNameAndNumber() {
     const query = `
     query {
-      ourFounds {
+      ourFounds(filters: { isDelete: { eq: false } }) {
         name
         numero_fondo
          clase_fondo {
