@@ -5,12 +5,22 @@ function nuestroEquipo({ client }) {
       method: "get",
     });
   }
+  function getAllPanel({ jwtToken }) {
+    return client({
+      url: "/api/nuestro-equipo-fondo",
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    });
+  }
   function updateNuestroEquipo({ jwtToken, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
+
     return client({
       url: "/api/nuestro-equipo-fondo",
       method: "put",
@@ -33,6 +43,7 @@ function nuestroEquipo({ client }) {
     getAll,
     updateNuestroEquipo,
     deleteNuestroEquipo,
+    getAllPanel,
   };
 }
 module.exports = nuestroEquipo;
