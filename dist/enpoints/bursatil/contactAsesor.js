@@ -20,9 +20,17 @@ function contactAsesor(_ref) {
     });
   }
   function getAll(_ref3) {
-    var jwtToken = _ref3.jwtToken;
+    var jwtToken = _ref3.jwtToken,
+      _ref3$page = _ref3.page,
+      page = _ref3$page === void 0 ? 1 : _ref3$page,
+      _ref3$pageSize = _ref3.pageSize,
+      pageSize = _ref3$pageSize === void 0 ? 20 : _ref3$pageSize;
+    var params = new URLSearchParams({
+      "pagination[page]": String(page),
+      "pagination[pageSize]": String(pageSize)
+    });
     return client({
-      url: "/api/asesores-contact-bursatils",
+      url: "/api/asesores-contact-bursatils?".concat(params.toString()),
       method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

@@ -6,8 +6,10 @@ declare function contactNewsleter({ client }: {
         jwtToken: any;
         contactId: any;
     }) => any;
-    getAll: ({ jwtToken }: {
+    getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
+        page?: number | undefined;
+        pageSize?: number | undefined;
     }) => any;
     createContact: ({ data }: {
         data: any;

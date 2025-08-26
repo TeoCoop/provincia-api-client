@@ -6,8 +6,10 @@ declare function contactAsesor({ client }: {
         jwtToken: any;
         asesorId: any;
     }) => any;
-    getAll: ({ jwtToken }: {
+    getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
+        page?: number | undefined;
+        pageSize?: number | undefined;
     }) => any;
     createAsesor: ({ data }: {
         data: any;

@@ -117,9 +117,9 @@ function paletteAndColors(_ref) {
       data: formattedData
     });
   }
-  function deleteColor(_ref10) {
-    var jwtToken = _ref10.jwtToken,
-      colorId = _ref10.colorId;
+  function deleteColor(_ref0) {
+    var jwtToken = _ref0.jwtToken,
+      colorId = _ref0.colorId;
     return client({
       url: "/api/colors-bursatils/".concat(colorId),
       method: "delete",
