@@ -9,9 +9,13 @@ function contactAsesor({ client }) {
     });
   }
 
-  function getAll({ jwtToken }) {
+  function getAll({ jwtToken, page = 1, pageSize = 20 }) {
+    const params = new URLSearchParams({
+      "pagination[page]": String(page),
+      "pagination[pageSize]": String(pageSize),
+    });
     return client({
-      url: `/api/asesores-contact-bursatils`,
+      url: `/api/asesores-contact-bursatils?${params.toString()}`,
       method: "get",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
