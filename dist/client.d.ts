@@ -1093,5 +1093,16 @@ export function client(options: any): {
                 access_token: any;
             }) => any;
         };
+        heroAndDestacados: {
+            getFromFront: () => any;
+            getPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateDestacado: ({ jwtToken, destacadoId, data }: {
+                jwtToken: any;
+                destacadoId: any;
+                data: any;
+            }) => any;
+        };
     };
 };

@@ -177,6 +177,9 @@ function fondosEndpoints(baseURL) {
     }),
     authFondos: require("./enpoints/fondos/auth.js")({
       client: client
+    }),
+    heroAndDestacados: require("./enpoints/fondos/heroConDestacados.js")({
+      client: client
     })
   };
 }
