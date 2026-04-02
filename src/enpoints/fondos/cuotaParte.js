@@ -5,10 +5,10 @@ function cuotaParteFound({ client }) {
       method: "get",
     });
   }
-  function getAll({ numero_fondo, clase_fondo, page = 1, pageSize = 20 }) {
+  function getAll({ our_found, clase_fondo, page = 1, pageSize = 20 }) {
     const params = new URLSearchParams({
-      "filters[numero_fondo][$eq]": String(numero_fondo),
-      "filters[clase_fondo][$eq]": clase_fondo,
+      our_found: String(our_found),
+      clase_fondo,
       page: String(page),
       pageSize: String(pageSize),
     });
@@ -42,7 +42,7 @@ function cuotaParteFound({ client }) {
   }
 
   function getByRange({
-    numero_fondo,
+    our_found,
     clase_fondo,
     fecha_inicio,
     fecha_fin,
@@ -50,7 +50,7 @@ function cuotaParteFound({ client }) {
     pageSize = 20,
   }) {
     const params = new URLSearchParams({
-      numero_fondo: String(numero_fondo),
+      our_found: String(our_found),
       clase_fondo,
       fecha_inicio,
       fecha_fin,
@@ -63,7 +63,6 @@ function cuotaParteFound({ client }) {
       method: "get",
     });
   }
-
   function updateCuotaParte({ jwtToken, cuotaParteId, data }) {
     const formattedData = {
       data: {
