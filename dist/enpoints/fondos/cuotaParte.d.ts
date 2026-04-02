@@ -2,8 +2,8 @@ export = cuotaParteFound;
 declare function cuotaParteFound({ client }: {
     client: any;
 }): {
-    getAll: ({ numero_fondo, clase_fondo, page, pageSize }: {
-        numero_fondo: any;
+    getAll: ({ our_found, clase_fondo, page, pageSize }: {
+        our_found: any;
         clase_fondo: any;
         page?: number | undefined;
         pageSize?: number | undefined;
@@ -24,8 +24,8 @@ declare function cuotaParteFound({ client }: {
         jwtToken: any;
         data: any;
     }) => any;
-    getByRange: ({ numero_fondo, clase_fondo, fecha_inicio, fecha_fin, page, pageSize, }: {
-        numero_fondo: any;
+    getByRange: ({ our_found, clase_fondo, fecha_inicio, fecha_fin, page, pageSize, }: {
+        our_found: any;
         clase_fondo: any;
         fecha_inicio: any;
         fecha_fin: any;

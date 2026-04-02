@@ -16,15 +16,15 @@ function cuotaParteFound(_ref) {
     });
   }
   function getAll(_ref3) {
-    var numero_fondo = _ref3.numero_fondo,
+    var our_found = _ref3.our_found,
       clase_fondo = _ref3.clase_fondo,
       _ref3$page = _ref3.page,
       page = _ref3$page === void 0 ? 1 : _ref3$page,
       _ref3$pageSize = _ref3.pageSize,
       pageSize = _ref3$pageSize === void 0 ? 20 : _ref3$pageSize;
     var params = new URLSearchParams({
-      "filters[numero_fondo][$eq]": String(numero_fondo),
-      "filters[clase_fondo][$eq]": clase_fondo,
+      our_found: String(our_found),
+      clase_fondo: clase_fondo,
       page: String(page),
       pageSize: String(pageSize)
     });
@@ -56,7 +56,7 @@ function cuotaParteFound(_ref) {
     });
   }
   function getByRange(_ref5) {
-    var numero_fondo = _ref5.numero_fondo,
+    var our_found = _ref5.our_found,
       clase_fondo = _ref5.clase_fondo,
       fecha_inicio = _ref5.fecha_inicio,
       fecha_fin = _ref5.fecha_fin,
@@ -65,7 +65,7 @@ function cuotaParteFound(_ref) {
       _ref5$pageSize = _ref5.pageSize,
       pageSize = _ref5$pageSize === void 0 ? 20 : _ref5$pageSize;
     var params = new URLSearchParams({
-      numero_fondo: String(numero_fondo),
+      our_found: String(our_found),
       clase_fondo: clase_fondo,
       fecha_inicio: fecha_inicio,
       fecha_fin: fecha_fin,
