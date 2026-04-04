@@ -35,15 +35,15 @@ function cuotaParteFound(_ref) {
   }
   function getTestingPermisosPanel(_ref4) {
     var jwtToken = _ref4.jwtToken,
-      numero_fondo = _ref4.numero_fondo,
+      our_found = _ref4.our_found,
       clase_fondo = _ref4.clase_fondo,
       _ref4$page = _ref4.page,
       page = _ref4$page === void 0 ? 1 : _ref4$page,
       _ref4$pageSize = _ref4.pageSize,
       pageSize = _ref4$pageSize === void 0 ? 1 : _ref4$pageSize;
     var params = new URLSearchParams({
-      "filters[numero_fondo][$eq]": String(numero_fondo),
-      "filters[clase_fondo][$eq]": clase_fondo,
+      our_found: String(our_found),
+      clase_fondo: clase_fondo,
       page: String(page),
       pageSize: String(pageSize)
     });
