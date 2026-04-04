@@ -20,14 +20,14 @@ function cuotaParteFound({ client }) {
   }
   function getTestingPermisosPanel({
     jwtToken,
-    numero_fondo,
+    our_found,
     clase_fondo,
     page = 1,
     pageSize = 1,
   }) {
     const params = new URLSearchParams({
-      "filters[numero_fondo][$eq]": String(numero_fondo),
-      "filters[clase_fondo][$eq]": clase_fondo,
+      our_found: String(our_found),
+      clase_fondo,
       page: String(page),
       pageSize: String(pageSize),
     });
