@@ -19,11 +19,11 @@ declare function founds({ client }: {
         jwtToken: any;
         foundId: any;
     }) => any;
-    getFilters: (page?: number) => any;
+    getFilters: (caracteristicaDocumentId: any, tipoActivoDocumentId: any, valueInversorId: any) => any;
     getByDocumentId: ({ foundDocumentId }: {
         foundDocumentId: any;
     }) => any;
-    getOnlyNameAndNumber: (page?: number) => any;
+    getOnlyNameAndNumber: () => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
