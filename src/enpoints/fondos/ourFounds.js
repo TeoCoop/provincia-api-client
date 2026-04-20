@@ -27,33 +27,53 @@ function founds({ client }) {
       },
     });
   }
-  function getOnlyNameAndNumber() {
+  function getOnlyNameAndNumber(page = 1) {
     const query = `
-    query {
-      ourFounds(filters: { isDelete: { eq: false } }) {
-        name
-        numero_fondo
-        documentId
-         clase_fondo {
-          clase
+      query ($page: Int!, $pageSize: Int!) {
+        ourFounds(
+          filters: { isDelete: { eq: false } }
+          pagination: { page: $page, pageSize: $pageSize }
+        ) {
+          data {
+            name
+            numero_fondo
+            documentId
+            clase_fondo {
+              clase
+            }
+          }
+          meta {
+            pagination {
+              page
+              pageSize
+              pageCount
+              total
+            }
+          }
         }
       }
-    }
-  `;
+    `;
+
     return client({
       url: "/graphql",
       method: "post",
       data: {
         query,
+        variables: {
+          page,
+          pageSize: 100,
+        },
       },
     });
   }
-  function getFilters() {
+  function getFilters(page = 1) {
     const query = `
-        query OurFounds(
+      query OurFounds(
         $caracteristicaDocumentId: ID
         $tipoActivoDocumentId: ID
         $valueInversorId: ID
+        $page: Int!
+        $pageSize: Int!
       ) {
         ourFounds(
           filters: {
@@ -69,53 +89,65 @@ function founds({ client }) {
                 }
               }
               {
-                inversor_profile_fondos:   {
+                inversor_profile_fondos: {
                   documentId: { eq: $valueInversorId }
                 }
               }
             ]
           }
+          pagination: { page: $page, pageSize: $pageSize }
         ) {
-        name
-        description
-        numero_fondo
-        moneda
-        informationAt
-        patrimonio
-        link
-        documentId
-        factSheet {
-          url
+          data {
+            name
+            description
+            numero_fondo
+            moneda
+            informationAt
+            patrimonio
+            link
+            documentId
+            factSheet {
+              url
+            }
+            caracteristicas_fondos {
+              value
+              documentId
+            }
+            tipos_activos_fondos {
+              value
+              documentId
+            }
+            inversor_profile_fondos {
+              title
+              description
+              documentId
+              shortDescription
+            }
+          }
+          meta {
+            pagination {
+              page
+              pageSize
+              pageCount
+              total
+            }
+          }
         }
-      caracteristicas_fondos {
-        value
-        documentId
       }
-      tipos_activos_fondos {
-        value
-        documentId
-      }
-      inversor_profile_fondos {
-        title
-        description
-        documentId
-        shortDescription
-      }
-        }
-      }
-`;
-    const variables = {
-      caracteristicaDocumentId,
-      tipoActivoDocumentId,
-      valueInversorId,
-    };
+    `;
 
     return client({
       url: `/graphql`,
       method: "post",
       data: {
         query,
-        variables,
+        variables: {
+          caracteristicaDocumentId,
+          tipoActivoDocumentId,
+          valueInversorId,
+          page,
+          pageSize: 100,
+        },
       },
     });
   }
