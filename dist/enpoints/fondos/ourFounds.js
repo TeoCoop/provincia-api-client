@@ -39,28 +39,35 @@ function founds(_ref) {
     });
   }
   function getOnlyNameAndNumber() {
-    var query = "\n    query {\n      ourFounds(filters: { isDelete: { eq: false } }) {\n        name\n        numero_fondo\n        documentId\n         clase_fondo {\n          clase\n        }\n      }\n    }\n  ";
-    return client({
-      url: "/graphql",
-      method: "post",
-      data: {
-        query: query
-      }
-    });
-  }
-  function getFilters() {
-    var query = "\n        query OurFounds(\n        $caracteristicaDocumentId: ID\n        $tipoActivoDocumentId: ID\n        $valueInversorId: ID\n      ) {\n        ourFounds(\n          filters: {\n            and: [\n              {\n                caracteristicas_fondos: {\n                  documentId: { eq: $caracteristicaDocumentId }\n                }\n              }\n              {\n                tipos_activos_fondos: {\n                  documentId: { eq: $tipoActivoDocumentId }\n                }\n              }\n              {\n                inversor_profile_fondos:   {\n                  documentId: { eq: $valueInversorId }\n                }\n              }\n            ]\n          }\n        ) {\n        name\n        description\n        numero_fondo\n        moneda\n        informationAt\n        patrimonio\n        link\n        documentId\n        factSheet {\n          url\n        }\n      caracteristicas_fondos {\n        value\n        documentId\n      }\n      tipos_activos_fondos {\n        value\n        documentId\n      }\n      inversor_profile_fondos {\n        title\n        description\n        documentId\n        shortDescription\n      }\n        }\n      }\n";
-    var variables = {
-      caracteristicaDocumentId: caracteristicaDocumentId,
-      tipoActivoDocumentId: tipoActivoDocumentId,
-      valueInversorId: valueInversorId
-    };
+    var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var query = "\n      query ($page: Int!, $pageSize: Int!) {\n        ourFounds(\n          filters: { isDelete: { eq: false } }\n          pagination: { page: $page, pageSize: $pageSize }\n        ) {\n          data {\n            name\n            numero_fondo\n            documentId\n            clase_fondo {\n              clase\n            }\n          }\n          meta {\n            pagination {\n              page\n              pageSize\n              pageCount\n              total\n            }\n          }\n        }\n      }\n    ";
     return client({
       url: "/graphql",
       method: "post",
       data: {
         query: query,
-        variables: variables
+        variables: {
+          page: page,
+          pageSize: 100
+        }
+      }
+    });
+  }
+  function getFilters() {
+    var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    var query = "\n      query OurFounds(\n        $caracteristicaDocumentId: ID\n        $tipoActivoDocumentId: ID\n        $valueInversorId: ID\n        $page: Int!\n        $pageSize: Int!\n      ) {\n        ourFounds(\n          filters: {\n            and: [\n              {\n                caracteristicas_fondos: {\n                  documentId: { eq: $caracteristicaDocumentId }\n                }\n              }\n              {\n                tipos_activos_fondos: {\n                  documentId: { eq: $tipoActivoDocumentId }\n                }\n              }\n              {\n                inversor_profile_fondos: {\n                  documentId: { eq: $valueInversorId }\n                }\n              }\n            ]\n          }\n          pagination: { page: $page, pageSize: $pageSize }\n        ) {\n          data {\n            name\n            description\n            numero_fondo\n            moneda\n            informationAt\n            patrimonio\n            link\n            documentId\n            factSheet {\n              url\n            }\n            caracteristicas_fondos {\n              value\n              documentId\n            }\n            tipos_activos_fondos {\n              value\n              documentId\n            }\n            inversor_profile_fondos {\n              title\n              description\n              documentId\n              shortDescription\n            }\n          }\n          meta {\n            pagination {\n              page\n              pageSize\n              pageCount\n              total\n            }\n          }\n        }\n      }\n    ";
+    return client({
+      url: "/graphql",
+      method: "post",
+      data: {
+        query: query,
+        variables: {
+          caracteristicaDocumentId: caracteristicaDocumentId,
+          tipoActivoDocumentId: tipoActivoDocumentId,
+          valueInversorId: valueInversorId,
+          page: page,
+          pageSize: 100
+        }
       }
     });
   }
