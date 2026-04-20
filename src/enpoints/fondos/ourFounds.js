@@ -27,28 +27,20 @@ function founds({ client }) {
       },
     });
   }
-  function getOnlyNameAndNumber(page = 1) {
+  const PAGE_SIZE = 100;
+
+  function getOnlyNameAndNumber() {
     const query = `
-      query ($page: Int!, $pageSize: Int!) {
+      query {
         ourFounds(
           filters: { isDelete: { eq: false } }
-          pagination: { page: $page, pageSize: $pageSize }
+          pagination: { page: 1, pageSize: ${PAGE_SIZE} }
         ) {
-          data {
-            name
-            numero_fondo
-            documentId
-            clase_fondo {
-              clase
-            }
-          }
-          meta {
-            pagination {
-              page
-              pageSize
-              pageCount
-              total
-            }
+          name
+          numero_fondo
+          documentId
+          clase_fondo {
+            clase
           }
         }
       }
@@ -57,98 +49,57 @@ function founds({ client }) {
     return client({
       url: "/graphql",
       method: "post",
-      data: {
-        query,
-        variables: {
-          page,
-          pageSize: 100,
-        },
-      },
+      data: { query },
     });
   }
-  function getFilters(page = 1) {
+
+  function getFilters(
+    caracteristicaDocumentId,
+    tipoActivoDocumentId,
+    valueInversorId
+  ) {
     const query = `
       query OurFounds(
         $caracteristicaDocumentId: ID
         $tipoActivoDocumentId: ID
         $valueInversorId: ID
-        $page: Int!
-        $pageSize: Int!
       ) {
         ourFounds(
           filters: {
             and: [
-              {
-                caracteristicas_fondos: {
-                  documentId: { eq: $caracteristicaDocumentId }
-                }
-              }
-              {
-                tipos_activos_fondos: {
-                  documentId: { eq: $tipoActivoDocumentId }
-                }
-              }
-              {
-                inversor_profile_fondos: {
-                  documentId: { eq: $valueInversorId }
-                }
-              }
+              { caracteristicas_fondos: { documentId: { eq: $caracteristicaDocumentId } } }
+              { tipos_activos_fondos: { documentId: { eq: $tipoActivoDocumentId } } }
+              { inversor_profile_fondos: { documentId: { eq: $valueInversorId } } }
             ]
           }
-          pagination: { page: $page, pageSize: $pageSize }
+          pagination: { page: 1, pageSize: ${PAGE_SIZE} }
         ) {
-          data {
-            name
-            description
-            numero_fondo
-            moneda
-            informationAt
-            patrimonio
-            link
-            documentId
-            factSheet {
-              url
-            }
-            caracteristicas_fondos {
-              value
-              documentId
-            }
-            tipos_activos_fondos {
-              value
-              documentId
-            }
-            inversor_profile_fondos {
-              title
-              description
-              documentId
-              shortDescription
-            }
-          }
-          meta {
-            pagination {
-              page
-              pageSize
-              pageCount
-              total
-            }
-          }
+          name
+          description
+          numero_fondo
+          moneda
+          informationAt
+          patrimonio
+          link
+          documentId
+          factSheet { url }
+          caracteristicas_fondos { value documentId }
+          tipos_activos_fondos { value documentId }
+          inversor_profile_fondos { title description documentId shortDescription }
         }
       }
     `;
 
+    const variables = {
+      caracteristicaDocumentId,
+      tipoActivoDocumentId,
+      valueInversorId,
+    };
+
     return client({
       url: `/graphql`,
       method: "post",
-      data: {
-        query,
-        variables: {
-          caracteristicaDocumentId,
-          tipoActivoDocumentId,
-          valueInversorId,
-          page,
-          pageSize: 100,
-        },
-      },
+      data: { query, variables },
     });
   }
   function createFound({ jwtToken, data }) {
