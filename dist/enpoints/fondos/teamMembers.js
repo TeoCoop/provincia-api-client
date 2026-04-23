@@ -31,6 +31,9 @@ function teamFondos(_ref) {
       method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
+      },
+      params: {
+        "pagination[pageSize]": 100
       }
     });
   }
