@@ -21,6 +21,9 @@ function teamFondos({ client }) {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
+      params: {
+        "pagination[pageSize]": 100,
+      },
     });
   }
   function updateMember({ jwtToken, memberId, data }) {
