@@ -9,6 +9,9 @@ function teamFondos({ client }) {
     return client({
       url: `/api/member-team-fondos`,
       method: "get",
+      params: {
+        "pagination[pageSize]": 100,
+      },
     });
   }
   function getAllPanel({ jwtToken }) {
