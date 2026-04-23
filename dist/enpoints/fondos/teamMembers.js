@@ -18,7 +18,10 @@ function teamFondos(_ref) {
   function getAll() {
     return client({
       url: "/api/member-team-fondos",
-      method: "get"
+      method: "get",
+      params: {
+        "pagination[pageSize]": 100
+      }
     });
   }
   function getAllPanel(_ref3) {
