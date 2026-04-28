@@ -38,6 +38,12 @@ function founds(_ref) {
       }
     });
   }
+  function getMoneda() {
+    return client({
+      url: "/api/monedas-filter",
+      method: "get"
+    });
+  }
   var PAGE_SIZE = 100;
   function getOnlyNameAndNumber() {
     var query = "\n      query {\n        ourFounds(\n          filters: { isDelete: { eq: false } }\n          pagination: { page: 1, pageSize: ".concat(PAGE_SIZE, " }\n        ) {\n          name\n          numero_fondo\n          documentId\n          clase_fondo {\n            clase\n          }\n        }\n      }\n    ");
@@ -116,7 +122,8 @@ function founds(_ref) {
     getFilters: getFilters,
     getByDocumentId: getByDocumentId,
     getOnlyNameAndNumber: getOnlyNameAndNumber,
-    getAllPanel: getAllPanel
+    getAllPanel: getAllPanel,
+    getMoneda: getMoneda
   };
 }
 module.exports = founds;

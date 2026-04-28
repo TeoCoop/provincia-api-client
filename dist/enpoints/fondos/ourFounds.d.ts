@@ -27,4 +27,5 @@ declare function founds({ client }: {
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
+    getMoneda: () => any;
 };

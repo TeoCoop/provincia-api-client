@@ -653,6 +653,7 @@ export function client(options: any): {
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
+            getMoneda: () => any;
         };
         areaTeam: {
             getAll: () => any;
