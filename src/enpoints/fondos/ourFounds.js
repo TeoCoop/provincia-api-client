@@ -27,6 +27,12 @@ function founds({ client }) {
       },
     });
   }
+  function getMoneda() {
+    return client({
+      url: `/api/monedas-filter`,
+      method: "get",
+    });
+  }
   const PAGE_SIZE = 100;
 
   function getOnlyNameAndNumber() {
@@ -154,6 +160,7 @@ function founds({ client }) {
     getByDocumentId,
     getOnlyNameAndNumber,
     getAllPanel,
+    getMoneda,
   };
 }
 
