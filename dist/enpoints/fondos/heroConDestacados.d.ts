@@ -7,8 +7,8 @@ declare function destacadoPopUp({ client }: {
         jwtToken: any;
     }) => any;
     updateDestacado: ({ jwtToken, destacadoId, data }: {
-        jwtToken: any;
-        destacadoId: any;
         data: any;
+        destacadoId: any;
+        jwtToken: any;
     }) => any;
 };

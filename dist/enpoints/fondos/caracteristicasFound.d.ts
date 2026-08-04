@@ -4,20 +4,20 @@ declare function caracteristicasFound({ client }: {
 }): {
     getAll: () => any;
     updateCaracteristica: ({ jwtToken, caracteristicaId, data }: {
-        jwtToken: any;
         caracteristicaId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteCaracteristica: ({ jwtToken, caracteristicaId }: {
-        jwtToken: any;
         caracteristicaId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ caracteristicaId }: {
         caracteristicaId: any;
     }) => any;
     createCaracteristica: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

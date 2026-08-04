@@ -7,17 +7,17 @@ declare function carterasEficientes({ client }: {
     }) => any;
     getAll: () => any;
     createCartera: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateCartera: ({ jwtToken, carteraId, data }: {
-        jwtToken: any;
         carteraId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteCartera: ({ jwtToken, carteraId }: {
-        jwtToken: any;
         carteraId: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

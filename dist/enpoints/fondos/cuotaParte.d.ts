@@ -3,39 +3,39 @@ declare function cuotaParteFound({ client }: {
     client: any;
 }): {
     getAll: ({ our_found, clase_fondo, page, pageSize }: {
-        our_found: any;
         clase_fondo: any;
+        our_found: any;
         page?: number | undefined;
         pageSize?: number | undefined;
     }) => any;
     updateCuotaParte: ({ jwtToken, cuotaParteId, data }: {
-        jwtToken: any;
         cuotaParteId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteCuotaParte: ({ jwtToken, cuotaParteId }: {
-        jwtToken: any;
         cuotaParteId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ cuotaParteId }: {
         cuotaParteId: any;
     }) => any;
     createCuotaParte: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getByRange: ({ our_found, clase_fondo, fecha_inicio, fecha_fin, page, pageSize, }: {
-        our_found: any;
         clase_fondo: any;
-        fecha_inicio: any;
         fecha_fin: any;
+        fecha_inicio: any;
+        our_found: any;
         page?: number | undefined;
         pageSize?: number | undefined;
     }) => any;
     getTestingPermisosPanel: ({ jwtToken, our_found, clase_fondo, page, pageSize, }: {
+        clase_fondo: any;
         jwtToken: any;
         our_found: any;
-        clase_fondo: any;
         page?: number | undefined;
         pageSize?: number | undefined;
     }) => any;

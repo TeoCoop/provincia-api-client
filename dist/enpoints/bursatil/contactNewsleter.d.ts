@@ -3,8 +3,8 @@ declare function contactNewsleter({ client }: {
     client: any;
 }): {
     getById: ({ jwtToken, contactId }: {
-        jwtToken: any;
         contactId: any;
+        jwtToken: any;
     }) => any;
     getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
@@ -15,12 +15,12 @@ declare function contactNewsleter({ client }: {
         data: any;
     }) => any;
     updateContact: ({ jwtToken, contactId, data }: {
-        jwtToken: any;
         contactId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteContact: ({ jwtToken, contactId }: {
-        jwtToken: any;
         contactId: any;
+        jwtToken: any;
     }) => any;
 };

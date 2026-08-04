@@ -7,17 +7,17 @@ declare function category({ client }: {
     }) => any;
     getAll: () => any;
     createCategory: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateCategory: ({ jwtToken, categoryId, data }: {
-        jwtToken: any;
         categoryId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteCategory: ({ jwtToken, categoryId }: {
-        jwtToken: any;
         categoryId: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

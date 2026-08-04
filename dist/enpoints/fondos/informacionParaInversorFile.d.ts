@@ -4,20 +4,20 @@ declare function informacionParaElInversorFile({ client }: {
 }): {
     getAll: () => any;
     updateFile: ({ jwtToken, fileId, data }: {
-        jwtToken: any;
-        fileId: any;
         data: any;
+        fileId: any;
+        jwtToken: any;
     }) => any;
     deleteFile: ({ jwtToken, fileId }: {
-        jwtToken: any;
         fileId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ fileId }: {
         fileId: any;
     }) => any;
     createFile: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

@@ -7,19 +7,19 @@ declare function faq({ client }: {
     }) => any;
     getAll: () => any;
     createFaq: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateFaq: ({ jwtToken, faqId, data }: {
-        jwtToken: any;
-        faqId: any;
         data: any;
+        faqId: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
     deleteFaq: ({ jwtToken, faqId }: {
-        jwtToken: any;
         faqId: any;
+        jwtToken: any;
     }) => any;
 };

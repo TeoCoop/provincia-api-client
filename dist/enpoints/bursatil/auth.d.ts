@@ -6,11 +6,11 @@ declare function auth({ client }: {
         user: any;
     }) => any;
     login: ({ user, access_token }: {
-        user: any;
         access_token: any;
+        user: any;
     }) => any;
     verifyTotp: ({ user, access_token }: {
-        user: any;
         access_token: any;
+        user: any;
     }) => any;
 };

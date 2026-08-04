@@ -4,20 +4,20 @@ declare function informacionParaElInversor({ client }: {
 }): {
     getAll: () => any;
     updateInformacion: ({ jwtToken, infoId, data }: {
-        jwtToken: any;
-        infoId: any;
         data: any;
+        infoId: any;
+        jwtToken: any;
     }) => any;
     deleteInformacion: ({ jwtToken, infoId }: {
-        jwtToken: any;
         infoId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ infoId }: {
         infoId: any;
     }) => any;
     createInformacion: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

@@ -4,20 +4,20 @@ declare function typeActive({ client }: {
 }): {
     getAll: () => any;
     updateActivo: ({ jwtToken, activoId, data }: {
-        jwtToken: any;
         activoId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteActivo: ({ jwtToken, activoId }: {
-        jwtToken: any;
         activoId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ activoId }: {
         activoId: any;
     }) => any;
     createActivo: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

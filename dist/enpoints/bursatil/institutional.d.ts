@@ -4,8 +4,8 @@ declare function institutional({ client }: {
 }): {
     getAll: () => any;
     updateInstitutional: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteInstitutional: ({ jwtToken }: {
         jwtToken: any;

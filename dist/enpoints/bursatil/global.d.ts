@@ -4,8 +4,8 @@ declare function global({ client }: {
 }): {
     getAll: () => any;
     updateGlobal: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteGlobal: ({ jwtToken }: {
         jwtToken: any;

@@ -7,17 +7,17 @@ declare function founds({ client }: {
     }) => any;
     getAll: () => any;
     createFound: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateFound: ({ jwtToken, foundId, data }: {
-        jwtToken: any;
-        foundId: any;
         data: any;
+        foundId: any;
+        jwtToken: any;
     }) => any;
     deleteFound: ({ jwtToken, foundId }: {
-        jwtToken: any;
         foundId: any;
+        jwtToken: any;
     }) => any;
     getFilters: (caracteristicaDocumentId: any, tipoActivoDocumentId: any, valueInversorId: any) => any;
     getByDocumentId: ({ foundDocumentId }: {

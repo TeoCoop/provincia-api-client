@@ -4,8 +4,8 @@ declare function nuestroEquipo({ client }: {
 }): {
     getAll: () => any;
     updateNuestroEquipo: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteNuestroEquipo: ({ jwtToken }: {
         jwtToken: any;

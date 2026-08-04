@@ -1,4 +1,4 @@
-export function client(options: any): {
+export declare function client(options: any): {
     bursatil: {
         blog: {
             getById: ({ blogId }: {
@@ -6,23 +6,23 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createBlog: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateBlog: ({ jwtToken, blogId, data }: {
-                jwtToken: any;
                 blogId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteBlog: ({ jwtToken, blogId }: {
-                jwtToken: any;
                 blogId: any;
+                jwtToken: any;
             }) => any;
             getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
-                year: any;
-                topicDocumentId: any;
                 categoryDocumentId: any;
                 search: any;
+                topicDocumentId: any;
+                year: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -31,8 +31,8 @@ export function client(options: any): {
         institutional: {
             getAll: () => any;
             updateInstitutional: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteInstitutional: ({ jwtToken }: {
                 jwtToken: any;
@@ -44,9 +44,9 @@ export function client(options: any): {
         product: {
             getAll: () => any;
             updateProduct: ({ jwtToken, productId, data }: {
+                data: any;
                 jwtToken: any;
                 productId: any;
-                data: any;
             }) => any;
             deleteProduct: ({ jwtToken, productId }: {
                 jwtToken: any;
@@ -56,8 +56,8 @@ export function client(options: any): {
                 productId: any;
             }) => any;
             createProduct: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -69,17 +69,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createFaq: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateFaq: ({ jwtToken, faqId, data }: {
-                jwtToken: any;
-                faqId: any;
                 data: any;
+                faqId: any;
+                jwtToken: any;
             }) => any;
             deleteFaq: ({ jwtToken, faqId }: {
-                jwtToken: any;
                 faqId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -88,8 +88,8 @@ export function client(options: any): {
         global: {
             getAll: () => any;
             updateGlobal: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteGlobal: ({ jwtToken }: {
                 jwtToken: any;
@@ -104,17 +104,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createCartera: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateCartera: ({ jwtToken, carteraId, data }: {
-                jwtToken: any;
                 carteraId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCartera: ({ jwtToken, carteraId }: {
-                jwtToken: any;
                 carteraId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -126,17 +126,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createInstrumento: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateInstrumento: ({ jwtToken, instrumentoId, data }: {
-                jwtToken: any;
-                instrumentoId: any;
                 data: any;
+                instrumentoId: any;
+                jwtToken: any;
             }) => any;
             deleteInstrumento: ({ jwtToken, instrumentoId }: {
-                jwtToken: any;
                 instrumentoId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -148,13 +148,13 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createVideo: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateVideo: ({ jwtToken, videoId, data }: {
+                data: any;
                 jwtToken: any;
                 videoId: any;
-                data: any;
             }) => any;
             deleteVideo: ({ jwtToken, videoId }: {
                 jwtToken: any;
@@ -170,17 +170,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createCategoriesVideos: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateCategoriesVideos: ({ jwtToken, categoriesId, data }: {
-                jwtToken: any;
                 categoriesId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCategoriesVideos: ({ jwtToken, categoriesId }: {
-                jwtToken: any;
                 categoriesId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -192,17 +192,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createCategory: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateCategory: ({ jwtToken, categoryId, data }: {
-                jwtToken: any;
                 categoryId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCategory: ({ jwtToken, categoryId }: {
-                jwtToken: any;
                 categoryId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -211,20 +211,20 @@ export function client(options: any): {
         areaTeam: {
             getAll: () => any;
             updateArea: ({ jwtToken, areaId, data }: {
-                jwtToken: any;
                 areaId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteArea: ({ jwtToken, areaId }: {
-                jwtToken: any;
                 areaId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ areaId }: {
                 areaId: any;
             }) => any;
             createArea: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -233,9 +233,9 @@ export function client(options: any): {
         teamMember: {
             getAll: () => any;
             updateMember: ({ jwtToken, memberId, data }: {
+                data: any;
                 jwtToken: any;
                 memberId: any;
-                data: any;
             }) => any;
             deleteMember: ({ jwtToken, memberId }: {
                 jwtToken: any;
@@ -245,8 +245,8 @@ export function client(options: any): {
                 memberId: any;
             }) => any;
             createMember: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -255,20 +255,20 @@ export function client(options: any): {
         aliados: {
             getAll: () => any;
             updateAliado: ({ jwtToken, aliadoId, data }: {
-                jwtToken: any;
                 aliadoId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteAliado: ({ jwtToken, aliadoId }: {
-                jwtToken: any;
                 aliadoId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ aliadoId }: {
                 aliadoId: any;
             }) => any;
             createAliado: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -277,9 +277,9 @@ export function client(options: any): {
         topicBlog: {
             getAll: () => any;
             updateTopic: ({ jwtToken, topicId, data }: {
+                data: any;
                 jwtToken: any;
                 topicId: any;
-                data: any;
             }) => any;
             deleteTopic: ({ jwtToken, topicId }: {
                 jwtToken: any;
@@ -289,8 +289,8 @@ export function client(options: any): {
                 topicId: any;
             }) => any;
             createTopic: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -299,20 +299,20 @@ export function client(options: any): {
         destacadosHome: {
             getAll: () => any;
             updateDestacado: ({ jwtToken, destacadoId, data }: {
-                jwtToken: any;
-                destacadoId: any;
                 data: any;
+                destacadoId: any;
+                jwtToken: any;
             }) => any;
             deleteDestacado: ({ jwtToken, destacadoId }: {
-                jwtToken: any;
                 destacadoId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ destacadoId }: {
                 destacadoId: any;
             }) => any;
             createDestacado: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -327,23 +327,23 @@ export function client(options: any): {
                 colorId: any;
             }) => any;
             deleteColor: ({ jwtToken, colorId }: {
-                jwtToken: any;
                 colorId: any;
+                jwtToken: any;
             }) => any;
             createColor: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateColor: ({ jwtToken, colorId, data }: {
-                jwtToken: any;
                 colorId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPalettes: () => any;
             updatePalette: ({ jwtToken, paletteId, data }: {
+                data: any;
                 jwtToken: any;
                 paletteId: any;
-                data: any;
             }) => any;
             deletePalette: ({ jwtToken, paletteId }: {
                 jwtToken: any;
@@ -353,8 +353,8 @@ export function client(options: any): {
                 paletteId: any;
             }) => any;
             createPalette: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -363,20 +363,20 @@ export function client(options: any): {
         homeBursatil: {
             getAll: () => any;
             updateHome: ({ jwtToken, homeCardId, data }: {
-                jwtToken: any;
-                homeCardId: any;
                 data: any;
+                homeCardId: any;
+                jwtToken: any;
             }) => any;
             deleteHome: ({ jwtToken, homeCardId }: {
-                jwtToken: any;
                 homeCardId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ homeCardId }: {
                 homeCardId: any;
             }) => any;
             createHome: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -384,8 +384,8 @@ export function client(options: any): {
         };
         contactNewsleter: {
             getById: ({ jwtToken, contactId }: {
-                jwtToken: any;
                 contactId: any;
+                jwtToken: any;
             }) => any;
             getAll: ({ jwtToken, page, pageSize }: {
                 jwtToken: any;
@@ -396,19 +396,19 @@ export function client(options: any): {
                 data: any;
             }) => any;
             updateContact: ({ jwtToken, contactId, data }: {
-                jwtToken: any;
                 contactId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteContact: ({ jwtToken, contactId }: {
-                jwtToken: any;
                 contactId: any;
+                jwtToken: any;
             }) => any;
         };
         contactAsociado: {
             getById: ({ jwtToken, asesorId }: {
-                jwtToken: any;
                 asesorId: any;
+                jwtToken: any;
             }) => any;
             getAll: ({ jwtToken, page, pageSize }: {
                 jwtToken: any;
@@ -419,20 +419,20 @@ export function client(options: any): {
                 data: any;
             }) => any;
             updateContact: ({ jwtToken, asesorId, data }: {
-                jwtToken: any;
                 asesorId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteAsesor: ({ jwtToken, asesorId }: {
-                jwtToken: any;
                 asesorId: any;
+                jwtToken: any;
             }) => any;
         };
         test: {
             getAll: () => any;
             updateTest: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -444,9 +444,9 @@ export function client(options: any): {
         questionTest: {
             getAll: () => any;
             updatedQuestion: ({ jwtToken, questionId, data }: {
+                data: any;
                 jwtToken: any;
                 questionId: any;
-                data: any;
             }) => any;
             deleteCuestion: ({ jwtToken, questionId }: {
                 jwtToken: any;
@@ -456,8 +456,8 @@ export function client(options: any): {
                 questionId: any;
             }) => any;
             createQuestion: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -466,9 +466,9 @@ export function client(options: any): {
         inversorProfile: {
             getAll: () => any;
             updateProfile: ({ jwtToken, profileId, data }: {
+                data: any;
                 jwtToken: any;
                 profileId: any;
-                data: any;
             }) => any;
             deleteProfile: ({ jwtToken, profileId }: {
                 jwtToken: any;
@@ -478,8 +478,8 @@ export function client(options: any): {
                 profileId: any;
             }) => any;
             createProfile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getResult: ({ value }: {
                 value: any;
@@ -500,21 +500,21 @@ export function client(options: any): {
                 pageSize?: number | undefined;
             }) => any;
             updateFile: ({ jwtToken, data, fileId }: {
-                jwtToken: any;
                 data: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             createFile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteFile: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
         };
         authBursatil: {
@@ -522,20 +522,20 @@ export function client(options: any): {
                 user: any;
             }) => any;
             login: ({ user, access_token }: {
-                user: any;
                 access_token: any;
+                user: any;
             }) => any;
             verifyTotp: ({ user, access_token }: {
-                user: any;
                 access_token: any;
+                user: any;
             }) => any;
         };
     };
     general: {
         upload: {
             update: ({ jwtToken, file }: {
-                jwtToken: any;
                 file: any;
+                jwtToken: any;
             }) => any;
         };
         blogMedia: {
@@ -545,21 +545,21 @@ export function client(options: any): {
                 pageSize?: number | undefined;
             }) => any;
             updateFile: ({ jwtToken, data, fileId }: {
-                jwtToken: any;
                 data: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             deleteFile: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             createFile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
         };
     };
@@ -570,23 +570,23 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createBlog: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateBlog: ({ jwtToken, blogId, data }: {
-                jwtToken: any;
                 blogId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteBlog: ({ jwtToken, blogId }: {
-                jwtToken: any;
                 blogId: any;
+                jwtToken: any;
             }) => any;
             getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
-                year: any;
-                topicDocumentId: any;
                 categoryDocumentId: any;
                 search: any;
+                topicDocumentId: any;
+                year: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -595,8 +595,8 @@ export function client(options: any): {
         institutional: {
             getAll: () => any;
             updateInstitutional: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -611,20 +611,20 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createFaq: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateFaq: ({ jwtToken, faqId, data }: {
-                jwtToken: any;
-                faqId: any;
                 data: any;
+                faqId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
             deleteFaq: ({ jwtToken, faqId }: {
-                jwtToken: any;
                 faqId: any;
+                jwtToken: any;
             }) => any;
         };
         founds: {
@@ -633,17 +633,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createFound: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateFound: ({ jwtToken, foundId, data }: {
-                jwtToken: any;
-                foundId: any;
                 data: any;
+                foundId: any;
+                jwtToken: any;
             }) => any;
             deleteFound: ({ jwtToken, foundId }: {
-                jwtToken: any;
                 foundId: any;
+                jwtToken: any;
             }) => any;
             getFilters: (caracteristicaDocumentId: any, tipoActivoDocumentId: any, valueInversorId: any) => any;
             getByDocumentId: ({ foundDocumentId }: {
@@ -658,20 +658,20 @@ export function client(options: any): {
         areaTeam: {
             getAll: () => any;
             updateArea: ({ jwtToken, areaId, data }: {
-                jwtToken: any;
                 areaId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteArea: ({ jwtToken, areaId }: {
-                jwtToken: any;
                 areaId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ areaId }: {
                 areaId: any;
             }) => any;
             createArea: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -683,17 +683,17 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createCategory: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateCategory: ({ jwtToken, categoryId, data }: {
-                jwtToken: any;
                 categoryId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCategory: ({ jwtToken, categoryId }: {
-                jwtToken: any;
                 categoryId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -705,37 +705,37 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createCategoriesVideos: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateCategoriesVideos: ({ jwtToken, categoriesId, data }: {
-                jwtToken: any;
                 categoriesId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCategoriesVideos: ({ jwtToken, categoriesId }: {
-                jwtToken: any;
                 categoriesId: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: () => any;
         };
         homeFondos: {
             getAll: () => any;
             updateHome: ({ jwtToken, homeCardId, data }: {
-                jwtToken: any;
-                homeCardId: any;
                 data: any;
+                homeCardId: any;
+                jwtToken: any;
             }) => any;
             deleteHome: ({ jwtToken, homeCardId }: {
-                jwtToken: any;
                 homeCardId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ homeCardId }: {
                 homeCardId: any;
             }) => any;
             createHome: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: (jwtToken: any) => any;
         };
@@ -745,23 +745,23 @@ export function client(options: any): {
                 colorId: any;
             }) => any;
             deleteColor: ({ jwtToken, colorId }: {
-                jwtToken: any;
                 colorId: any;
+                jwtToken: any;
             }) => any;
             createColor: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateColor: ({ jwtToken, colorId, data }: {
-                jwtToken: any;
                 colorId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPalettes: () => any;
             updatePalette: ({ jwtToken, paletteId, data }: {
+                data: any;
                 jwtToken: any;
                 paletteId: any;
-                data: any;
             }) => any;
             deletePalette: ({ jwtToken, paletteId }: {
                 jwtToken: any;
@@ -771,16 +771,16 @@ export function client(options: any): {
                 paletteId: any;
             }) => any;
             createPalette: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
         };
         questionTest: {
             getAll: () => any;
             updatedQuestion: ({ jwtToken, questionId, data }: {
+                data: any;
                 jwtToken: any;
                 questionId: any;
-                data: any;
             }) => any;
             deleteCuestion: ({ jwtToken, questionId }: {
                 jwtToken: any;
@@ -790,8 +790,8 @@ export function client(options: any): {
                 questionId: any;
             }) => any;
             createQuestion: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -800,9 +800,9 @@ export function client(options: any): {
         teamMember: {
             getAll: () => any;
             updateMember: ({ jwtToken, memberId, data }: {
+                data: any;
                 jwtToken: any;
                 memberId: any;
-                data: any;
             }) => any;
             deleteMember: ({ jwtToken, memberId }: {
                 jwtToken: any;
@@ -812,8 +812,8 @@ export function client(options: any): {
                 memberId: any;
             }) => any;
             createMember: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -822,9 +822,9 @@ export function client(options: any): {
         inversorProfile: {
             getAll: () => any;
             updateProfile: ({ jwtToken, profileId, data }: {
+                data: any;
                 jwtToken: any;
                 profileId: any;
-                data: any;
             }) => any;
             deleteProfile: ({ jwtToken, profileId }: {
                 jwtToken: any;
@@ -834,8 +834,8 @@ export function client(options: any): {
                 profileId: any;
             }) => any;
             createProfile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getResult: ({ value }: {
                 value: any;
@@ -847,8 +847,8 @@ export function client(options: any): {
         test: {
             getAll: () => any;
             updateTest: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteTest: ({ jwtToken }: {
                 jwtToken: any;
@@ -860,9 +860,9 @@ export function client(options: any): {
         topicBlog: {
             getAll: () => any;
             updateTopic: ({ jwtToken, topicId, data }: {
+                data: any;
                 jwtToken: any;
                 topicId: any;
-                data: any;
             }) => any;
             deleteTopic: ({ jwtToken, topicId }: {
                 jwtToken: any;
@@ -872,8 +872,8 @@ export function client(options: any): {
                 topicId: any;
             }) => any;
             createTopic: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -885,13 +885,13 @@ export function client(options: any): {
             }) => any;
             getAll: () => any;
             createVideo: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             updateVideo: ({ jwtToken, videoId, data }: {
+                data: any;
                 jwtToken: any;
                 videoId: any;
-                data: any;
             }) => any;
             deleteVideo: ({ jwtToken, videoId }: {
                 jwtToken: any;
@@ -904,8 +904,8 @@ export function client(options: any): {
         nuestroEquipo: {
             getAll: () => any;
             updateNuestroEquipo: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteNuestroEquipo: ({ jwtToken }: {
                 jwtToken: any;
@@ -917,20 +917,20 @@ export function client(options: any): {
         tiposActivos: {
             getAll: () => any;
             updateActivo: ({ jwtToken, activoId, data }: {
-                jwtToken: any;
                 activoId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteActivo: ({ jwtToken, activoId }: {
-                jwtToken: any;
                 activoId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ activoId }: {
                 activoId: any;
             }) => any;
             createActivo: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -939,20 +939,20 @@ export function client(options: any): {
         caracteristicasFound: {
             getAll: () => any;
             updateCaracteristica: ({ jwtToken, caracteristicaId, data }: {
-                jwtToken: any;
                 caracteristicaId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCaracteristica: ({ jwtToken, caracteristicaId }: {
-                jwtToken: any;
                 caracteristicaId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ caracteristicaId }: {
                 caracteristicaId: any;
             }) => any;
             createCaracteristica: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -966,20 +966,20 @@ export function client(options: any): {
         informacionParaInversor: {
             getAll: () => any;
             updateInformacion: ({ jwtToken, infoId, data }: {
-                jwtToken: any;
-                infoId: any;
                 data: any;
+                infoId: any;
+                jwtToken: any;
             }) => any;
             deleteInformacion: ({ jwtToken, infoId }: {
-                jwtToken: any;
                 infoId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ infoId }: {
                 infoId: any;
             }) => any;
             createInformacion: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -988,20 +988,20 @@ export function client(options: any): {
         informacionParaInversorFile: {
             getAll: () => any;
             updateFile: ({ jwtToken, fileId, data }: {
-                jwtToken: any;
-                fileId: any;
                 data: any;
+                fileId: any;
+                jwtToken: any;
             }) => any;
             deleteFile: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ fileId }: {
                 fileId: any;
             }) => any;
             createFile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ jwtToken }: {
                 jwtToken: any;
@@ -1009,39 +1009,39 @@ export function client(options: any): {
         };
         cuotaParte: {
             getAll: ({ our_found, clase_fondo, page, pageSize }: {
-                our_found: any;
                 clase_fondo: any;
+                our_found: any;
                 page?: number | undefined;
                 pageSize?: number | undefined;
             }) => any;
             updateCuotaParte: ({ jwtToken, cuotaParteId, data }: {
-                jwtToken: any;
                 cuotaParteId: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteCuotaParte: ({ jwtToken, cuotaParteId }: {
-                jwtToken: any;
                 cuotaParteId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ cuotaParteId }: {
                 cuotaParteId: any;
             }) => any;
             createCuotaParte: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getByRange: ({ our_found, clase_fondo, fecha_inicio, fecha_fin, page, pageSize, }: {
-                our_found: any;
                 clase_fondo: any;
-                fecha_inicio: any;
                 fecha_fin: any;
+                fecha_inicio: any;
+                our_found: any;
                 page?: number | undefined;
                 pageSize?: number | undefined;
             }) => any;
             getTestingPermisosPanel: ({ jwtToken, our_found, clase_fondo, page, pageSize, }: {
+                clase_fondo: any;
                 jwtToken: any;
                 our_found: any;
-                clase_fondo: any;
                 page?: number | undefined;
                 pageSize?: number | undefined;
             }) => any;
@@ -1053,28 +1053,28 @@ export function client(options: any): {
                 pageSize?: number | undefined;
             }) => any;
             updateFile: ({ jwtToken, data, fileId }: {
-                jwtToken: any;
                 data: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             createFile: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             deleteFile: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
             getById: ({ jwtToken, fileId }: {
-                jwtToken: any;
                 fileId: any;
+                jwtToken: any;
             }) => any;
         };
         destacadoPopUp: {
             getAll: (isPublic: any) => any;
             updateDestacado: ({ jwtToken, data }: {
-                jwtToken: any;
                 data: any;
+                jwtToken: any;
             }) => any;
             getAllPanel: ({ isPublic, jwtToken }: {
                 isPublic: any;
@@ -1086,12 +1086,12 @@ export function client(options: any): {
                 user: any;
             }) => any;
             login: ({ user, access_token }: {
-                user: any;
                 access_token: any;
+                user: any;
             }) => any;
             verifyTotp: ({ user, access_token }: {
-                user: any;
                 access_token: any;
+                user: any;
             }) => any;
         };
         heroAndDestacados: {
@@ -1100,9 +1100,9 @@ export function client(options: any): {
                 jwtToken: any;
             }) => any;
             updateDestacado: ({ jwtToken, destacadoId, data }: {
-                jwtToken: any;
-                destacadoId: any;
                 data: any;
+                destacadoId: any;
+                jwtToken: any;
             }) => any;
         };
     };

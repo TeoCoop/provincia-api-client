@@ -4,9 +4,9 @@ declare function inverterProfile({ client }: {
 }): {
     getAll: () => any;
     updateProfile: ({ jwtToken, profileId, data }: {
+        data: any;
         jwtToken: any;
         profileId: any;
-        data: any;
     }) => any;
     deleteProfile: ({ jwtToken, profileId }: {
         jwtToken: any;
@@ -16,8 +16,8 @@ declare function inverterProfile({ client }: {
         profileId: any;
     }) => any;
     createProfile: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getResult: ({ value }: {
         value: any;

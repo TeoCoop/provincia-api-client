@@ -4,9 +4,9 @@ declare function topicBlog({ client }: {
 }): {
     getAll: () => any;
     updateTopic: ({ jwtToken, topicId, data }: {
+        data: any;
         jwtToken: any;
         topicId: any;
-        data: any;
     }) => any;
     deleteTopic: ({ jwtToken, topicId }: {
         jwtToken: any;
@@ -16,8 +16,8 @@ declare function topicBlog({ client }: {
         topicId: any;
     }) => any;
     createTopic: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

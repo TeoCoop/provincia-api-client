@@ -4,20 +4,20 @@ declare function homeBursatil({ client }: {
 }): {
     getAll: () => any;
     updateHome: ({ jwtToken, homeCardId, data }: {
-        jwtToken: any;
-        homeCardId: any;
         data: any;
+        homeCardId: any;
+        jwtToken: any;
     }) => any;
     deleteHome: ({ jwtToken, homeCardId }: {
-        jwtToken: any;
         homeCardId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ homeCardId }: {
         homeCardId: any;
     }) => any;
     createHome: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

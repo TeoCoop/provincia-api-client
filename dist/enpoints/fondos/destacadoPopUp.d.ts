@@ -4,8 +4,8 @@ declare function destacadoPopUp({ client }: {
 }): {
     getAll: (isPublic: any) => any;
     updateDestacado: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ isPublic, jwtToken }: {
         isPublic: any;

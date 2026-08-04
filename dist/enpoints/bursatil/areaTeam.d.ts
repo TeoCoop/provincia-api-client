@@ -4,20 +4,20 @@ declare function areasBursatil({ client }: {
 }): {
     getAll: () => any;
     updateArea: ({ jwtToken, areaId, data }: {
-        jwtToken: any;
         areaId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteArea: ({ jwtToken, areaId }: {
-        jwtToken: any;
         areaId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ areaId }: {
         areaId: any;
     }) => any;
     createArea: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

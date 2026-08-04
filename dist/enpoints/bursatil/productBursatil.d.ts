@@ -4,9 +4,9 @@ declare function productBursatil({ client }: {
 }): {
     getAll: () => any;
     updateProduct: ({ jwtToken, productId, data }: {
+        data: any;
         jwtToken: any;
         productId: any;
-        data: any;
     }) => any;
     deleteProduct: ({ jwtToken, productId }: {
         jwtToken: any;
@@ -16,8 +16,8 @@ declare function productBursatil({ client }: {
         productId: any;
     }) => any;
     createProduct: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

@@ -7,17 +7,17 @@ declare function instrumento({ client }: {
     }) => any;
     getAll: () => any;
     createInstrumento: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateInstrumento: ({ jwtToken, instrumentoId, data }: {
-        jwtToken: any;
-        instrumentoId: any;
         data: any;
+        instrumentoId: any;
+        jwtToken: any;
     }) => any;
     deleteInstrumento: ({ jwtToken, instrumentoId }: {
-        jwtToken: any;
         instrumentoId: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

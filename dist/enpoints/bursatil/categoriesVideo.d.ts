@@ -7,17 +7,17 @@ declare function categoriesVideos({ client }: {
     }) => any;
     getAll: () => any;
     createCategoriesVideos: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateCategoriesVideos: ({ jwtToken, categoriesId, data }: {
-        jwtToken: any;
         categoriesId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteCategoriesVideos: ({ jwtToken, categoriesId }: {
-        jwtToken: any;
         categoriesId: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

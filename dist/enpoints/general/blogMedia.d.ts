@@ -8,20 +8,20 @@ declare function blogMedia({ client }: {
         pageSize?: number | undefined;
     }) => any;
     updateFile: ({ jwtToken, data, fileId }: {
-        jwtToken: any;
         data: any;
         fileId: any;
+        jwtToken: any;
     }) => any;
     deleteFile: ({ jwtToken, fileId }: {
-        jwtToken: any;
         fileId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ jwtToken, fileId }: {
-        jwtToken: any;
         fileId: any;
+        jwtToken: any;
     }) => any;
     createFile: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
 };

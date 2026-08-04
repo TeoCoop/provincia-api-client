@@ -7,23 +7,23 @@ declare function blog({ client }: {
     }) => any;
     getAll: () => any;
     createBlog: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateBlog: ({ jwtToken, blogId, data }: {
-        jwtToken: any;
         blogId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteBlog: ({ jwtToken, blogId }: {
-        jwtToken: any;
         blogId: any;
+        jwtToken: any;
     }) => any;
     getFilters: ({ year, topicDocumentId, categoryDocumentId, search }: {
-        year: any;
-        topicDocumentId: any;
         categoryDocumentId: any;
         search: any;
+        topicDocumentId: any;
+        year: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

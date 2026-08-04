@@ -4,8 +4,8 @@ declare function testInversor({ client }: {
 }): {
     getAll: () => any;
     updateTest: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

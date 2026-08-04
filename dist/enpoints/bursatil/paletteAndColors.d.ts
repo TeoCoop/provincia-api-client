@@ -7,23 +7,23 @@ declare function paletteAndColors({ client }: {
         colorId: any;
     }) => any;
     deleteColor: ({ jwtToken, colorId }: {
-        jwtToken: any;
         colorId: any;
+        jwtToken: any;
     }) => any;
     createColor: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateColor: ({ jwtToken, colorId, data }: {
-        jwtToken: any;
         colorId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPalettes: () => any;
     updatePalette: ({ jwtToken, paletteId, data }: {
+        data: any;
         jwtToken: any;
         paletteId: any;
-        data: any;
     }) => any;
     deletePalette: ({ jwtToken, paletteId }: {
         jwtToken: any;
@@ -33,8 +33,8 @@ declare function paletteAndColors({ client }: {
         paletteId: any;
     }) => any;
     createPalette: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

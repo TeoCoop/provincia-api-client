@@ -4,20 +4,20 @@ declare function aliados({ client }: {
 }): {
     getAll: () => any;
     updateAliado: ({ jwtToken, aliadoId, data }: {
-        jwtToken: any;
         aliadoId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteAliado: ({ jwtToken, aliadoId }: {
-        jwtToken: any;
         aliadoId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ aliadoId }: {
         aliadoId: any;
     }) => any;
     createAliado: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

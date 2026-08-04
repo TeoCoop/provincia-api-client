@@ -4,20 +4,20 @@ declare function destacadosHome({ client }: {
 }): {
     getAll: () => any;
     updateDestacado: ({ jwtToken, destacadoId, data }: {
-        jwtToken: any;
-        destacadoId: any;
         data: any;
+        destacadoId: any;
+        jwtToken: any;
     }) => any;
     deleteDestacado: ({ jwtToken, destacadoId }: {
-        jwtToken: any;
         destacadoId: any;
+        jwtToken: any;
     }) => any;
     getById: ({ destacadoId }: {
         destacadoId: any;
     }) => any;
     createDestacado: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

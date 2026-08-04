@@ -4,9 +4,9 @@ declare function teamFondos({ client }: {
 }): {
     getAll: () => any;
     updateMember: ({ jwtToken, memberId, data }: {
+        data: any;
         jwtToken: any;
         memberId: any;
-        data: any;
     }) => any;
     deleteMember: ({ jwtToken, memberId }: {
         jwtToken: any;
@@ -16,8 +16,8 @@ declare function teamFondos({ client }: {
         memberId: any;
     }) => any;
     createMember: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

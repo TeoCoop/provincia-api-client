@@ -3,8 +3,8 @@ declare function contactAsesor({ client }: {
     client: any;
 }): {
     getById: ({ jwtToken, asesorId }: {
-        jwtToken: any;
         asesorId: any;
+        jwtToken: any;
     }) => any;
     getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
@@ -15,12 +15,12 @@ declare function contactAsesor({ client }: {
         data: any;
     }) => any;
     updateContact: ({ jwtToken, asesorId, data }: {
-        jwtToken: any;
         asesorId: any;
         data: any;
+        jwtToken: any;
     }) => any;
     deleteAsesor: ({ jwtToken, asesorId }: {
-        jwtToken: any;
         asesorId: any;
+        jwtToken: any;
     }) => any;
 };

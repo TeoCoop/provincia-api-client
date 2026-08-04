@@ -4,9 +4,9 @@ declare function questionTest({ client }: {
 }): {
     getAll: () => any;
     updatedQuestion: ({ jwtToken, questionId, data }: {
+        data: any;
         jwtToken: any;
         questionId: any;
-        data: any;
     }) => any;
     deleteCuestion: ({ jwtToken, questionId }: {
         jwtToken: any;
@@ -16,8 +16,8 @@ declare function questionTest({ client }: {
         questionId: any;
     }) => any;
     createQuestion: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;

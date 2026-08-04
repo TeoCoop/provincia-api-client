@@ -7,13 +7,13 @@ declare function videoSeccion({ client }: {
     }) => any;
     getAll: () => any;
     createVideo: ({ jwtToken, data }: {
-        jwtToken: any;
         data: any;
+        jwtToken: any;
     }) => any;
     updateVideo: ({ jwtToken, videoId, data }: {
+        data: any;
         jwtToken: any;
         videoId: any;
-        data: any;
     }) => any;
     deleteVideo: ({ jwtToken, videoId }: {
         jwtToken: any;
