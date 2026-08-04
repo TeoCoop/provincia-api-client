@@ -171,8 +171,8 @@ export function client(options) {
   const baseURL =
     env === "prod"
       ? "https://provincia-prod-api.teocoop.site/"
-      : env === "sandbox"
-      ? "https://provincia-sandbox-api.teocoop.site/"
+      : env === "dev"
+      ? "http://localhost:1337/"
       : "https://provincia-prod-api.teocoop.site/";
   return {
     bursatil: bursatilEndpoints(baseURL),
