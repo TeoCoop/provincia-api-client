@@ -1105,5 +1105,61 @@ export declare function client(options: any): {
                 jwtToken: any;
             }) => any;
         };
+        dinamicLanding: {
+            getAll: () => any;
+            getAllPanel: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateLanding: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            createLanding: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            deleteLanding: ({ jwtToken, ladingId, data }: {
+                data: any;
+                jwtToken: any;
+                ladingId: any;
+            }) => any;
+        };
+        motivoConsulta: {
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateMotivo: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            createMotivo: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            deleteMotivo: ({ jwtToken, motivoId, data }: {
+                data: any;
+                jwtToken: any;
+                motivoId: any;
+            }) => any;
+            getFront: () => any;
+        };
+        form: {
+            getAll: ({ jwtToken }: {
+                jwtToken: any;
+            }) => any;
+            updateForm: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            createForm: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
+            deleteForm: ({ jwtToken, motivoId, data }: {
+                data: any;
+                jwtToken: any;
+                motivoId: any;
+            }) => any;
+        };
     };
 };

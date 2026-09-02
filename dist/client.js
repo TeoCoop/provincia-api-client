@@ -180,6 +180,15 @@ function fondosEndpoints(baseURL) {
     }),
     heroAndDestacados: require("./enpoints/fondos/heroConDestacados.js")({
       client: client
+    }),
+    dinamicLanding: require("./enpoints/fondos/dinamicLanding.js")({
+      client: client
+    }),
+    motivoConsulta: require("./enpoints/fondos/motivoConsulta.js")({
+      client: client
+    }),
+    form: require("./enpoints/fondos/form.js")({
+      client: client
     })
   };
 }
