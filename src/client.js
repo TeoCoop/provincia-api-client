@@ -155,6 +155,9 @@ function fondosEndpoints(baseURL) {
     heroAndDestacados: require("./enpoints/fondos/heroConDestacados.js")({
       client,
     }),
+    dinamicLanding: require("./enpoints/fondos/dinamicLanding.js")({ client }),
+    motivoConsulta: require("./enpoints/fondos/motivoConsulta.js")({ client }),
+    form: require("./enpoints/fondos/form.js")({ client }),
   };
 }
 function generalEnpoints(baseURL) {
