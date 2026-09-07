@@ -26,7 +26,8 @@ function dinamicLanding(_ref) {
   }
   function updateLanding(_ref3) {
     var jwtToken = _ref3.jwtToken,
-      data = _ref3.data;
+      data = _ref3.data,
+      ladingId = _ref3.ladingId;
     return client({
       url: "/api/dinamic-landings/".concat(ladingId),
       method: "put",

@@ -6,9 +6,10 @@ declare function dinamicLanding({ client }: {
     getAllPanel: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    updateLanding: ({ jwtToken, data }: {
+    updateLanding: ({ jwtToken, data, ladingId }: {
         data: any;
         jwtToken: any;
+        ladingId: any;
     }) => any;
     createLanding: ({ jwtToken, data }: {
         data: any;
