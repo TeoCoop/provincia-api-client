@@ -14,7 +14,7 @@ function dinamicLanding({ client }) {
       },
     });
   }
-  function updateLanding({ jwtToken, data }) {
+  function updateLanding({ jwtToken, data, ladingId }) {
     return client({
       url: `/api/dinamic-landings/${ladingId}`,
       method: "put",
