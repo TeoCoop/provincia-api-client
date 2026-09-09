@@ -1129,18 +1129,19 @@ export declare function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            updateMotivo: ({ jwtToken, data }: {
+            updateMotivo: ({ jwtToken, documentId, data }: {
                 data: any;
+                documentId: any;
                 jwtToken: any;
             }) => any;
             createMotivo: ({ jwtToken, data }: {
                 data: any;
                 jwtToken: any;
             }) => any;
-            deleteMotivo: ({ jwtToken, motivoId, data }: {
+            deleteMotivo: ({ jwtToken, documentId, data }: {
                 data: any;
+                documentId: any;
                 jwtToken: any;
-                motivoId: any;
             }) => any;
             getFront: () => any;
         };
@@ -1148,18 +1149,19 @@ export declare function client(options: any): {
             getAll: ({ jwtToken }: {
                 jwtToken: any;
             }) => any;
-            updateForm: ({ jwtToken, data }: {
+            updateForm: ({ jwtToken, documentId, data }: {
                 data: any;
+                documentId: any;
                 jwtToken: any;
             }) => any;
             createForm: ({ jwtToken, data }: {
                 data: any;
                 jwtToken: any;
             }) => any;
-            deleteForm: ({ jwtToken, motivoId, data }: {
+            deleteForm: ({ jwtToken, documentId, data }: {
                 data: any;
+                documentId: any;
                 jwtToken: any;
-                motivoId: any;
             }) => any;
         };
     };

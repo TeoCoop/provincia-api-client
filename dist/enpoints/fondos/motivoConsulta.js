@@ -26,9 +26,10 @@ function motivoConsulta(_ref) {
   }
   function updateMotivo(_ref3) {
     var jwtToken = _ref3.jwtToken,
+      documentId = _ref3.documentId,
       data = _ref3.data;
     return client({
-      url: "/api/motivo-consulta-fondos/".concat(motivoId),
+      url: "/api/motivo-consulta-fondos/".concat(documentId),
       method: "put",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
@@ -40,13 +41,13 @@ function motivoConsulta(_ref) {
   }
   function deleteMotivo(_ref4) {
     var jwtToken = _ref4.jwtToken,
-      motivoId = _ref4.motivoId,
+      documentId = _ref4.documentId,
       data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
     return client({
-      url: "/api/motivo-consulta-fondos/".concat(motivoId),
+      url: "/api/motivo-consulta-fondos/".concat(documentId),
       method: "delete",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

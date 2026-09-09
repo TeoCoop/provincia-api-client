@@ -1,21 +1,22 @@
-export = motivoConsulta;
-declare function motivoConsulta({ client }: {
+export = form;
+declare function form({ client }: {
     client: any;
 }): {
     getAll: ({ jwtToken }: {
         jwtToken: any;
     }) => any;
-    updateForm: ({ jwtToken, data }: {
+    updateForm: ({ jwtToken, documentId, data }: {
         data: any;
+        documentId: any;
         jwtToken: any;
     }) => any;
     createForm: ({ jwtToken, data }: {
         data: any;
         jwtToken: any;
     }) => any;
-    deleteForm: ({ jwtToken, motivoId, data }: {
+    deleteForm: ({ jwtToken, documentId, data }: {
         data: any;
+        documentId: any;
         jwtToken: any;
-        motivoId: any;
     }) => any;
 };
