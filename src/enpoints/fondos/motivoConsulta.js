@@ -14,9 +14,9 @@ function motivoConsulta({ client }) {
       method: "get",
     });
   }
-  function updateMotivo({ jwtToken, data }) {
+  function updateMotivo({ jwtToken, documentId, data }) {
     return client({
-      url: `/api/motivo-consulta-fondos/${motivoId}`,
+      url: `/api/motivo-consulta-fondos/${documentId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -26,14 +26,14 @@ function motivoConsulta({ client }) {
       },
     });
   }
-  function deleteMotivo({ jwtToken, motivoId, data }) {
+  function deleteMotivo({ jwtToken, documentId, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/motivo-consulta-fondos/${motivoId}`,
+      url: `/api/motivo-consulta-fondos/${documentId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,

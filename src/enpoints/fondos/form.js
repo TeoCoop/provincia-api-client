@@ -1,4 +1,4 @@
-function motivoConsulta({ client }) {
+function form({ client }) {
   function getAll({ jwtToken }) {
     return client({
       url: `/api/form-fondos`,
@@ -8,9 +8,9 @@ function motivoConsulta({ client }) {
       },
     });
   }
-  function updateForm({ jwtToken, data }) {
+  function updateForm({ jwtToken, documentId, data }) {
     return client({
-      url: `/api/form-fondos/${motivoId}`,
+      url: `/api/form-fondos/${documentId}`,
       method: "put",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -20,14 +20,14 @@ function motivoConsulta({ client }) {
       },
     });
   }
-  function deleteForm({ jwtToken, motivoId, data }) {
+  function deleteForm({ jwtToken, documentId, data }) {
     const formattedData = {
       data: {
         ...data,
       },
     };
     return client({
-      url: `/api/form-fondos/${motivoId}`,
+      url: `/api/form-fondos/${documentId}`,
       method: "delete",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -57,4 +57,4 @@ function motivoConsulta({ client }) {
     deleteForm,
   };
 }
-module.exports = motivoConsulta;
+module.exports = form;
