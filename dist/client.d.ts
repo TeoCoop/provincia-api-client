@@ -1146,10 +1146,14 @@ export declare function client(options: any): {
             getFront: () => any;
         };
         form: {
-            getAll: ({ jwtToken, page, pageSize }: {
+            getAll: ({ jwtToken, page, pageSize, search, motivoDocumentId, dateFrom, dateTo, }: {
+                dateFrom: any;
+                dateTo: any;
                 jwtToken: any;
+                motivoDocumentId: any;
                 page?: number | undefined;
                 pageSize?: number | undefined;
+                search: any;
             }) => any;
             updateForm: ({ jwtToken, documentId, data }: {
                 data: any;

@@ -13,9 +13,30 @@ function form(_ref) {
       _ref2$page = _ref2.page,
       page = _ref2$page === void 0 ? 1 : _ref2$page,
       _ref2$pageSize = _ref2.pageSize,
-      pageSize = _ref2$pageSize === void 0 ? 25 : _ref2$pageSize;
+      pageSize = _ref2$pageSize === void 0 ? 25 : _ref2$pageSize,
+      search = _ref2.search,
+      motivoDocumentId = _ref2.motivoDocumentId,
+      dateFrom = _ref2.dateFrom,
+      dateTo = _ref2.dateTo;
+    var params = new URLSearchParams();
+    params.set("pagination[page]", page);
+    params.set("pagination[pageSize]", pageSize);
+    if (search) {
+      params.set("filters[$or][0][name][$containsi]", search);
+      params.set("filters[$or][1][email][$containsi]", search);
+      params.set("filters[$or][2][message][$containsi]", search);
+    }
+    if (motivoDocumentId) {
+      params.set("filters[motivo_consulta_fondo][documentId][$eq]", motivoDocumentId);
+    }
+    if (dateFrom) {
+      params.set("filters[createdAt][$gte]", dateFrom);
+    }
+    if (dateTo) {
+      params.set("filters[createdAt][$lte]", dateTo);
+    }
     return client({
-      url: "/api/form-fondos?pagination[page]=".concat(page, "&pagination[pageSize]=").concat(pageSize),
+      url: "/api/form-fondos?".concat(params.toString()),
       method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)
