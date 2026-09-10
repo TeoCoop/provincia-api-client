@@ -3,10 +3,10 @@ function form({ client }) {
     jwtToken,
     page = 1,
     pageSize = 25,
-    search,
-    motivoDocumentId,
-    dateFrom,
-    dateTo,
+    search = undefined,
+    motivoDocumentId = undefined,
+    dateFrom = undefined,
+    dateTo = undefined,
   }) {
     const params = new URLSearchParams();
     params.set("pagination[page]", page);
