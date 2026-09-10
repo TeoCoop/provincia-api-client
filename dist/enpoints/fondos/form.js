@@ -14,10 +14,14 @@ function form(_ref) {
       page = _ref2$page === void 0 ? 1 : _ref2$page,
       _ref2$pageSize = _ref2.pageSize,
       pageSize = _ref2$pageSize === void 0 ? 25 : _ref2$pageSize,
-      search = _ref2.search,
-      motivoDocumentId = _ref2.motivoDocumentId,
-      dateFrom = _ref2.dateFrom,
-      dateTo = _ref2.dateTo;
+      _ref2$search = _ref2.search,
+      search = _ref2$search === void 0 ? undefined : _ref2$search,
+      _ref2$motivoDocumentI = _ref2.motivoDocumentId,
+      motivoDocumentId = _ref2$motivoDocumentI === void 0 ? undefined : _ref2$motivoDocumentI,
+      _ref2$dateFrom = _ref2.dateFrom,
+      dateFrom = _ref2$dateFrom === void 0 ? undefined : _ref2$dateFrom,
+      _ref2$dateTo = _ref2.dateTo,
+      dateTo = _ref2$dateTo === void 0 ? undefined : _ref2$dateTo;
     var params = new URLSearchParams();
     params.set("pagination[page]", page);
     params.set("pagination[pageSize]", pageSize);
