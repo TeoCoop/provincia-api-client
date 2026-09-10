@@ -1,7 +1,7 @@
 function form({ client }) {
-  function getAll({ jwtToken }) {
+  function getAll({ jwtToken, page = 1, pageSize = 25 }) {
     return client({
-      url: `/api/form-fondos`,
+      url: `/api/form-fondos?pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
       method: "get",
       headers: {
         Authorization: `Bearer ${jwtToken}`,
