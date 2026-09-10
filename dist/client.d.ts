@@ -1146,8 +1146,10 @@ export declare function client(options: any): {
             getFront: () => any;
         };
         form: {
-            getAll: ({ jwtToken }: {
+            getAll: ({ jwtToken, page, pageSize }: {
                 jwtToken: any;
+                page?: number | undefined;
+                pageSize?: number | undefined;
             }) => any;
             updateForm: ({ jwtToken, documentId, data }: {
                 data: any;

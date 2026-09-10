@@ -9,9 +9,13 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 function form(_ref) {
   var client = _ref.client;
   function getAll(_ref2) {
-    var jwtToken = _ref2.jwtToken;
+    var jwtToken = _ref2.jwtToken,
+      _ref2$page = _ref2.page,
+      page = _ref2$page === void 0 ? 1 : _ref2$page,
+      _ref2$pageSize = _ref2.pageSize,
+      pageSize = _ref2$pageSize === void 0 ? 25 : _ref2$pageSize;
     return client({
-      url: "/api/form-fondos",
+      url: "/api/form-fondos?pagination[page]=".concat(page, "&pagination[pageSize]=").concat(pageSize),
       method: "get",
       headers: {
         Authorization: "Bearer ".concat(jwtToken)

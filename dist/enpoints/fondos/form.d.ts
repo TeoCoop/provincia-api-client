@@ -2,8 +2,10 @@ export = form;
 declare function form({ client }: {
     client: any;
 }): {
-    getAll: ({ jwtToken }: {
+    getAll: ({ jwtToken, page, pageSize }: {
         jwtToken: any;
+        page?: number | undefined;
+        pageSize?: number | undefined;
     }) => any;
     updateForm: ({ jwtToken, documentId, data }: {
         data: any;
