@@ -8,6 +8,17 @@ function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" 
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function form(_ref) {
   var client = _ref.client;
+  /**
+   * @param {{
+   *   jwtToken: string,
+   *   page?: number,
+   *   pageSize?: number,
+   *   search?: string,
+   *   motivoDocumentId?: string,
+   *   dateFrom?: string,
+   *   dateTo?: string,
+   * }} params
+   */
   function getAll(_ref2) {
     var jwtToken = _ref2.jwtToken,
       _ref2$page = _ref2.page,
