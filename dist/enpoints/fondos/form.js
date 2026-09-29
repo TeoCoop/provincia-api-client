@@ -29,6 +29,7 @@ function form(_ref) {
       params.set("filters[$or][0][name][$containsi]", search);
       params.set("filters[$or][1][email][$containsi]", search);
       params.set("filters[$or][2][message][$containsi]", search);
+      params.set("filters[$or][3][cuit][$containsi]", search);
     }
     if (motivoDocumentId) {
       params.set("filters[motivo_consulta_fondo][documentId][$eq]", motivoDocumentId);
