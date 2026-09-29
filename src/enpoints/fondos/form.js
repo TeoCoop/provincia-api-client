@@ -16,6 +16,7 @@ function form({ client }) {
       params.set("filters[$or][0][name][$containsi]", search);
       params.set("filters[$or][1][email][$containsi]", search);
       params.set("filters[$or][2][message][$containsi]", search);
+      params.set("filters[$or][3][cuit][$containsi]", search);
     }
     if (motivoDocumentId) {
       params.set(
