@@ -1,4 +1,15 @@
 function form({ client }) {
+  /**
+   * @param {{
+   *   jwtToken: string,
+   *   page?: number,
+   *   pageSize?: number,
+   *   search?: string,
+   *   motivoDocumentId?: string,
+   *   dateFrom?: string,
+   *   dateTo?: string,
+   * }} params
+   */
   function getAll({
     jwtToken,
     page = 1,
