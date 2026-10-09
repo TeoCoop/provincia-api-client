@@ -1,5 +1,5 @@
 ///api/home-destacados
-function destacadoPopUp({ client }) {
+function destacadoHero({ client }) {
   function getFromFront() {
     return client({
       url: `/api/home-destacados`,
@@ -13,6 +13,21 @@ function destacadoPopUp({ client }) {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
+    });
+  }
+  function createDestacado({ jwtToken, data }) {
+    const formattedData = {
+      data: {
+        ...data,
+      },
+    };
+    return client({
+      url: `/api/destacados-home-fondos`,
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      data: formattedData,
     });
   }
 
@@ -35,6 +50,7 @@ function destacadoPopUp({ client }) {
     getFromFront,
     getPanel,
     updateDestacado,
+    createDestacado,
   };
 }
-module.exports = destacadoPopUp;
+module.exports = destacadoHero;
