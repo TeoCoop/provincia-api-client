@@ -1104,6 +1104,10 @@ export declare function client(options: any): {
                 destacadoId: any;
                 jwtToken: any;
             }) => any;
+            createDestacado: ({ jwtToken, data }: {
+                data: any;
+                jwtToken: any;
+            }) => any;
         };
         dinamicLanding: {
             getAll: () => any;

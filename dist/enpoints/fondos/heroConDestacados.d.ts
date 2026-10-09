@@ -1,5 +1,5 @@
-export = destacadoPopUp;
-declare function destacadoPopUp({ client }: {
+export = destacadoHero;
+declare function destacadoHero({ client }: {
     client: any;
 }): {
     getFromFront: () => any;
@@ -9,6 +9,10 @@ declare function destacadoPopUp({ client }: {
     updateDestacado: ({ jwtToken, destacadoId, data }: {
         data: any;
         destacadoId: any;
+        jwtToken: any;
+    }) => any;
+    createDestacado: ({ jwtToken, data }: {
+        data: any;
         jwtToken: any;
     }) => any;
 };

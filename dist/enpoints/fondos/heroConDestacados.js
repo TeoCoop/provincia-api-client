@@ -7,7 +7,7 @@ function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 ///api/home-destacados
-function destacadoPopUp(_ref) {
+function destacadoHero(_ref) {
   var client = _ref.client;
   function getFromFront() {
     return client({
@@ -25,10 +25,25 @@ function destacadoPopUp(_ref) {
       }
     });
   }
-  function updateDestacado(_ref3) {
+  function createDestacado(_ref3) {
     var jwtToken = _ref3.jwtToken,
-      destacadoId = _ref3.destacadoId,
       data = _ref3.data;
+    var formattedData = {
+      data: _objectSpread({}, data)
+    };
+    return client({
+      url: "/api/destacados-home-fondos",
+      method: "post",
+      headers: {
+        Authorization: "Bearer ".concat(jwtToken)
+      },
+      data: formattedData
+    });
+  }
+  function updateDestacado(_ref4) {
+    var jwtToken = _ref4.jwtToken,
+      destacadoId = _ref4.destacadoId,
+      data = _ref4.data;
     var formattedData = {
       data: _objectSpread({}, data)
     };
@@ -44,7 +59,8 @@ function destacadoPopUp(_ref) {
   return {
     getFromFront: getFromFront,
     getPanel: getPanel,
-    updateDestacado: updateDestacado
+    updateDestacado: updateDestacado,
+    createDestacado: createDestacado
   };
 }
-module.exports = destacadoPopUp;
+module.exports = destacadoHero;
